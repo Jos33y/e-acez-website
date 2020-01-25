@@ -21,6 +21,12 @@
          <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
 
          <link rel="stylesheet" href="styles/index.css">
+
+         <style>
+           *{
+              color: #fff;
+             }
+           </style>
     </head>
 
 <body>

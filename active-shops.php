@@ -1,70 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <title> active shops </title>
-    <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
-		
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-                    
-         <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
 
-         <link rel="stylesheet" href="styles/index.css">
-    </head>
+<?php
+$active = "active-shop";
+include('header.php')
 
-<body>
-
-  <!-- Navigation bar-->
-  <nav class="navbar navbar-light navbar-expand-sm  sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand ml-3" href="index.php">
-              <img src="images/eiconweb.png" class="logo">
-              <span class="logo-head">e-acez </span>
-          </a>
-                    
-
-            <button class="navbar-toggler " type="button" data-toggle="collapse" 
-            data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon my-toggler "></span>
-              </button>
-              <div class="collapse navbar-collapse"></div>
-
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                                <a class="nav-link" href="index.php">Home</a>
-                              </li>
-                        <li class="nav-item">
-                                <a class="nav-link" href="how-it-works.php">How It Works</a>
-                              </li>
-                              <li class="nav-item active">
-                                <a class="nav-link" href="active-shops.php">Active Shops</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="https://e-acez.com/blog/">Blog</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="about.php">About US</a>
-                              </li>
-                    </ul>                                              
-                        </form>
-                        &nbsp;
-                        &nbsp;                       
-                            <div class="button">
-                                <a href="sign-in.php" class="btn btn-sm btn-primary">Login</a>
-                                  <a href="sign-up.php" class="btn btn-signup btn-sm "> Sign Up </a>
-                  </div>
-                    </div>
-        </div>
-  </nav>
-
-
+?>
   <!-- active shops header-->
-
 
   <div class="container-fluid active-shops-header">
           <div class="text-center">
@@ -76,6 +16,54 @@
 
         </div>
     </div>
+
+    <!-- active shops body -->
+    <!-- row one -->
+      <!-- shop 1 -->
+    <div class="container">
+      <div class="row shop-box">
+        <div class="col-md-4 col-sm-4">
+          <span class="steps">Shop One:</span>
+          <div class="card">
+            <div class="card-header"> yk Store</div>
+            <img class="card-img-top" src="images/store-img.jpg" alt="Shop Image">
+            <div class="card-footer">
+              <span class="text-right">Fashion Store</span>
+              <a href ="#" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+            </div>
+          </div>
+        </div>
+
+      <!-- shop 2-->
+        <div class="col-md-4 col-sm-4 ">
+          <span class="steps">Shop Two:</span>
+          <div class="card">
+            <div class="card-header"> aStar Store</div>
+            <img class="card-img-top" src="images/aStar.jpg" alt="Shop Image">
+            <div class="card-footer">
+              <span class="text-right">Fashion Store</span>
+              <a href ="#" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+            </div>
+          </div>
+        </div>
+
+      <!-- shop 3 -->
+        <div class="col-md-4 col-sm-4">
+          <span class="steps">Shop Three:</span>
+          <div class="card">
+            <div class="card-header"> Coza Store</div>
+            <img class="card-img-top" src="images/cozastore.jpg" alt="Shop Image">
+            <div class="card-footer">
+              <span class="text-right">Fashion Store</span>
+              <a href ="#" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!--row two -->
+
 </body>
 </html>
 
