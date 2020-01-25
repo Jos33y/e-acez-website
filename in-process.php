@@ -78,10 +78,10 @@
                   <br>
                    <br>
              <div class="card-body">
-                  <p> If that's what happened then you welcome on board and will love to let you know that the development of your store 
-                    is in progress and will be active in one to three days.</p>
-                  <p> In case you've not received a call from our in-house developer click the <a href="#">chat with developer button</a> to chat with our developer
-                      on how personalize you want your store to look like or if you have any other issues.
+                  <p> If you just registered on e-acez, you are welcome on board. We will love to inform you that 
+                    the development of your store is in progress and will be ready soonest.</p>
+                  <p>  Just in case you have not received a call from any of our in-house developer, kindly click the chat with our developer button to get in touch with one of our developers. 
+                    In either case, our developers will take care of your store personalization and attend to every other issue you might encounter.
              </div>
           </div>
       </div>
@@ -93,9 +93,9 @@
                 <img class="card-img-top rounded" src="images/in-process-2.jpg" alt="image2">
 
              <div class="card-body">
-                <p> We not happy to that your subscription as expired and your account got deactivated. We know what it means to be online 24/7 
-                  and will like you to subscribe again. </p>
-                <p> As a sign of apprerciation that you subcribing again we offering 10% discount on all our plans, select a plan below and renew your subscription.</p>
+                <p> Hey! Your subscription has expired and your account has been deactivated.  </p>
+                <p>We value your web presence and we will help you get back online in no time. Renew your subscription now to get 10% discount on any plan.</p>
+                <p>Select a plan below.</p>
                         <!--- Plan Subscription-->
                         <div class="row justify-content-center">
                               <div class="col-sm-8">
