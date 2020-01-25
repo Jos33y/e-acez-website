@@ -84,44 +84,43 @@ background-color: #f2f1f6;
         font-size: 15px;
     }
 }
-
+/** Ends **/
 
 /** Form Styles **/
-.form-style{
-    background-image: url('../images/back.jpg');
+*{
+    color: #fff;
 }
-.log{
-    margin: 50px;
+.bg{
+    background-image: url('../images/back.jpg');    
+    width: 100%;
+    height: 100vh;
+}
+.form-container{
+    border: 0px solid #fff;
+    padding: 50px 60px;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    -webkit-box-shadow: -1px 3px 26px 11px rgba(252,252,252,1);
+    -moz-box-shadow: -1px 3px 26px 11px rgba(252,252,252,1);
+    box-shadow: -1px 3px 26px 11px rgba(252,252,252,1);
+}
+.form-text{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+.form-logo{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5vh;
    
 }
-
-@media (max-width: 570px) {
-.log{
-    margin: 10px;
-    margin-top: 50px;
-    
+.form-container .footer a{
+    color: #fff;
 }
-}
+/** Ends **/
 
-.card{
 
-    box-shadow: 0 2px 3px rgba(0,0,0,0.5);
-    
-}
-.card-header{
-    background: #ffffff;
-}
-
-.col-one{
-    margin-top: 20px;
-   
-}
-
-.col-one .card{
-
-    box-shadow: 0 2px 3px rgba(0,0,0,0.5);
-    
-}
 /** Social Icon Styles **/
 
 .social a {

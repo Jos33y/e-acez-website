@@ -23,65 +23,58 @@
          <link rel="stylesheet" href="styles/index.css">
     </head>
 
-    <body class="form-style">
-
-<div class="row justify-content-center log ">
-<!-- Form Card -->
-<div class="container col-sm-6">
-  <div class="card">
-    <div class="card-header text-center">
-    <a href="index.php"><img class="img-fluid"  src="images/eiconweb.png" alt="" width="100" height="100"></a>
-    </div>
-    <div class="card-body">
-
-      <form method="POST">
+    <body>
+    <div class="container-fluid bg">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+      <!-- Form Start -->
+      <form method="POST" class="form-container">
+        <div class="text-center">
+          <a href="index.php"><img class="form-logo"  src="images/eiconweb.png" alt=""></a>      
+          </div>
         <div class="form-group">
-          <label for="first_name">First Name</label>
-          <input type="text" name="firstname" maxlength="20" class="form-control" required autofocus>
+          <label for="first_name" class="form-text">First Name</label>
+          <input type="text" name="firstname" maxlength="20" class="form-control" placeholder="Enter First Name" required autofocus>
         </div>
 
         <div class="form-group">
-          <label for="last_name">Last Name</label>
-          <input type="text" name="lastname"  maxlength="20" class="form-control" required autofocus>
+          <label for="last_name" class="form-text">Last Name</label>
+          <input type="text" name="lastname"  maxlength="20" class="form-control" placeholder="Enter Last Name" required autofocus>
         </div>
 
         <div class="form-group">
-          <label for="business_name">Business / Brand Name</label>
-          <input type="text" name="business_name"  maxlength="50" class="form-control" required autofocus>
+          <label for="business_name" class="form-text">Business / Brand Name</label>
+          <input type="text" name="business_name"  maxlength="50" class="form-control" placeholder="Enter Business / Brand Name" required autofocus>
         </div>
 
         <div class="form-group">
-          <label for="phone-number">Phone Number</label>
-          <input type="number" name="phone_number"  maxlength="15" class="form-control" required autofocus>
+          <label for="phone-number" class="form-text">Phone Number</label>
+          <input type="number" name="phone_number"  maxlength="15" class="form-control" placeholder="Enter Phone Number" required autofocus>
         </div>
 
         <div class="form-group">
-          <label for="Email">Email</label>
-          <input type="email" name="email"  maxlength="50" class="form-control" required autofocus>
+          <label for="Email" class="form-text">Email</label>
+          <input type="email" name="email"  maxlength="50" class="form-control" placeholder="Enter Email" required autofocus>
         </div>
 
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" maxlength="20" class="form-control" required autofocus>
+          <label for="password" class="form-text">Password</label>
+          <input type="password" name="password" maxlength="20" class="form-control" placeholder="Enter Password" required autofocus>
         </div>
 
         <div class="form-group">
-          <button class="btn btn-md btn-primary form-control" name="sign-in" >Sign Up</button>
+          <button type="submit" class="btn btn-success btn-block" name="sign-in" >Sign Up</button>
         </div>
-
-      </form>
-      <div class="footer text-center">
-        <hr>
-        <p>Have an account <a href="sign-in.php"> Login </a></p>
-
-        <hr>
-        <p class="mt-5 mb-3 text-muted">&copy; e-acez.com 2020</p>
+        <div class="footer text-center">
+          <p style="float: left"><a href="sign-in.php"> Login Here </a></p>
+          <hr>
+          <p class="lead" style="clear:both; color: #fff">&copy; e-acez.com 2020</p>
       </div>
+      </form>   
     </div>
+    <div class="col-md-4 col-sm-4 col-xs-12"></div>
   </div>
-</div>
-</div>
-
 </div>
 </body>
 </html>

@@ -23,46 +23,40 @@
          <link rel="stylesheet" href="styles/index.css">
     </head>
 
-<body class="form-style">
+<body>
+<div class="container-fluid bg">
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+    <!-- Form Start -->
+        <form method="POST" action="in-process.php" class="form-container">
+          <div class="text-center">
+          <a href="index.php"><img class="form-logo"  src="images/eiconweb.png" alt=""></a>      
+          </div>
+          <div class="form-group">
+              <label for="Email" class="form-text">Email</label>
+              <input type="email" name="email" class="form-control" placeholder="Enter Email" required autofocus>
+            </div>
 
-<div class="row justify-content-center log ">
-<!-- Form Card -->
-<div class="container col-md-6">
-  <div class="card">
-    <div class="card-header text-center">
-    <a href="index.php"><img class="img-fluid"  src="images/eiconweb.png" alt="" width="100" height="100"></a>
+            <div class="form-group">
+              <label for="password" class="form-text">Password</label>
+              <input type="password" name="password" maxlength="20" class="form-control" placeholder="Enter Password" required autofocus>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block" name="sign-in" >Sign in</button>
+            </div>
+            <div class="footer text-center">
+                <p style="float: left"><a href="forget-password.php"> Forget Password </a></p>
+                <p style="float: right"><a href="sign-up.php"> Create Account </a></p>
+                <hr>
+                <p class="lead" style="clear:both; color: #fff">&copy; e-acez.com 2020</p>
+          </div>
+        </form>
+ 
     </div>
-    <div class="card-body">
-
-      <form method="POST" action="in-process.php">
-        <div class="form-group">
-          <label for="username">Email</label>
-          <input type="email" name="username" class="form-control" required autofocus>
-        </div>
-
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" maxlength="20" class="form-control" required autofocus>
-        </div>
-
-        <div class="form-group">
-          <button class="btn btn-md btn-primary form-control" name="sign-in" >Sign in</button>
-        </div>
-
-      </form>
-      <div class="footer text-center">
-        <hr>
-        <p> Click <a href="forget-password.php"> Forget Password </a> to reset it.</p>
-        <p>Kindly click <a href="sign-up.php"> Create Account </a> to register.</p>
-
-        <hr>
-        <p class="mt-5 mb-3 text-muted">&copy; e-acez.com 2020</p>
-      </div>
-    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12"></div>
   </div>
-</div>
-</div>
-
 </div>
 </body>
 </html>
