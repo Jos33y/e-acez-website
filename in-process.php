@@ -1,0 +1,176 @@
+<?php
+
+//include('include/dbconn.php');
+//session_start();
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title> welcome to e-acez </title>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+		
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                    
+         <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
+
+         <link rel="stylesheet" href="styles/index.css">
+    </head>
+
+<body>
+<div class="in-process">
+  <nav class="navbar navbar-light navbar-expand-sm  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand ml-3" href="index.php">
+              <img src="images/eiconweb.png" class="logo">
+              <span class="logo-head">e-acez </span>
+          </a>
+                    
+
+            <button class="navbar-toggler " type="button" data-toggle="collapse" 
+            data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon my-toggler "></span>
+              </button>
+
+              <div class="collapse navbar-collapse"></div>
+
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                                <a class="nav-link" href="index.php">Home</a>
+                              </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="how-it-works.php"> Blog</a>
+                              </li>
+                    </ul>
+                                      
+                            <div class="button">
+
+                             <a href="sign-out.php" class="btn btn-primary btn-sm ">  Chat with Developer </a> &nbsp;
+                        &nbsp;
+                                <a href="sign-out.php" class="btn btn-danger btn-sm ">  Sign Out </a>
+                               </div>
+                    
+                    </div>
+        </div>
+        </nav>
+</div>
+        <!-- first row -->
+        <div class="container col-one">
+          <h3 class="text-center" style="letter-spacing: 1px;">WOAH... If you seeing this page, two things might have happened!!!</h3>
+      
+      <br>
+      <hr>
+
+  <div class="row">
+    <!-- NEw Column -->
+      <div class="col-md-6" style="margin-top: 20px;">
+          <div class="card">
+              <div class="card-header"><strong>One you've just registered on e-acez</strong></div>
+                
+                  <img class="card-img-top rounded align-content-center" src="images/in-process-1.jpg" alt="image">
+                  <br>
+                   <br>
+             <div class="card-body">
+                  <p> If that's what happened then you welcome on board and will love to let you know that the development of your store 
+                    is in progress and will be active in one to three days.</p>
+                  <p> In case you've not received a call from our in-house developer click the <a href="#">chat with developer button</a> to chat with our developer
+                      on how personalize you want your store to look like or if you have any other issues.
+             </div>
+          </div>
+      </div>
+<!--- New Column -->
+      <div class="col-md-6" style="margin-top: 20px;">
+          <div class="card">
+             <div class="card-header"><strong>Two your subscription has expired</strong></div>
+               
+                <img class="card-img-top rounded" src="images/in-process-2.jpg" alt="image2">
+
+             <div class="card-body">
+                <p> We not happy to that your subscription as expired and your account got deactivated. We know what it means to be online 24/7 
+                  and will like you to subscribe again. </p>
+                <p> As a sign of apprerciation that you subcribing again we offering 10% discount on all our plans, select a plan below and renew your subscription.</p>
+                        <!--- Plan Subscription-->
+                        <div class="row justify-content-center">
+                              <div class="col-sm-8">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <form  method="post">,
+                                          <div class="form-group">
+
+                                      <label for="nonthly plan"  class="sr-only">Monthly Plans</i></label>
+
+                                          <select type="text" class="form-control" id="payment" name="amount">
+
+                                              <option  value="100">One Month ---- &#8358; 100</option>
+                                              <option  value="5000">One Month ---- &#8358; 5,000</option>
+                                              <option value="13500">Three Months ---- &#8358; 13,500</option>
+                                              <option value="22000">Five Months ---- &#8358; 22,000</option>
+                                              <option value="28000">Seven Months ---- &#8358; 28,000</option>
+                                              <option value="35000">Nine Months ---- &#8358; 35,000</option>
+                                              <option value="45000">One Year ---- &#8358; 45,000</option>
+                                            
+
+                                                </select>
+
+                                          </div>
+                                          <div class="form-group text-center">
+                                                          <button class="btn btn-sm btn-primary" name="next_pay" >Select Plan </button>
+                                                          <a href="index.php"> 
+                                                                  </button></a>                 
+                                          </div>
+                                    </form>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                          <!-- Plan Subscription End -->
+          </div>
+      </div>
+  </div>
+
+  <!-- Not interested column -->
+  <div class="container">
+                  <hr>
+        <div class="row justify-content-center" style="margin-top: 20px;">
+          <div class="col-md-8">
+            <div class="card">
+                 <div class="card-header"><strong>Not interested again</strong></div>
+            <div class="card-body">
+              <p> If for any reason you don't want to renew your subscription or you don't want your store active again
+                , kindly send us a message with the form below. </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-sm-8">
+                        <form  method="post">
+                                  <div class="form-group">
+                                    <label for="reason" class="text-danger"><b>State Reason for deactivation:</b></label>
+                                    <textarea class="form-control" rows="8" ></textarea>
+                                  </div>
+                                  <div class="form-group">
+                                    <button class="btn btn-danger">Send message</button>
+                                  </div>
+                        </form>       
+                   </div>
+                 </div>
+            </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  </div>
+      <hr>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; e-acez.com 2020</p>
+      </div>
+        </div>
+    
+          
+</body>
+</html>
+
