@@ -1,9 +1,9 @@
 <?php
 $active = "how-it-works";
+$title = "how it works";
 include('header.php')
 
 ?>
-
   <!-- how it works header-->
   <div class="container-fluid works-header">
           <div class="text-center">
@@ -38,6 +38,7 @@ include('header.php')
                           <br>
                   <div class="button">
                     <a href="sign-up.php" class="btn btn-info"> Create  Account </a> </div>
+                    <br>
           </div>
 
           <div class="col-sm-6">
@@ -241,8 +242,8 @@ include('header.php')
           </div>
           </div>
       </div>
-  </div>
-  
+</div>
+</div>
 </body>
 </html>
 

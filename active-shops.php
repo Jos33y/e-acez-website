@@ -1,6 +1,7 @@
 
 <?php
 $active = "active-shop";
+$title = "active shops";
 include('header.php')
 
 ?>

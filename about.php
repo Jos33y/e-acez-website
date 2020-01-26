@@ -1,5 +1,6 @@
 <?php
 $active = "about";
+$title = "about";
 include('header.php')
 
 ?>
