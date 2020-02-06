@@ -32,7 +32,7 @@
     <body>
     <div class="container-fluid bg">
       <br>
-      <h5 style="color: red; font-size:16px;"> Beta shop is in progress and registration is closed </h5>
+      <h5 style="color: red; font-size:16px;"> Beta stores are in progress... Registration is closed </h5>
       <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12"></div>
         <div class="col-md-4 col-sm-4 col-xs-12">

@@ -10,7 +10,7 @@ include('header.php')
     <div class="container-fluid">
           <div class="text-center">
             <h1 class="heading">About E-ACEZ</h1>
-                <p class="sub-heading">What to Know About US</p>
+                <p class="sub-heading">What to know about us</p>
           </div>
     </div>
   </div>
