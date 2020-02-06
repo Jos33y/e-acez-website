@@ -194,20 +194,20 @@ background-color: #f2f1f6;
  .header-text{
     font-size: 57px;
     font-weight: 600;
-    color: #FF5500;
+    color: #ffffff;
     font-family: 'Acme', sans-serif;
     text-transform: uppercase;
 }
 
  .sub-text{
     font-size: 26px;
-    color: #04108a;
+    color: #ffffff;
     font-family: 'Courgette', cursive;
     text-transform: lowercase;
 }
 .btn.btn-outline-light{
     margin: 5%;
-    margin-bottom: 15%;
+    margin-bottom: 20%;
 }
 .title .one{
     margin-top: 10%;

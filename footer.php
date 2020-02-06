@@ -71,7 +71,9 @@
 
             <div class="col-md-12 text-center">
                         <hr class="line" width="100%">
-                        <h6>&copy; 2020 e-acez.com</h6>
+                        <h6> images from <a href="https://www.pikrepo.com/">nicepik</a></h6>
+                        <h6>&copy; 2020 e-acez.com </h6>
+                           
                     </div>
         </div>
     </div>
