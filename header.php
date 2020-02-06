@@ -10,6 +10,7 @@
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <link rel="stylesheet" href="styles/index.css">
 
         <script type="text/javascript" src="script.js"></script>
@@ -22,7 +23,7 @@
 <div id="content">
 
   <!-- Navigation bar-->
-  <nav class="navbar navbar-dark navbar-expand-sm  sticky-top">
+  <nav class="navbar navbar-dark navbar-expand-md  sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand ml-3" href="index.php">
               <img src="images/eiconweb.png" class="logo">
@@ -44,14 +45,22 @@
                             <li class="nav-item <?php if($active=='how-it-works') echo'active';?>">
                                 <a class="nav-link" href="how-it-works.php">How It Works</a>
                               </li>
-                              <li class="nav-item <?php if($active=='active-shop') echo'active';?>">
-                                <a class="nav-link" href="active-shops.php">Active Shops</a>
+                              <li class="nav-item dropdown <?php if($active=='shop') echo'active';?>">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Shops
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="active-shops.php">Active Shops</a>
+                                  <a class="dropdown-item" href="shops-template.php">Shops Template</a>
                               </li>
                               <li class="nav-item <?php if($active=='blog') echo'active';?>">
-                                <a class="nav-link" href="https://e-acez.com/blog/" target="_blank">Blog</a>
+                                <a class="nav-link" href="https://dazzling-davinci-70e6ae.netlify.com/" target="_blank">Blog</a>
                               </li>
                               <li class="nav-item <?php if($active=='about') echo'active';?>">
                                 <a class="nav-link" href="about.php">About US</a>
+                              </li>
+                               <li class="nav-item <?php if($active=='contact') echo'active';?>">
+                                <a class="nav-link" href="contact.php">Contact Us</a>
                               </li>
                     </ul>                                              
                         </form>

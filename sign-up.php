@@ -31,6 +31,8 @@
 
     <body>
     <div class="container-fluid bg">
+      <br>
+      <h5 style="color: red; font-size:16px;"> Beta shop is in progress and registration is closed </h5>
       <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12"></div>
         <div class="col-md-4 col-sm-4 col-xs-12">
@@ -70,7 +72,7 @@
         </div>
 
         <div class="form-group">
-          <button type="submit" class="btn btn-success btn-block" name="sign-in" >Sign Up</button>
+          <button type="submit" class="btn btn-success btn-block"  onclick="alert()">Sign Up</button>
         </div>
         <div class="footer text-center">
           <p style="float: left"><a href="sign-in.php"> Login Here </a></p>
@@ -81,6 +83,13 @@
     </div>
     <div class="col-md-4 col-sm-4 col-xs-12"></div>
   </div>
+    </div>
+
+  <script>
+      function alert(){
+        swal("Closed!!!", "Registration is closed!", "error");
+      }
+    </script>
 </div>
 </body>
 </html>

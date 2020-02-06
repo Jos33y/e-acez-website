@@ -1,6 +1,6 @@
 
 <?php
-$active = "active-shop";
+$active = "shop";
 $title = "active shops";
 include('header.php')
 
@@ -12,7 +12,7 @@ include('header.php')
             <h1 class="heading">Active Shops</h1>
                 <p class="sub-heading">View regisered and active shops developed by e-acez</p>
                 <div class="button">
-                <a href="sign-up.php" class="btn btn-temp-head"> Rent a Shop Now </a>
+                <a href="sign-up.php" class="btn btn-temp-head"> Rent Shop</a>
                 </div>
 
         </div>
@@ -26,11 +26,11 @@ include('header.php')
         <div class="col-md-4 col-sm-4">
           <span class="steps">Shop One:</span>
           <div class="card">
-            <div class="card-header"> yk Store</div>
-            <img class="card-img-top" src="images/store-img.jpg" alt="Shop Image">
+            <div class="card-header"> Beta shop in progress</div>
+            <img class="card-img-top shop-img" src="images/store-img.jpg" alt="Shop Image">
             <div class="card-footer">
-              <span class="text-right">Fashion Store</span>
-              <a href ="#" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+              <span class="text-right">Shop category</span>
+              <button onclick="alert()" class="btn btn-sm btn-primary" style="float: right">Visit Shop</button>
             </div>
           </div>
         </div>
@@ -39,11 +39,11 @@ include('header.php')
         <div class="col-md-4 col-sm-4 ">
           <span class="steps">Shop Two:</span>
           <div class="card">
-            <div class="card-header"> aStar Store</div>
-            <img class="card-img-top" src="images/aStar.jpg" alt="Shop Image">
+            <div class="card-header"> Beta shop in progress</div>
+            <img class="card-img-top shop-img" src="images/aStar.jpg" alt="Shop Image">
             <div class="card-footer">
-              <span class="text-right">Fashion Store</span>
-              <a href ="#" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+              <span class="text-right">Shop category</span>
+              <button onclick="alert()" class="btn btn-sm btn-primary" style="float: right">Visit Shop</button>
             </div>
           </div>
         </div>
@@ -52,11 +52,11 @@ include('header.php')
         <div class="col-md-4 col-sm-4">
           <span class="steps">Shop Three:</span>
           <div class="card">
-            <div class="card-header"> Coza Store</div>
-            <img class="card-img-top" src="images/cozastore.jpg" alt="Shop Image">
+            <div class="card-header"> Beta shop in progress</div>
+            <img class="card-img-top shop-img" src="images/cozastore.jpg" alt="Shop Image">
             <div class="card-footer">
-              <span class="text-right">Fashion Store</span>
-              <a href ="#" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+              <span class="text-right">Shop category</span>
+              <button onclick="alert()" class="btn btn-sm btn-primary" style="float: right">Visit Shop</button>
             </div>
           </div>
         </div>
@@ -64,7 +64,20 @@ include('header.php')
     </div>
 
         <!--row two -->
+    
+  
+        <?php
 
-</body>
+include('footer.php');
+
+?>
+    </div>
+    <script>
+      function alert(){
+        swal("Coming soon!", "Beta shop in development!", "error");
+      }
+    </script>
+    </body>
 </html>
+
 

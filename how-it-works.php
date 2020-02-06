@@ -11,7 +11,7 @@ include('header.php')
                 <p class="sub-heading">Renting a shop online is one of the best way to boost your business</p>
                 <div class="button">
 
-                <a href="sign-up.php" class="btn btn-heading"> Rent A Shop Now </a>
+                <a href="sign-up.php" class="btn btn-heading"> Rent shop</a>
 
                 </div>
           </div>
@@ -37,7 +37,7 @@ include('header.php')
                   </ul>
                           <br>
                   <div class="button">
-                    <a href="sign-up.php" class="btn btn-info"> Create  Account </a> </div>
+                    <a href="sign-up.php" class="btn btn-info"> Sign-up</a> </div>
                     <br>
           </div>
 
@@ -68,7 +68,7 @@ include('header.php')
                   </ul>
                           <br>
                   <div class="button">
-                    <a href="sign-up.php" class="btn btn-info"> Create  Account </a> </div>
+                    <a href="sign-up.php" class="btn btn-info"> Sign-up </a> </div>
           </div>    
       </div>
     </div>
@@ -222,7 +222,7 @@ include('header.php')
                 <p class="four-sub">Get Started today to get more sales effectively </p>
                   <br>
                 <div class="button">
-                    <a href="signin.php" class="btn btn-six"> Rent Shop </a> </div>
+                    <a href="signin.php" class="btn btn-six">Rent Shop</a> </div>
           </div>
     </div>
   </div>
@@ -243,6 +243,12 @@ include('header.php')
           </div>
       </div>
 </div>
+
+<?php
+
+include('footer.php');
+
+?>
 </div>
 </body>
 </html>
