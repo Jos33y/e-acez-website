@@ -224,7 +224,7 @@ hr.line{
 }
 
 /** Card styles **/
-.card-body .fas, .far, .fab{
+.card-body .fas, .card-body .far, .card-body .fab{
     font-size: 50px;
     margin: 20px;
 }
@@ -246,7 +246,7 @@ hr.line{
 
 
 /** services column styles **/
-.services .fas, .far{
+.services .fas, .services .far{
     color: #04108a;
     font-size: 50px;
     margin: 20px;
