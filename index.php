@@ -48,7 +48,7 @@ include('header.php')
             <span class="sub-title">Easy and Secured Payment Gateways</span>
             <p class="card-text">
             We offer various mediums of payment both offline and online;
-             the good thing is every transaction/form of pament is very secured by Paystack!
+             the good thing is every transaction/form of payment is secured by Paystack!
             </p>
             </div>
         </div>
@@ -88,7 +88,7 @@ include('header.php')
             <span class="sub-title">24X7 live support</span>
             <br>
             <p class="title-text">
-            E-acez Live Chat is our online service that enables you to chat online to a member
+            E-acez Live Chat enables you to chat online to with a member
              of our customer service representative about selected products and services 
             </p>
         </div>
@@ -121,7 +121,7 @@ include('header.php')
             <span class="sub-title">Flexiblity and Usage</span>
             <br>
             <p class="title-text">
-            Each store comes with flexible features for sellers’ convenience.
+            Each store comes with flexible features for seller's convenience.
              Stores provided are generally smooth and user friendly.
             </p>
 
