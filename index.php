@@ -63,11 +63,10 @@ include('header.php')
         </div>
         <div class="card bg-danger">
             <div class="card-body text-center">
-            <i class="far fa-clock"></i>
+            <i class="fab fa-buromobelexperte"></i>
             <br>
-            <span class="sub-title">98.9% store uptime</span>
-            <p class="card-text"> Every store has 98.9% uptime which means your store is accessible at every hour. 
-                Smoky put, all stores are available 24/7.</p>
+            <span class="sub-title">Online Showroom</span>
+            <p class="card-text">  We offer an amazing showroom features for you to showcase your products in any order you want.</p>
             </div>
         </div>
     </div>
@@ -89,7 +88,7 @@ include('header.php')
             <br>
             <p class="title-text">
             E-acez Live Chat enables you to chat online to with a member
-             of our customer service representative about selected products and services 
+             of our customer service representative about selected products and services. 
             </p>
         </div>
 
@@ -116,13 +115,13 @@ include('header.php')
         </div>
 
         <div class="col">
-            <i class="fas fa-cash-register"></i>
+            <i class="far fa-clock"></i>
             <br>
-            <span class="sub-title">Flexiblity and Usage</span>
+            <span class="sub-title">99.8% store uptime</span>
             <br>
             <p class="title-text">
-            Each store comes with flexible features for seller's convenience.
-             Stores provided are generally smooth and user friendly.
+            Every store has 99.8% uptime which means your store is accessible at every hour. 
+                Smoky put, all stores are available 24/7.
             </p>
 
         </div>
