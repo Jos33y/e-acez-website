@@ -1,7 +1,6 @@
 <?php
+include('include/dbconn.php');
 
-//include('include/dbconn.php');
-//session_start();
 
 ?>
 
@@ -31,11 +30,10 @@
 
 <body>
 <div class="container-fluid bg">
-  <div class="row">
-    <div class="col-md-4 col-sm-4 col-xs-12"></div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
+  <div class="row justify-content-center">
+      <div class="col-sm-6 col-xs-12 "> 
     <!-- Form Start -->
-        <form method="POST" action="in-process.php" class="form-container">
+        <form method="POST" class="form-container">
           <div class="text-center">
           <a href="index.php"><img class="form-logo"  src="images/eiconweb.png" alt=""></a>      
           </div>
@@ -61,9 +59,68 @@
         </form>
  
     </div>
-    <div class="col-md-4 col-sm-4 col-xs-12"></div>
   </div>
 </div>
 </body>
 </html>
+
+    <?php
+
+    if(isset($_POST['sign-in'])){
+
+$user_email = $_POST['email'];
+
+$password = $_POST['password'];
+
+$select_user = "select * from user_db where email='$user_email' AND password = '$password'";
+
+$run_user = mysqli_query($con, $select_user);
+
+$p_ip = getRealIpUser();
+
+$check_user = mysqli_num_rows($run_user);
+
+$select_user_info = "select * from user_db where email='$user_email'"; 
+
+$run_info = mysqli_query($con, $select_user_info);
+
+$row = mysqli_fetch_array($run_info);
+
+    $user_id = $row['user_id'];
+
+    $first_name = $row['first_name'];
+
+    $last_name = $row['last_name'];
+
+  $get_dashboard = "select  * from dashboard_db where user_id = '$user_id'";
+
+  $run_dashboard = mysqli_query($con, $get_dashboard);
+
+  $row = mysqli_fetch_array($run_dashboard);
+
+      $dash_link = $row['dashboard'];
+      
+
+
+if($check_user==false){
+
+    echo "<script>alert('Your email or password is wrong')</script>";
+
+    exit();
+
+}
+if($check_user==true){
+
+  $_SESSION['user_id'] = $user_id;
+  
+
+  echo "<script>window.open('$dash_link?user_id=$user_id' , '_self')</script>";
+  
+
+}
+
+}
+
+?>
+
 

@@ -1,8 +1,31 @@
 <?php
 
-//include('include/dbconn.php');
-//session_start();
+include('include/dbconn.php');
 
+if(!isset($_SESSION['user_id'])){
+
+  echo "<script>window.open('https://e-acez.com/sign-in.php', '_self')</script>";
+
+}else{
+
+?>
+<?php
+
+ if(isset($_GET['user_id'])){
+
+   $user_id = $_GET['user_id'];
+
+   $get_user = "select * from user_db where user_id = '$user_id'";
+      
+   $run_user  = mysqli_query($con , $get_user);
+
+    $row = mysqli_fetch_array($run_user);
+
+    $first_name = $row['first_name'];
+
+    $last_name = $row['last_name'];
+
+ }
 ?>
 
 <!DOCTYPE html>
@@ -51,10 +74,7 @@
                     </ul>
                                       
                             <div class="button">
-
-                             <a href="sign-out.php" class="btn btn-primary btn-sm ">  Chat with Developer </a> &nbsp;
-                        &nbsp;
-                                <a href="sign-out.php" class="btn btn-danger btn-sm ">  Sign Out </a>
+                                <a href="sign-out.php" class="btn btn-danger btn-sm "> Sign Out </a>
                                </div>
                     
                     </div>
@@ -63,6 +83,8 @@
 </div>
         <!-- first row -->
         <div class="container col-one">
+         
+        <h2 class="temp-head text-center" style="color: #222;"> <?php echo $last_name . " " . $first_name; ?> </h2>
           <h3 class="text-center" style="letter-spacing: 1px;">WOAH... If you seeing this page, two things might have happened!!!</h3>
       
       <br>
@@ -134,6 +156,59 @@
           </div>
       </div>
   </div>
+  </div>
+        </div>
+  <!--Developer circle-->
+<div class="developer">
+    <div class="container-fluid">
+          <div class="text-center">
+            
+            <h1 class="four-heading">Our Web developers build the shop</h1>
+                <p class="four-sub">In-house web developers personalize the shop for you and upload it online. </p>
+                <p class="four-sub">You can communicate with our web developers through this medium to explain how personalize you want your shop to be. </p>
+               
+                  <div class="row">
+                      <div class="col-3">
+                         <a href="tel:+2347037344408">
+                          <div class="icon-social">                          
+                             <i class="fas fa-phone-alt"></i>
+                           </div>
+                           </a>
+                        <p><span class="contact">Call</span></p>
+                      </div>
+
+                      <div class="col-3">
+                        <a href="https://wa.me/2347037344408">
+                             <div class="icon-social">
+                                  <i class="fab fa-whatsapp-square"></i>                        
+                         </div>
+                        </a>
+                      <p><span class="contact">WhatsApp</span></p>
+                      </div>
+
+                      <div class="col-3">
+                            <a href="mailto:josephlagbalu@gmail.com">
+                          <div class="icon-social"> 
+                             <i class="fas fa-envelope"></i>
+                        </div>
+                            </a>
+                      <p><span class="contact">Email</span></p>
+                      </div>
+
+                      <div class="col-3">
+                        <a href="https://m.me/lagbalu.joseph">
+                         <div class="icon-social">
+                            <i class="fab fa-facebook-messenger"></i>                           
+                         </div>
+                          </a>
+                              <p><span class="contact">Messenger</span></p>
+                      </div>
+                  </div>
+               
+
+                </div>
+          </div>
+</div>
 
   <!-- Not interested column -->
   <div class="container">
@@ -174,3 +249,6 @@
 </body>
 </html>
 
+<?php
+}
+?>

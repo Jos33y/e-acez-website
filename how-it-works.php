@@ -51,7 +51,7 @@ include('header.php')
      <div class="container col-one">
         <div class="row">
           <div class="col-sm-6">
-                  <img src="images/coloshop.jpg" alt="Template Image" class="img-fluid">
+                  <img src="images/select-temp.jpg" alt="Template Image" class="img-fluid">
           </div>
           <div class="col-sm-6">
 
@@ -68,7 +68,7 @@ include('header.php')
                   </ul>
                           <br>
                   <div class="button">
-                    <a href="sign-up.php" class="btn btn-info"> Sign-up </a> </div>
+                    <a href="shops-template.php" class="btn btn-info"> Templates </a> </div>
           </div>    
       </div>
     </div>
@@ -85,7 +85,7 @@ include('header.php')
                 <p><span class="sub-info">After you've successfully selecting a template, you will be taken to the paymemt page to select a plan that fit your business.</span> </p>
                   <p> <span class="info-two">Steps to subscribe: </span> </p>
                   <ul class="sub-info">
-                    <li>Select a monthly plan of your choice</li>
+                    <li>Select a monthly plan of your choice (if you have a code, enter it and click apply)</li>
                     <li>Confirm details and pay now</li>
                     <li>Pay online using paystack</li>
                     <li>Read instruction on Thank you page...</li>
@@ -106,7 +106,7 @@ include('header.php')
 
                               <div class="carousel-item active">
 
-                                  <img src="images/payment-one.jpg" alt="Payment Image" class="img-fluid">
+                                  <img src="images/select-plan.jpg" alt="Payment Image" class="img-fluid">
 
                               </div>
 
@@ -124,7 +124,7 @@ include('header.php')
 
                                <div class="carousel-item">
 
-                                  <img src="images/payment-four.jpg" alt="Payment Image" class="img-fluid">
+                                  <img src="images/thank-you.png" alt="Payment Image" class="img-fluid">
 
                               </div>
                             
@@ -143,7 +143,7 @@ include('header.php')
     </div>
 
     <!--Developer circle-->
-<div class="col-four">
+<div class="developer">
     <div class="container">
           <div class="text-center">
             

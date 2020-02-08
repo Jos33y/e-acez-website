@@ -462,6 +462,11 @@ hr.line{
     background-attachment: fixed;
     background-size: cover;
 }
+.developer{
+    margin-top: 5%;
+    background: #FF5500;
+    color: #ffff;
+}
 .four-heading{
     color: #ffffff;
     padding-top: 50px;
@@ -505,9 +510,18 @@ hr.line{
     font-size: 80px;
     color: #ffffff;
 }
+.developer .icon-social{
+    font-size: 80px;
+    color: #ffffff;
+}
+
 @media (max-width: 992px) {
 .col-four .icon-social{
     font-size: 50px;
+    color: #ffffff;
+}
+.developer .icon-social{
+    font-size: 45px;
     color: #ffffff;
 }
 }
@@ -687,3 +701,153 @@ footer .table .fas{
 footer .table{
     color: #888;
 }
+
+/** template Styles **/
+
+.temp-head{
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Acme', sans-serif;
+    text-transform: uppercase;
+}
+/** Payment Page Styles **/
+
+.thank-you{
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+.sub-thank{
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.plan{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+
+}
+
+@media (max-width: 768px) {
+    .temp-head{
+        font-size: 25px;
+    }
+    .thank-you{
+        font-size: 18px;
+    
+    }
+    .sub-thank{
+        font-size: 15px;
+    }
+    .plan{
+        font-size: 15px;
+    
+    }
+    
+}
+
+@media (max-width: 540px) {
+    .temp-head{
+        font-size: 20px;
+    }
+    .thank-you{
+        font-size: 18px;
+    
+    }
+    .sub-thank{
+        font-size: 15px;
+    }
+    .plan{
+        font-size: 15px;
+    
+    }
+}
+
+@media (max-width: 340px) {
+    .thank-you{
+        font-size: 15px;
+    
+    }
+    .sub-thank{
+        font-size: 12px;
+    }
+    .plan{
+        font-size: 12px;
+    
+    }
+}
+
+/** Success Page Styles **/
+
+.success-head{
+    color: #5A5A5A;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.sub-success{
+    color: #5A5A5A;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.success-info{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #5A5A5A;
+}
+.btn-success{
+    font-size: 16px;
+    font-weight: 500;
+    color:#ffff;
+   background-color: #FF5500;
+   border-color: #FF5500;
+   width: 20%;
+   height: 5%;
+}
+.btn-success-two{
+    font-size: 16px;
+    font-weight: 500;
+    color:#ffff;
+   background-color:  #2A7FFF;
+   border-color:  #2A7FFF;
+   width: 20%;
+   height: 5%;
+}
+.success .icon{
+    font-size: 200px;
+    color: green;
+}
+@media (max-width: 992px) {
+    .success .icon{
+        font-size: 100px;  
+    }
+    .success-head{
+        font-size: 25px;
+    }
+    .sub-success{
+        font-size: 15px;
+    }
+    .success-info{
+        font-size: 12px;
+    }
+    .btn-success{
+        font-size: 12px;
+        width: 20%;
+        height: 5%;
+    }
+    .btn-success-two{
+        font-size: 12px;
+        width: 20%;
+        height: 5%;
+    }
+}
+
+/** end **/
