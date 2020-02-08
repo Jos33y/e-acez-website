@@ -222,7 +222,7 @@ include('header.php')
                 <p class="four-sub">Get Started today to get more sales effectively </p>
                   <br>
                 <div class="button">
-                    <a href="signin.php" class="btn btn-six">Rent Shop</a> </div>
+                    <a href="sign-in.php" class="btn btn-six">Rent Shop</a> </div>
           </div>
     </div>
   </div>
