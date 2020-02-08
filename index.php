@@ -20,7 +20,7 @@ include('header.php')
 
 </div>
 <br>
-<h5 class="text-center" style="color: red; font-size:16px;"> Beta stores are in progress, registration will be open soon... </h5>
+<h5 class="text-center" style="color: red; font-size:16px;"> Beta stores are in progress... </h5>
 
 <!-- our features -->
 <div class="container">
