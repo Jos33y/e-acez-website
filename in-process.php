@@ -94,7 +94,7 @@ if(!isset($_SESSION['user_id'])){
     <!-- NEw Column -->
       <div class="col-md-6" style="margin-top: 20px;">
           <div class="card">
-              <div class="card-header"><strong>One you've just registered on e-acez</strong></div>
+              <div class="card-header"><strong>One: You've just registered on e-acez</strong></div>
                 
                   <img class="card-img-top rounded align-content-center" src="images/in-process-1.jpg" alt="image">
                   <br>
@@ -107,59 +107,9 @@ if(!isset($_SESSION['user_id'])){
              </div>
           </div>
       </div>
-<!--- New Column -->
-      <div class="col-md-6" style="margin-top: 20px;">
-          <div class="card">
-             <div class="card-header"><strong>Two your subscription has expired</strong></div>
-               
-                <img class="card-img-top rounded" src="images/in-process-2.jpg" alt="image2">
 
-             <div class="card-body">
-                <p> Hey! Your subscription has expired and your account has been deactivated.  </p>
-                <p>We value your web presence and we will help you get back online in no time. Renew your subscription now to get 10% discount on any plan.</p>
-                <p>Select a plan below.</p>
-                        <!--- Plan Subscription-->
-                        <div class="row justify-content-center">
-                              <div class="col-sm-8">
-                                <div class="card">
-                                  <div class="card-body">
-                                    <form  method="post">,
-                                          <div class="form-group">
-
-                                      <label for="nonthly plan"  class="sr-only">Monthly Plans</i></label>
-
-                                          <select type="text" class="form-control" id="payment" name="amount">
-
-                                              <option  value="100">One Month ---- &#8358; 100</option>
-                                              <option  value="5000">One Month ---- &#8358; 5,000</option>
-                                              <option value="13500">Three Months ---- &#8358; 13,500</option>
-                                              <option value="22000">Five Months ---- &#8358; 22,000</option>
-                                              <option value="28000">Seven Months ---- &#8358; 28,000</option>
-                                              <option value="35000">Nine Months ---- &#8358; 35,000</option>
-                                              <option value="45000">One Year ---- &#8358; 45,000</option>
-                                            
-
-                                                </select>
-
-                                          </div>
-                                          <div class="form-group text-center">
-                                                          <button class="btn btn-sm btn-primary" name="next_pay" >Select Plan </button>
-                                                          <a href="index.php"> 
-                                                                  </button></a>                 
-                                          </div>
-                                    </form>
-                                  </div>
-                              </div>
-                            </div>
-                        </div>
-                          <!-- Plan Subscription End -->
-          </div>
-      </div>
-  </div>
-  </div>
-        </div>
-  <!--Developer circle-->
-<div class="developer">
+      <!-- developer circle -->
+      <div class="developer">
     <div class="container-fluid">
           <div class="text-center">
             
@@ -209,6 +159,60 @@ if(!isset($_SESSION['user_id'])){
                 </div>
           </div>
 </div>
+
+<!--- New Column -->
+      <div class="col-md-6" style="margin-top: 20px;">
+          <div class="card">
+             <div class="card-header"><strong>Two: Your subscription has expired</strong></div>
+               
+                <img class="card-img-top rounded" src="images/in-process-2.jpg" alt="image2">
+
+             <div class="card-body">
+                <p> Hey! Your subscription has expired and your account has been deactivated.  </p>
+                <p>We value your web presence and we will help you get back online in no time. Renew your subscription now to get 10% discount on any plan.</p>
+                <p>Select a plan below.</p>
+                        <!--- Plan Subscription-->
+                        <div class="row justify-content-center">
+                              <div class="col-sm-8">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <form  method="post">,
+                                          <div class="form-group">
+
+                                      <label for="nonthly plan"  class="sr-only">Monthly Plans</i></label>
+
+                                          <select type="text" class="form-control" id="payment" name="amount">
+
+                                              <option  value="100">One Month ---- &#8358; 100</option>
+                                              <option  value="5000">One Month ---- &#8358; 5,000</option>
+                                              <option value="13500">Three Months ---- &#8358; 13,500</option>
+                                              <option value="22000">Five Months ---- &#8358; 22,000</option>
+                                              <option value="28000">Seven Months ---- &#8358; 28,000</option>
+                                              <option value="35000">Nine Months ---- &#8358; 35,000</option>
+                                              <option value="45000">One Year ---- &#8358; 45,000</option>
+                                            
+
+                                                </select>
+
+                                          </div>
+                                          <div class="form-group text-center">
+                                                          <button class="btn btn-sm btn-primary" name="next_pay" >Select Plan </button>
+                                                          <a href="index.php"> 
+                                                                  </button></a>                 
+                                          </div>
+                                    </form>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                          <!-- Plan Subscription End -->
+          </div>
+      </div>
+  </div>
+  </div>
+        </div>
+  <!--Developer circle-->
+
 
   <!-- Not interested column -->
   <div class="container">
