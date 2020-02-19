@@ -91,6 +91,8 @@ $row = mysqli_fetch_array($run_info);
     $first_name = $row['first_name'];
 
     $last_name = $row['last_name'];
+	
+	$customer_email = $row['email'];
 
   $get_dashboard = "select  * from dashboard_db where user_id = '$user_id'";
 
@@ -112,6 +114,9 @@ if($check_user==false){
 if($check_user==true){
 
   $_SESSION['user_id'] = $user_id;
+  $_SESSION['email'] = $customer_email;
+  $_SESSION['firstname'] = $first_name;
+  $_SESSION['lastname'] = $last_name;
   
 
   echo "<script>window.open('$dash_link?user_id=$user_id' , '_self')</script>";
