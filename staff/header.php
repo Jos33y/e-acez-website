@@ -48,6 +48,9 @@
                               <li class="nav-item <?php if($active=='view-dash') echo'active';?>">
                                 <a class="nav-link" href="view_dash.php">Users Dashboard</a>
                               </li>
+                              <li class="nav-item <?php if($active=='view-survey') echo'active';?>">
+                                <a class="nav-link" href="view-survey.php">Survey</a>
+                              </li>
                     </ul>                                                                     
                     </div>
         </div>

@@ -11,7 +11,7 @@ include('dbconn.php');
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>s/n</th>
+                    <th>S/N</th>
                     <th>firstname</th>
                     <th>lastname</th>
                     <th>coupon</th>

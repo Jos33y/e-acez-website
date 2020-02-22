@@ -90,11 +90,25 @@ background-color: #f2f1f6;
 /** Ends **/
 
 /** Form Styles **/
-
+.survey-title{
+    line-height: normal;
+    margin-top: 30px;
+    margin-bottom: 50px;
+   
+}
 .bg{
     background-image: url('../images/back.jpg');    
     width: 100%;
     height: 100%;
+}
+
+.survey-form .info{
+    font-size: 12px;
+}
+.survey-form{
+    border: 1px solid #5A5A5A;
+    margin-top: 18vh;
+    margin-bottom: 15vh;
 }
 .form-container{
     border: 0px solid #fff;
