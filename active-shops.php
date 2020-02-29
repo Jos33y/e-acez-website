@@ -39,11 +39,11 @@ include('header.php')
         <div class="col-md-4 col-sm-4 ">
           <span class="steps">Shop Two:</span>
           <div class="card">
-            <div class="card-header"> Beta shop in progress</div>
-            <img class="card-img-top shop-img" src="images/aStar.jpg" alt="Shop Image">
+            <div class="card-header"> Madonna Sweets</div>
+            <img class="card-img-top" src="images/madonnasweets.jpg" alt="Shop Image">
             <div class="card-footer">
-              <span class="text-right">Shop category</span>
-              <button onclick="alert()" class="btn btn-sm btn-primary" style="float: right">Visit Shop</button>
+              <span class="text-right">Cakes and Snacks</span>
+              <a href="https://www.e-acez.com/madonnasweets" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
             </div>
           </div>
         </div>

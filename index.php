@@ -189,7 +189,13 @@ include('header.php')
         </div>
 
        <!-- shop 2 -->
-       <div class="col-md-3 col-sm-3"> </div>
+       <div class="col-md-3 col-sm-3"> 
+       <span class="steps">Shop Two:</span>
+          <div class="card">
+            <div class="card-header"> Madonna Sweets </div>
+            <img class="card-img-top" src="images/madonnasweets.jpg" alt="Shop Image">
+          </div>
+       </div>
 
       <!-- shop 3 -->
         <div class="col-md-3 col-sm-3"> </div>
