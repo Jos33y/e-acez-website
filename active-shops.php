@@ -26,11 +26,11 @@ include('header.php')
         <div class="col-md-4 col-sm-4">
           <span class="steps">Shop One:</span>
           <div class="card">
-            <div class="card-header"> Beta shop in progress</div>
-            <img class="card-img-top shop-img" src="images/store-img.jpg" alt="Shop Image">
+            <div class="card-header"> Zanga Wears</div>
+            <img class="card-img-top" src="images/zangawears.jpg" alt="Shop Image">
             <div class="card-footer">
-              <span class="text-right">Shop category</span>
-              <button onclick="alert()" class="btn btn-sm btn-primary" style="float: right">Visit Shop</button>
+              <span class="text-right">Fashion</span>
+              <a href="https://e-acez.com/zangawears/" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
             </div>
           </div>
         </div>

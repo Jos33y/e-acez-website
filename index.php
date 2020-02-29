@@ -183,8 +183,8 @@ include('header.php')
         <div class="col-md-3 col-sm-3">
           <span class="steps">Shop One:</span>
           <div class="card">
-            <div class="card-header"> Beta shop in progress</div>
-            <img class="card-img-top shop-img" src="images/store-img.jpg" alt="Shop Image">
+            <div class="card-header"> Zanga Wears </div>
+            <img class="card-img-top" src="images/zangawears.jpg" alt="Shop Image">
           </div>
         </div>
 
