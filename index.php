@@ -19,9 +19,32 @@ include('header.php')
             </div>
 
 </div>
-<br>
-<h5 class="text-center" style="color: red; font-size:16px;"> Beta stores are in progress... </h5>
 
+<div class="container">
+    <div class="countdownCount">
+        <table class="table">
+            <thead>
+                <tr class="count-one">
+                    <td colspan="4"> Active Store Count Down </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="count-two">
+                    <td id="day">02</td>
+                    <td id="hour">12</td>
+                    <td id="minute">23</td>
+                    <td id="second">20</td>
+                </tr>
+                <tr class="count-three">
+                    <td> Day</td>
+                    <td> Hours</td>
+                    <td> Minutes</td>
+                    <td> Seconds</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 <!-- our features -->
 <div class="container">
     <div class="title text-center">
@@ -30,7 +53,7 @@ include('header.php')
     </div>
     <!-- card deck -->
     <div class="card-deck">
-        <div class="card bg-primary zoom">
+        <div class="card bg-primary">
             <div class="card-body text-center">
             <i class="fas fa-store-alt"></i>
             <br>
@@ -81,7 +104,7 @@ include('header.php')
     </div>
 
     <div class="row services">
-        <div class="col-md">
+        <div class="col-lg">
             <i class="fas fa-headset"></i>
             <br>
             <span class="sub-title">24X7 live support</span>
@@ -92,7 +115,7 @@ include('header.php')
             </p>
         </div>
 
-        <div class="col-md">
+        <div class="col-lg">
             <i class="fas fa-tachometer-alt"></i>
             <br>
             <span class="sub-title">Easy to use Dashboard</span>
@@ -103,7 +126,7 @@ include('header.php')
 
         </div>
 
-        <div class="col-md">
+        <div class="col-lg">
             <i class="fas fa-user-edit"></i>
             <br>
             <span class="sub-title">Personalization</span>
@@ -114,7 +137,7 @@ include('header.php')
             </p>
         </div>
 
-        <div class="col">
+        <div class="col-lg">
             <i class="far fa-clock"></i>
             <br>
             <span class="sub-title">99.8% store uptime</span>
@@ -269,7 +292,9 @@ include('header.php')
 include('footer.php');
 
 ?>
+
 </div>
+<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
 

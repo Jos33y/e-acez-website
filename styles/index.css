@@ -865,3 +865,44 @@ footer .table{
 }
 
 /** end **/
+
+/** Count Down Styles **/
+
+.countdownCount{
+    
+    margin: 6%;
+    text-align: center;
+    background: #17192e;
+    border: 1px solid #FF5500;
+    padding: 10px;
+    box-shadow: 0 0 5px 3px #ccc;
+}
+.count-one{
+    font-size: 50px; 
+}
+.count-two{
+    font-size: 60px;
+}
+.countdownCount .table {
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+@media (max-width: 900px) {
+    .count-one{  font-size: 40px; }
+    .count-two{  font-size: 60px; }
+}
+@media (max-width: 720px) {
+    .count-one{  font-size: 32px; }
+    .count-two{  font-size: 60px; }
+}
+@media (max-width: 540px) {
+    .count-one{  font-size: 25px; }
+    .count-two{  font-size: 52px; }
+}
+@media (max-width: 400px) {
+    .count-one{  font-size: 18px; }
+    .count-two{  font-size: 30px; }
+    .count-three{  font-size: 12px; }
+}
+/** End **/

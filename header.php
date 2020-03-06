@@ -13,7 +13,7 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <link rel="stylesheet" href="styles/index.css">
 
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
 
         <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -37,7 +37,7 @@ s0.parentNode.insertBefore(s1,s0);
 <div id="content">
 
   <!-- Navigation bar-->
-  <nav class="navbar navbar-dark navbar-expand-md  sticky-top">
+  <nav class="navbar navbar-dark navbar-expand-lg  sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand ml-3" href="index.php">
               <img src="images/eiconweb.png" class="logo">
