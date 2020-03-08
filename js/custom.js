@@ -3,7 +3,7 @@
 // Update the count down every 1 second
 var x = setInterval(function() {
 	var today = new Date();
-	var target = new Date("March 9, 2020 06:00:00");
+	var target = new Date("March 9, 2020 08:00:00");
 	var currentTime = today.getTime();
 	var targetTime = target.getTime();
  
