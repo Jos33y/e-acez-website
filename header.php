@@ -70,6 +70,7 @@ s0.parentNode.insertBefore(s1,s0);
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                   <a class="dropdown-item" href="active-shops.php">Active Shops</a>
                                   <a class="dropdown-item" href="shops-template.php">Shops Template</a>
+                                </div>
                               </li>
                               <li class="nav-item <?php if($active=='blog') echo'active';?>">
                                 <a class="nav-link" href="https://dazzling-davinci-70e6ae.netlify.com/" target="_blank">Blog</a>
