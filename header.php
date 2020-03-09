@@ -16,7 +16,7 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script data-ad-client="ca-pub-3739740059258858" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <link rel="stylesheet" href="styles/index.css">
-
+        <script data-ad-client="ca-pub-3739740059258858" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
 
         <!--Start of Tawk.to Script-->

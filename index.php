@@ -19,32 +19,6 @@ include('header.php')
             </div>
 
 </div>
-
-<div class="container">
-    <div class="countdownCount">
-        <table class="table">
-            <thead>
-                <tr class="count-one">
-                    <td colspan="4"> Active Store Count Down </td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="count-two">
-                    <td id="day">02</td>
-                    <td id="hour">12</td>
-                    <td id="minute">23</td>
-                    <td id="second">20</td>
-                </tr>
-                <tr class="count-three">
-                    <td> Day</td>
-                    <td> Hours</td>
-                    <td> Minutes</td>
-                    <td> Seconds</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
 <!-- our features -->
 <div class="container">
     <div class="title text-center">
@@ -203,20 +177,42 @@ include('header.php')
     </div>
 
     <div class="row post-box">
+
+    <div class="col-md-3 col-sm-3"> 
+       <span class="steps">Shop One:</span>
+          <div class="card">
+            <div class="card-header"> Archive Mall </div>
+            <img class="card-img-top" src="images/archivemall.jpg" alt="Shop Image">
+          <div class="card-footer">
+              <span class="text-right">General</span>
+              <a href="https://e-acez.com/archivemall/" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+            </div>
+       </div>
+    </div>
+
+
         <div class="col-md-3 col-sm-3">
-          <span class="steps">Shop One:</span>
+          <span class="steps">Shop Two:</span>
           <div class="card">
             <div class="card-header"> Zanga Wears </div>
             <img class="card-img-top" src="images/zangawears.jpg" alt="Shop Image">
+            <div class="card-footer">
+              <span class="text-right">Fashion</span>
+              <a href="https://e-acez.com/zangawears/" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+            </div>
           </div>
         </div>
 
        <!-- shop 2 -->
        <div class="col-md-3 col-sm-3"> 
-       <span class="steps">Shop Two:</span>
+       <span class="steps">Shop Three:</span>
           <div class="card">
             <div class="card-header"> Madonna Sweets </div>
             <img class="card-img-top" src="images/madonnasweets.jpg" alt="Shop Image">
+            <div class="card-footer">
+              <span class="text-right">Cakes and Snacks</span>
+              <a href="https://www.e-acez.com/madonnasweets" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+            </div>
           </div>
        </div>
 

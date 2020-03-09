@@ -23,6 +23,20 @@ include('header.php')
       <!-- shop 1 -->
     <div class="container">
       <div class="row shop-box">
+
+      <div class="col-md-4 col-sm-4">
+          <span class="steps">Shop Two:</span>
+          <div class="card">
+            <div class="card-header"> Archive Mall</div>
+            <img class="card-img-top" src="images/archivemall.jpg" alt="Shop Image">
+            <div class="card-footer">
+              <span class="text-right">General</span>
+              <a href="https://e-acez.com/archivemall/" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
+            </div>
+          </div>
+        </div>
+
+
         <div class="col-md-4 col-sm-4">
           <span class="steps">Shop One:</span>
           <div class="card">
