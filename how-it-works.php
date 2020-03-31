@@ -7,7 +7,7 @@ include('header.php')
   <!-- how it works header-->
   <div class="container-fluid works-header">
           <div class="text-center">
-            <h1 class="heading">How to rent a Shop on E-acez?</h1>
+            <h1 class="heading">How to rent a shop on e-acez?</h1>
                 <p class="sub-heading">Renting a shop online is one of the best way to boost your business</p>
                 <div class="button">
 

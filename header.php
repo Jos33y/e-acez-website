@@ -45,7 +45,7 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="container-fluid">
             <a class="navbar-brand ml-3" href="index.php">
               <img src="images/eiconweb.png" class="logo">
-              <span class="logo-head">e-acez </span>
+              <span class="logo-head">e-acez</span>
           </a>
                     
 

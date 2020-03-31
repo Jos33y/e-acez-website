@@ -12,7 +12,7 @@ include('header.php')
               <br>
               <br>
               <span class="header-text">Get Your Business Online</span> <br>
-              <span class="sub-text">The Best Place to rent an online shop</span>               
+              <span class="sub-text">The best place to rent an online shop</span>               
                 <div class="button">
                 <a href="sign-up.php" class="btn btn-outline-light"> Get Started</a>
                 </div>
@@ -95,7 +95,7 @@ include('header.php')
             <span class="sub-title">Easy to use Dashboard</span>
             <br>
             <p class="title-text">
-            The seller’s dashboard where the store is managed, it is very easy to use and understand. No complexities at all!
+            The seller’s dashboard where the store is managed: it is very easy to use and understand. No complexities at all!
             </p>
 
         </div>
@@ -106,7 +106,7 @@ include('header.php')
             <span class="sub-title">Personalization</span>
             <br>
             <p class="title-text">
-            Each E-commerce store is built to suit the taste of the store owner(seller), 
+            Each ecommerce store is built to suit the taste of the store owner(seller), 
             the store carries the brand name, brand logo, and everything the store owner wants to integrate.
             </p>
         </div>

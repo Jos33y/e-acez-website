@@ -35,7 +35,7 @@
                         </tr>
                         <tr>
                             <th><i class="fas fa-phone-alt"></i></th>
-                            <td>08162758422 </td>
+                            <td>08110867275 </td>
                         </tr>
                         <tr>
                             <th><i class="fas fa-envelope"></i></th>

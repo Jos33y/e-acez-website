@@ -25,16 +25,16 @@ include('header.php')
         </div>
         <div class="col-md-6">
             <p class="about-para about-body">  
-            E-acez is a growing e-commerce company that started September 22,2019.
-            E-acez provides personalized E-commerce stores for sellers with unique
-            and amazing every seller needs to run his/her business coveniently.</p>
+            E-acez is a growing ecommerce company that started September 22, 2019.
+            e-acez provides personalized ecommerce stores for sellers with unique
+            and amazing features that every seller needs to run his/her business coveniently.</p>
             <p class="about-para"> 
-            We look forward to creating amazing experiences for both sellers and buyers
+            We look forward to creating an amazing experience for both sellers and buyers
               as we provide sellers a means to own a personalized e-commerce store at a 
-              very convenient price and in turn create an amazing sjopping experience for buyers</p>
-             <!-- <p class="about-para">  E-acez currently operates from  Asa dam, Ilorin Kwara State. </p> -->
+              very convenient price and in turn create an amazing shopping experience for their buyers.</p>
+             <!-- <p class="about-para">  E-acez currently operates from  Asa dam, Ilorin Kwara  State. </p> -->
         </div>
-     </div>
+     </d*iv>
 
      <div class="row">
         <div class="col-md-6">
@@ -47,27 +47,27 @@ include('header.php')
            <tbody>
              <tr>
                 <th><i class="fas fa-dot-circle"></i></th>
-                <td> Provide personalised e-commerce store with amazing and unique features</td>
+                <td>Provide personalised ecommerce store with amazing and unique features</td>
              </tr>
              <tr>
                 <th><i class="fas fa-dot-circle"></i></th>
-                <td>Close the gap between Customers and Sellers </td>
-             </tr>
+                <td>Close the gap between customers and sellers </td>
+                             </tr>
              <tr>
                 <th><i class="fas fa-dot-circle"></i></th>
                 <td>Create less competition amd more effective sales </td>
              </tr>
              <tr>
                 <th><i class="fas fa-dot-circle"></i></th>
-                <td>Create an end communicstion between Customers and Sellers</td>
+                <td>Create an end to end communication between buyers and sellers</td>
              </tr>
            </tbody>
          </table>
 
-            <p class="about-para">We look forward to acheive the best with your help, join the moving train. </p>
+            <p class="about-para">We lookng forward to acheiving the best with your help, and join the moving train. </p>
 
             <!-- <p> E-acez ...bringing you closer!!</p> -->
-        </div>     
+        </div>   
       </div>    
       <div class="row justify-content-center about-body">
         <div class="col-md-8">
@@ -80,11 +80,11 @@ include('header.php')
              </tr>
              <tr>
                 <th><i class="fas fa-phone-alt"></i></th>
-                <td>08162758422 </td>
+                <td>08110867275</td>
              </tr>
              <tr>
                 <th><i class="fas fa-envelope"></i></th>
-                <td>eacez@e-acez.com </td>
+                <td>eacez@e-acez.com</td>
              </tr>
            </tbody>
          </table>
@@ -100,4 +100,3 @@ include('footer.php');
     </div>
 </body>
 </html>
-
