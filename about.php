@@ -30,7 +30,7 @@ include('header.php')
             and amazing features that every seller needs to run his/her business coveniently.</p>
             <p class="about-para"> 
             We look forward to creating an amazing experience for both sellers and buyers
-              as we provide sellers a means to own a personalized e-commerce store at a 
+              as we provide sellers a means to own a personalized ecommerce store at a 
               very convenient price and in turn create an amazing shopping experience for their buyers.</p>
              <!-- <p class="about-para">  E-acez currently operates from  Asa dam, Ilorin Kwara  State. </p> -->
         </div>
@@ -64,11 +64,12 @@ include('header.php')
            </tbody>
          </table>
 
-            <p class="about-para">We lookng forward to acheiving the best with your help, and join the moving train. </p>
+            <p class="about-para">We looking forward to achieving the best with your help, and join the moving train. </p>
 
             <!-- <p> E-acez ...bringing you closer!!</p> -->
         </div>   
-      </div>    
+      </div>  
+    </div>  
       <div class="row justify-content-center about-body">
         <div class="col-md-8">
           <h5 class="text-center" style="font-weight: 600; text-transform:uppercase;"> Contact us </h5>
@@ -91,7 +92,7 @@ include('header.php')
         </div>     
     </div>
   </div>
-  
+  </div>
   <?php
 
 include('footer.php');
