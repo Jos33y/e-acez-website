@@ -12,32 +12,53 @@ include('dbconn.php');
             <thead>
                 <tr>
                     <th>S/N</th>
-                    <th>Business Name</th>
-                    <th>Cash On Delivery</th>
-                    <th>Direct Transfer</th>
-                    <th>Online Payment</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>State</th>
+                    <th>DOB</th>
+                    <th>Job</th>
+                    <th>Hobby</th>
+                    <th>Favourite Section</th>
+                    <th>Amount Spent</th>
+                    <th>Institution</th>
                 </tr>
             </thead>
             <tbody>
         <?php
         $i = 0;
-    $get_info = "select * from payment_survey";
+    $get_info = "select * from ecommercesurvey";
     $run_info = mysqli_query($con, $get_info);
     while ($row = mysqli_fetch_array($run_info)){
-        $b_name = $row['business_name'];
-        $cash = $row['cash_on_delivery'];
-        $transfer = $row['direct_transfer'];
-        $paystack =  $row['online_payment'];
-
+        $name = $row['fullname'];
+        $email = $row['email'];
+        $phone = $row['phoneno'];
+        $gender =  $row['gender'];
+        $state = $row['state'];
+        $dob = $row['dob'];
+        $job = $row['job'];
+        $hobby = $row['hobby'];
+        $section = $row['section'];
+        $amt = $row['amount'];
+        $uni = $row['university'];
+        
         $i++;
         ?>
         
                 <tr>
                     <td><?php echo $i;?></td>
-                    <td><?php echo $b_name;?></td>
-                    <td><?php echo $cash;?></td>
-                    <td><?php echo $transfer;?></td>
-                    <td><?php echo $paystack;?></td>
+                    <td><?php echo $name;?></td>
+                    <td><?php echo $email;?></td>
+                    <td><?php echo $phone;?></td>
+                    <td><?php echo $gender;?></td>
+                    <td><?php echo $state;?></td>
+                    <td><?php echo $dob;?></td>
+                    <td><?php echo $job;?></td>
+                    <td><?php echo $hobby;?></td>
+                    <td><?php echo $section;?></td>
+                    <td><?php echo $amt;?></td>
+                    <td><?php echo $uni;?></td>
                 </tr>
                 <?php 
 }
