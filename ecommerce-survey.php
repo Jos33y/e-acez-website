@@ -124,7 +124,17 @@ include('include/dbconn.php');
 
            <div class="form-group">
               <label for="section">Favourite Shopping Section </label>
-              <input type="text" name="section" class="form-control" placeholder="Enter Interest/Hobby" required>
+              <select class="form-control" name="section" required>
+                  <option   value="Accesories"> Accesories </option>
+                  <option   value="Computing"> Computing </option>
+                  <option   value="Electronics"> Electronics </option>
+                  <option   value="Fashion"> Fashion </option>
+                  <option   value="Footwear"> Footwear </option>
+                  <option   value="Grocery"> Grocery </option>
+                  <option   value="Health and Beauty"> Health and Beauty </option>
+                  <option   value="Medicare"> Medicare </option>
+                  <option   value="Phones and Tablets"> Phones and Tablets </option>
+              </select>
           </div>
 
           <div class="form-group">
