@@ -123,18 +123,52 @@ include('include/dbconn.php');
           </div>
 
            <div class="form-group">
-              <label for="section">Favourite Shopping Section </label>
-              <select class="form-control" name="section" required>
-                  <option   value="Accesories"> Accesories </option>
-                  <option   value="Computing"> Computing </option>
-                  <option   value="Electronics"> Electronics </option>
-                  <option   value="Fashion"> Fashion </option>
-                  <option   value="Footwear"> Footwear </option>
-                  <option   value="Grocery"> Grocery </option>
-                  <option   value="Health and Beauty"> Health and Beauty </option>
-                  <option   value="Medicare"> Medicare </option>
-                  <option   value="Phones and Tablets"> Phones and Tablets </option>
-              </select>
+              <label for="section">Favourite Shopping Section <small><strong>(you can select more than one)</strong></small></label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Accesories">Accesories
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Computing">Computing
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Electronics">Electronics
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Fashion">Fashion
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Footwear">Footwear
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Grocery">Grocery
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Health and Beauty">Health and Beauty
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Medicare">Medicare
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Phones and Tablets">Phones and Tablets
+                    </label>
+                </div>
           </div>
 
           <div class="form-group">
@@ -182,11 +216,19 @@ if(isset($_POST['submit'])){
 
     $hobby = $_POST['hobby'];
 
-    $section = $_POST['section'];
+    $chkbox = $_POST['chkbox'];
 
     $amt = $_POST['amount'];
 
     $uni = $_POST['uni'];
+
+    $section = ""; 
+
+    foreach($chkbox as $chkNew1) 
+    { 
+        $section .= $chkNew1 . ","; 
+    } 
+    
 
     $insert_survey = "insert into ecommercesurvey (fullname, email, phoneno, gender, state, dob, job, hobby, section, amount, university) 
     values ('$f_name', '$email', '$phone', '$gender', '$state', '$dob', '$job', '$hobby', '$section', '$amt', '$uni')";
