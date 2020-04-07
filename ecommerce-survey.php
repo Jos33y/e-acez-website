@@ -108,8 +108,15 @@ include('include/dbconn.php');
                 </div>
 
           <div class="form-group">
-              <label for="date">Date of Birth </label>
-              <input type="date" name="date" class="form-control" placeholder="Enter Date of Birth" required>
+              <label for="date">Age </label>
+                <select type="text" name="date" class="form-control">
+                    <option value="state" deselected> Select age range</option>
+                    <option value="18 and below">18 and below</option>
+                    <option value="19 - 29">19 - 29</option>
+                    <option value="30 - 39">30 - 39</option>
+                    <option value="40 - 49">40 - 49</option>
+                    <option value="50 and above">50 and above</option>
+                 </select>
           </div>
           
           <div class="form-group">
@@ -127,6 +134,11 @@ include('include/dbconn.php');
                 <div class="form-check">
                     <label class="form-check-label">
                         <input type="checkbox" name="chkbox[]" class="form-check-input" value="Accesories">Accesories
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Books">Books
                     </label>
                 </div>
                 <div class="form-check">
@@ -167,6 +179,11 @@ include('include/dbconn.php');
                 <div class="form-check">
                     <label class="form-check-label">
                         <input type="checkbox" name="chkbox[]" class="form-check-input" value="Phones and Tablets">Phones and Tablets
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Sport Wears">Sport Wears(Jersey)
                     </label>
                 </div>
           </div>
@@ -236,7 +253,7 @@ if(isset($_POST['submit'])){
     $run_survey = mysqli_query($con, $insert_survey) or die(mysqli_error($con));
 
     if($run_survey){
-        echo "<script> alert('Thank You.. Survey Sent')</script>";
+        echo "<script> alert('Thank You.. Survey Submitted')</script>";
         echo "<script>window.open('ecommerce-survey.php', '_self')</script>";  
     }
     else{
