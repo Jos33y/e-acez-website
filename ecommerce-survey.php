@@ -195,7 +195,7 @@ include('include/dbconn.php');
 
           <div class="form-group">
               <label for="hobby">Institution <strong>(for students)</strong> </label>
-              <input type="text" name="uni" class="form-control" placeholder="Enter Institution" required>
+              <input type="text" name="uni" class="form-control" placeholder="Enter Institution">
           </div>
 
           <div class="form-group">
