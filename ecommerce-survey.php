@@ -62,11 +62,15 @@ include('include/dbconn.php');
                   <option value="Not Say">Rather not say </option>
               </select>
           </div>
+          <div class="form-group">
+              <label for="phone">City of Residence </label>
+              <input type="text" name="city" class="form-control" placeholder="Enter City of Residence" required>
+          </div>
 
           <div class="form-group">
-              <label for="state"> State </label>
+              <label for="state"> State of Residence </label>
                 <select type="text" name="state" class="form-control">
-                    <option value="state" deselected> Select State</option>
+                    <option value="state" deselected> Select State of Residence</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
                     <option value="Akwa Ibom">Akwa Ibom</option>
@@ -110,7 +114,7 @@ include('include/dbconn.php');
           <div class="form-group">
               <label for="date">Age </label>
                 <select type="text" name="date" class="form-control">
-                    <option value="state" deselected> Select age range</option>
+                    <option value="no selection made" deselected> Select age range</option>
                     <option value="18 and below">18 and below</option>
                     <option value="19 - 29">19 - 29</option>
                     <option value="30 - 39">30 - 39</option>
@@ -118,15 +122,36 @@ include('include/dbconn.php');
                     <option value="50 and above">50 and above</option>
                  </select>
           </div>
-          
+    
           <div class="form-group">
               <label for="occupation">Occupation </label>
-              <input type="text" name="occupation" class="form-control" placeholder="Enter Occupation" required>
+              <select type="text" name="occupation" class="form-control">
+                    <option value="no selection made" deselected> Select occupation</option>
+                    <option value="Clerical/ Secretary Support">Clerical/ Secretary Support</option>
+                    <option value="Craft/Trade">Craft/Trade</option>
+                    <option value="Customer Service">Customer Service</option>
+                    <option value="Government/Civil Services">Government/Civil Services</option>
+                    <option value="Journalism/Broadcast">Journalism/Broadcast</option>
+                    <option value="Laborer">Laborer</option>
+                    <option value="Manager/Supervisor">Manager/Supervisor</option>
+                    <option value="Medical/Health-care Professional">Medical/Health-care Professional</option>
+                    <option value="Retired">Retired</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Self Employed/Business Owner">Self Employed/Business Owner</option>
+                    <option value="Student">Student</option>
+                    <option value="Teacher/Educator">Teacher/Educator</option>
+                    <option value="Technology/Engineering">Technology/Engineering</option>
+                    <option value="Transportation">Transportation</option>                   
+                    <option value="Others">Others(if selected fill occupation below)</option>
+              </select>
+              <br>
+              <input type="text" name="others" class="form-control" placeholder="If others enter occupation here">
           </div>
 
           <div class="form-group">
               <label for="hobby">Interest / Hobby </label>
               <input type="text" name="hobby" class="form-control" placeholder="Enter Interest/Hobby" required>
+              
           </div>
 
            <div class="form-group">
@@ -134,6 +159,11 @@ include('include/dbconn.php');
                 <div class="form-check">
                     <label class="form-check-label">
                         <input type="checkbox" name="chkbox[]" class="form-check-input" value="Accesories">Accesories
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Baked Products">Baked products (cake, pasteries, e.t.c.)
                     </label>
                 </div>
                 <div class="form-check">
@@ -173,7 +203,17 @@ include('include/dbconn.php');
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Home and Office">Home and Office
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
                         <input type="checkbox" name="chkbox[]" class="form-check-input" value="Medicare">Medicare
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="chkbox[]" class="form-check-input" value="Pets">Pets
                     </label>
                 </div>
                 <div class="form-check">
@@ -190,14 +230,21 @@ include('include/dbconn.php');
 
           <div class="form-group">
               <label for="amount-spent">Amount Spent on Shopping(Ranging from lowest-highest)</label>
-              <input type="text" name="amount" class="form-control" placeholder="Enter Amount Spent on Shopping" required>
+                <select type="text" name="amount" class="form-control">
+                    <option value="no selection made" deselected> Select amount spent</option>
+                    <option value="Below 5,000">Below 5,000</option>
+                    <option value="5,000 - 9,999">5,000 - 9,999</option>
+                    <option value="10,000 - 14,999">10,000 - 14,999</option>
+                    <option value="15,000 - 19,999">15,000 - 19,999</option>
+                    <option value="20,000 Above">20,000 Above</option>
+                </select>
           </div>
 
           <div class="form-group">
               <label for="hobby">Institution <strong>(for students)</strong> </label>
               <input type="text" name="uni" class="form-control" placeholder="Enter Institution">
           </div>
-
+ 
           <div class="form-group">
               <div class="text-center">
                 <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
@@ -225,11 +272,15 @@ if(isset($_POST['submit'])){
 
     $gender = $_POST['gender'];
 
+    $city = $_POST['city'];
+
     $state = $_POST['state'];
 
     $dob = $_POST['date'];
 
     $job = $_POST['occupation'];
+
+    $others = $_POST['others'];
 
     $hobby = $_POST['hobby'];
 
@@ -247,14 +298,14 @@ if(isset($_POST['submit'])){
     } 
     
 
-    $insert_survey = "insert into ecommercesurvey (fullname, email, phoneno, gender, state, dob, job, hobby, section, amount, university) 
-    values ('$f_name', '$email', '$phone', '$gender', '$state', '$dob', '$job', '$hobby', '$section', '$amt', '$uni')";
+    $insert_survey = "insert into ecommercesurvey (fullname, email, phoneno, gender, city, state, dob, job, hobby, section, amount, university, others) 
+    values ('$f_name', '$email', '$phone', '$gender', '$city', '$state', '$dob', '$job', '$hobby', '$section', '$amt', '$uni', '$others')";
 
     $run_survey = mysqli_query($con, $insert_survey) or die(mysqli_error($con));
 
     if($run_survey){
-        echo "<script> alert('Thank You.. Survey Submitted')</script>";
-        echo "<script>window.open('ecommerce-survey.php', '_self')</script>";  
+        echo "<script> alert('Thank You.. Survey Submitted.. check out e-acez site')</script>";
+        echo "<script>window.open('index.php', '_self')</script>";  
     }
     else{
         echo "<script> alert('Error.. Retry the survey')</script>";

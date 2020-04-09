@@ -35,6 +35,7 @@ include('include/dbconn.php');
       <!-- Form Start -->
       <form method="POST" class="form-container">
         <div class="text-center">
+        <h5 style="color:red"> Registration is closed </h4>
           <a href="index.php"><img class="form-logo"  src="images/eiconweb.png" alt=""></a>      
           </div>
         <div class="form-group">

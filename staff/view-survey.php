@@ -16,6 +16,7 @@ include('dbconn.php');
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Gender</th>
+                    <th>City</th>
                     <th>State</th>
                     <th>DOB</th>
                     <th>Job</th>
@@ -23,6 +24,7 @@ include('dbconn.php');
                     <th>Favourite Section</th>
                     <th>Amount Spent</th>
                     <th>Institution</th>
+                    <th>other occupation</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +37,7 @@ include('dbconn.php');
         $email = $row['email'];
         $phone = $row['phoneno'];
         $gender =  $row['gender'];
+        $city = $row['city'];
         $state = $row['state'];
         $dob = $row['dob'];
         $job = $row['job'];
@@ -42,7 +45,7 @@ include('dbconn.php');
         $section = $row['section'];
         $amt = $row['amount'];
         $uni = $row['university'];
-        
+        $other = $row['others'];
         $i++;
         ?>
         
@@ -52,6 +55,7 @@ include('dbconn.php');
                     <td><?php echo $email;?></td>
                     <td><?php echo $phone;?></td>
                     <td><?php echo $gender;?></td>
+                    <td><?php echo $city;?></td>
                     <td><?php echo $state;?></td>
                     <td><?php echo $dob;?></td>
                     <td><?php echo $job;?></td>
@@ -59,6 +63,7 @@ include('dbconn.php');
                     <td><?php echo $section;?></td>
                     <td><?php echo $amt;?></td>
                     <td><?php echo $uni;?></td>
+                    <td><?php echo $other;?></td>
                 </tr>
                 <?php 
 }
