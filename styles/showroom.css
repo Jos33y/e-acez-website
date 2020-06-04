@@ -1,0 +1,90 @@
+/* =======================================================
+* Website Name: Showroom 1.0 (e-acez 4.0)
+* Website URL: www.e-acez.com/
+* Author: Lagbalu Joseph (Jos33y)
+======================================================== */
+
+/** Nav Styles **/
+nav {
+    background-image: linear-gradient(to right, #292C4A, #17192E);
+}
+
+.navbar {
+    margin-left: 3%;
+    margin-right: 2%;
+}
+
+nav .shop-name {
+    color: #F5EDE9;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+nav .call {
+    color: #F5EDE9;
+    font-size: 15px;
+    font-weight: 550;
+    text-transform: capitalize;
+}
+
+.call a {
+    color: #F5EDE9;
+    text-decoration: none;
+
+}
+
+/** responsive design **/
+@media (max-width:760px) {
+
+    nav .shop-name {
+        font-size: 27px;
+    }
+
+    nav .call {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:540px) {
+
+    nav .shop-name {
+        font-size: 25px;
+    }
+
+    nav .call {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:320px) {
+
+    nav .shop-name {
+        font-size: 22px;
+    }
+
+    nav .call {
+        font-size: 10px;
+    }
+}
+
+/** Product Styles **/
+
+.product{
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.product .outer-box{
+    width: 400px;
+    height: 450px;
+    border: 2px solid #707070;
+    border-radius: 27px;
+}
+
+.inner-box{
+    width: 400px;
+    height: 240px;
+    border-radius: 27px;
+}
