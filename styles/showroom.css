@@ -4,6 +4,13 @@
 * Author: Lagbalu Joseph (Jos33y)
 ======================================================== */
 
+html,
+body {
+    height: 100%;
+    background: rgb(248, 248, 253);
+}
+
+
 /** Nav Styles **/
 nav {
     background-image: linear-gradient(to right, #292C4A, #17192E);
@@ -20,6 +27,7 @@ nav .shop-name {
     font-weight: 700;
     font-style: italic;
     text-transform: lowercase;
+    letter-spacing: 1px;
 }
 
 nav .call {
@@ -71,20 +79,69 @@ nav .call {
 
 /** Product Styles **/
 
-.product{
+.product {
     margin-top: 8%;
     margin-bottom: 8%;
 }
 
-.product .outer-box{
-    width: 400px;
-    height: 450px;
-    border: 2px solid #707070;
+.product .card {
+    margin-bottom: 10%;
+    min-height: 310px;
+    background-color: #FCF9F9;
+    border: 0px solid #707070;
     border-radius: 27px;
+    /**shadow box style **/
+    -webkit-box-shadow: inset 0px 0px 3px 0.2px rgba(23, 25, 46, 1);
+    -moz-box-shadow: inset 0px 0px 3px 0.2px rgba(23, 25, 46, 1);
+    box-shadow: inset 0px 0px 3px 0.2px rgba(23, 25, 46, 1);
 }
 
-.inner-box{
-    width: 400px;
-    height: 240px;
+.card-img-top {
     border-radius: 27px;
+    min-height: 160px;
+}
+
+.product .name {
+    font-size: 17px;
+    font-weight: 550;
+    text-transform: lowercase;
+}
+
+.product .price {
+    color: #FF5500;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.product .btn {
+    color: #F5EDE9;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #075e54;
+    border: #075e54;
+    border-radius: 20px;
+    text-transform: lowercase;
+}
+
+.product .btn {
+    -webkit-box-shadow: 0px 0px 3px 0.5px rgba(23, 25, 46, 1);
+    -moz-box-shadow: 0px 0px 3px 0.5px rgba(23, 25, 46, 1);
+    box-shadow: 0px 0px 3px 0.5px rgba(23, 25, 46, 1);
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    ...
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    ...
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    ...
 }
