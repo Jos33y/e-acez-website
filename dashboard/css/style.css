@@ -1,0 +1,126 @@
+/* =======================================================
+* Website Name:Dashboard Showroom 1.0 (e-acez 4.0)
+* Website URL: www.e-acez.com/
+* Author: Lagbalu Joseph (Jos33y)
+======================================================== */
+
+html,
+body {
+    height: 100%;
+    background: rgb(248, 248, 253);
+    overflow-x: hidden;
+}
+
+/** Nav Styles **/
+nav {
+    padding-top: 5px;
+    background-color: #000000d3;
+    color: #f5ede9;
+}
+
+.img-fluid {
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+.nav-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 5%;
+
+}
+
+.nav-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 5%;
+    text-transform: capitalize;
+}
+
+/** Styles for Dashboard **/
+
+.dash-title{
+    text-align: center;
+    margin-top: 3%;
+    color: #000000d3;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.boards .col-sm-4{
+    margin-bottom: 10%;
+}
+.boards .fas{
+color: #fff;
+        font-size: 80px;
+}
+.boards .card-title{
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.boards .card-footer{
+    border-top: 2px solid #fff;
+}
+/** Responsive styling **/
+
+/* Extra small devices (portrait phones, less than 345px) */
+@media (max-width: 381px) {
+    .nav-title {
+        font-size: 15px;
+        
+    }
+    
+    .nav-name {
+        font-size: 15px;
+    }
+}
+   
+
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    .nav-title {
+        font-size: 10px;
+    }
+
+    .nav-name {
+        font-size: 18px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {
+
+    .nav-title {
+        font-size: 19px;
+    }
+
+    .nav-name {
+        font-size: 19px;
+    }
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+    .product .name {
+        font-size: 16px;
+    }
+
+    .product .price {
+        font-size: 18px;
+    }
+
+    .product .btn {
+        font-size: 14px;
+    }
+}
