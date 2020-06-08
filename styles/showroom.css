@@ -8,6 +8,7 @@ html,
 body {
   height: 100%;
   background: rgb(248, 248, 253);
+  overflow-x: hidden;
 }
 
 /** Nav Styles **/
@@ -89,6 +90,7 @@ nav .call {
 .product {
   margin-top: 8%;
   margin-bottom: 8%;
+ 
 }
 
 .product .card {
@@ -106,7 +108,6 @@ nav .call {
 .card-img-top {
   border-radius: 27px;
   min-height: 160px;
- 
 }
 
 .product .name {
@@ -172,31 +173,28 @@ footer .orange {
   color: #ff5500;
 }
 
-  
 /* Extra small devices (portrait phones, less than 345px) */
 
-
 @media (max-width: 345.98px) {
-    .product {
-      margin: 5%;
-    }
-    .product .card {
-      width: 90%;
-    }
-  
-    .product .name {
-      font-size: 12px;
-    }
-    .product .price {
-      font-size: 14px;
-    }
-  
-    .product .btn {
-      font-size: 11px;
-    }
+  .product {
+    margin: 5%;
+  }
+  .product .card {
+    width: 90%;
   }
 
-  
+  .product .name {
+    font-size: 12px;
+  }
+  .product .price {
+    font-size: 14px;
+  }
+
+  .product .btn {
+    font-size: 11px;
+  }
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575.98px) {
@@ -222,8 +220,6 @@ footer .orange {
 /* Small devices (landscape phones, less than 768px) */
 
 @media (max-width: 767.98px) {
-
-    
   .product .name {
     font-size: 15px;
   }
