@@ -15,7 +15,7 @@ body {
 nav {
     padding-top: 5px;
     background-color: #000000d3;
-    color: #f5ede9;
+    color: #fff;
 }
 
 .img-fluid {
@@ -41,7 +41,7 @@ nav {
 
 /** Styles for Dashboard **/
 
-.dash-title{
+.dash-title {
     text-align: center;
     margin-top: 3%;
     color: #000000d3;
@@ -49,49 +49,87 @@ nav {
     font-weight: 700;
     letter-spacing: 1px;
 }
-.boards .col-sm-4{
-    margin-bottom: 10%;
+
+.boards {
+    margin: 5%;
 }
-.boards .fas{
-color: #fff;
-        font-size: 80px;
+
+.boards #col {
+    margin-bottom: 5%;
 }
-.boards .card-title{
+
+.boards .fas,
+.far {
+    color: #fff;
+    font-size: 80px;
+}
+
+
+.boards .card-title {
 
     color: #fff;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
 }
-.boards .card-footer{
+
+.boards .card-footer {
     border-top: 2px solid #fff;
 }
+
 /** Responsive styling **/
 
-/* Extra small devices (portrait phones, less than 345px) */
-@media (max-width: 381px) {
-    .nav-title {
-        font-size: 15px;
-        
-    }
-    
-    .nav-name {
-        font-size: 15px;
-    }
+
+
+
+/** footer styles */
+
+footer {
+    background-color: #000000d3;
+    color: #fff;
 }
-   
+
+.copyright {
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 550px;
+}
+
+footer .orange {
+    color: #ff5500;
+}
+
+
+/* Change Password Styles */
 
 
 
 /* Extra small devices (portrait phones, less than 576px) */
 
-@media (max-width: 575.98px) {
+@media (max-width: 575.95px) {
     .nav-title {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .nav-name {
-        font-size: 18px;
+        font-size: 15px;
+        
+    }
+
+    .boards .fas,
+    .far {
+        font-size: 60px;
+    }
+
+
+    .boards .card-title {
+
+        font-size: 16px;
+    }
+
+    .copyright {
+
+        font-size: 9px;
     }
 }
 
@@ -99,12 +137,20 @@ color: #fff;
 
 @media (max-width: 767.98px) {
 
-    .nav-title {
-        font-size: 19px;
+    .boards .fas,
+    .far {
+        font-size: 70px;
     }
 
-    .nav-name {
-        font-size: 19px;
+
+    .boards .card-title {
+
+        font-size: 18px;
+    }
+
+    .copyright {
+
+        font-size: 11px;
     }
 
 }
@@ -122,5 +168,18 @@ color: #fff;
 
     .product .btn {
         font-size: 14px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 345px) */
+@media (max-width: 340px) {
+    .nav-title {
+        font-size: 13px;
+    }
+
+    .nav-name {
+        font-size: 13px;
+        text-align: right;
+       
     }
 }
