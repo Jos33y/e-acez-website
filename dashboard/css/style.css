@@ -48,7 +48,7 @@ nav {
 
 .dash-title {
     text-align: center;
-    margin-top: 3%;
+    margin-top: 6%;
     color: #000000d3;
     font-size: 22px;
     font-weight: 700;
@@ -123,7 +123,15 @@ footer .orange {
     font-weight: 550;
 }
 
-.change-password .btn {
+.insert.back{
+    margin-left: 15%;
+    margin-top: 25%;
+    color: gray;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.form .btn {
     margin-top: 30%;
     font-size: 14px;
     color: #fff;
@@ -134,7 +142,7 @@ footer .orange {
 }
 
 /** change password input styles **/
-.change-password input {
+.form input {
     border: solid #000000d3;
     border-top: 0;
     border-left: 0;
@@ -145,7 +153,7 @@ footer .orange {
     font-size: 20px;
 }
 
-.change-password input::placeholder {
+.form input::placeholder {
     color: gray;
 }
 
@@ -197,7 +205,7 @@ footer .orange {
     }
 
     /* change password style */
-    .change-password input {
+    .form input {
 
         margin-top: 25%;
         font-size: 18px;
@@ -235,17 +243,21 @@ footer .orange {
 
     /** change password style **/
     .back {
-
+        
         font-size: 14px;
 
     }
+    .insert.back{
+        font-size: 14px;
+     
+    }
 
-    .change-password .btn {
+    .form .btn {
 
         font-size: 12px;
     }
 
-    .change-password input {
+    .form input {
 
         margin-top: 25%;
         font-size: 16px;
@@ -278,8 +290,13 @@ footer .orange {
         font-size: 12px;
 
     }
+    .insert.back{
+        font-size: 12px;
+     
+    }
 
-    .change-password input {
+
+    .form input {
 
         margin-top: 25%;
         font-size: 14px;
