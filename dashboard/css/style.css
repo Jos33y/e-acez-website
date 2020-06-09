@@ -29,7 +29,12 @@ nav {
     font-size: 18px;
     font-weight: 600;
     margin-left: 5%;
+    color: #fff;
 
+}
+
+.navbar a{
+    text-decoration: none;
 }
 
 .nav-name {
@@ -77,9 +82,10 @@ nav {
     border-top: 2px solid #fff;
 }
 
-/** Responsive styling **/
 
-
+.boards a {
+    text-decoration: none;
+}
 
 
 /** footer styles */
@@ -102,34 +108,55 @@ footer .orange {
 
 /* Change Password Styles */
 
+.back {
+   margin-left: 20%;
+    margin-top: 25%;
+    color: gray;
+    font-size: 16px;
+    font-weight: 550;
+}
+.change-password .btn{
+    margin-top: 30%;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 550;
+    border-radius: 20px;
+    text-transform: uppercase;
+
+}
+/** change password input styles **/
+.change-password input{
+    border:  solid #000000d3;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    background-color: rgb(248, 248, 253);
+    margin-top: 25%;
+    font-size: 20px;
+}
+.change-password input::placeholder{
+    color: gray;
+}
 
 
-/* Extra small devices (portrait phones, less than 576px) */
-
-@media (max-width: 575.95px) {
-    .nav-title {
-        font-size: 15px;
-    }
-
-    .nav-name {
-        font-size: 15px;
-        
-    }
-
-    .boards .fas,
-    .far {
-        font-size: 60px;
-    }
 
 
-    .boards .card-title {
+/** Responsive styling **/
 
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+    .product .name {
         font-size: 16px;
     }
 
-    .copyright {
+    .product .price {
+        font-size: 18px;
+    }
 
-        font-size: 9px;
+    .product .btn {
+        font-size: 14px;
     }
 }
 
@@ -152,24 +179,61 @@ footer .orange {
 
         font-size: 11px;
     }
-
-}
-
-/* Medium devices (tablets, less than 992px) */
-
-@media (max-width: 991.98px) {
-    .product .name {
-        font-size: 16px;
-    }
-
-    .product .price {
+    /* change password style */
+    .change-password input{
+     
+        margin-top: 25%;
         font-size: 18px;
     }
 
-    .product .btn {
-        font-size: 14px;
-    }
 }
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.95px) {
+    .nav-title {
+        font-size: 15px;
+    }
+
+    .nav-name {
+        font-size: 15px;
+
+    }
+
+    .boards .fas,
+    .far {
+        font-size: 60px;
+    }
+
+
+    .boards .card-title {
+
+        font-size: 16px;
+    }
+
+    .copyright {
+
+        font-size: 9px;
+    }
+
+    /** change password style **/
+    .back {
+
+        font-size: 14px;
+
+    }
+    .change-password .btn{
+       
+        font-size: 12px;
+    }
+    .change-password input{
+     
+        margin-top: 25%;
+        font-size: 16px;
+    }
+
+}
+
 
 /* Extra small devices (portrait phones, less than 345px) */
 @media (max-width: 340px) {
@@ -180,6 +244,23 @@ footer .orange {
     .nav-name {
         font-size: 13px;
         text-align: right;
-       
+
+    }
+
+    .dash-title {
+
+        font-size: 16px;
+
+    }
+     /** change password style **/
+     .back {
+
+        font-size: 12px;
+
+    }
+    .change-password input{
+     
+        margin-top: 25%;
+        font-size: 14px;
     }
 }
