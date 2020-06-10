@@ -71,12 +71,14 @@ nav {
     margin-bottom: 5%;
 }
 
-.boards .fas,
-.far {
+.boards .fas {
     color: #fff;
     font-size: 80px;
 }
-
+.boards .far{
+    color: #fff;
+    font-size: 80px;
+}
 
 .boards .card-title {
 
@@ -292,7 +294,7 @@ footer .orange {
 
     .form input {
 
-        margin-top: 25%;
+        margin-top: 15%;
         font-size: 16px;
     }
 
