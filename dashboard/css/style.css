@@ -59,6 +59,14 @@ nav {
     margin: 5%;
 }
 
+.developer {
+    margin: 5%;
+}
+
+.margin {
+    margin-top: 20%;
+}
+
 .boards #col {
     margin-bottom: 5%;
 }
@@ -96,9 +104,9 @@ footer {
 }
 
 .footer {
-  
+
     bottom: 0;
-  
+
 }
 
 .copyright {
@@ -123,13 +131,14 @@ footer .orange {
     font-weight: 550;
 }
 
-.insert.back{
+.insert.back {
     margin-left: 15%;
     margin-top: 25%;
     color: gray;
     font-size: 16px;
     font-weight: 550;
 }
+
 
 .form .btn {
     margin-top: 30%;
@@ -138,6 +147,12 @@ footer .orange {
     font-weight: 550;
     border-radius: 20px;
     text-transform: uppercase;
+
+    /** box shadow styles **/
+
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 
 }
 
@@ -157,8 +172,24 @@ footer .orange {
     color: gray;
 }
 
+/** Developer Style **/
+.contact .btn {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 550;
+    border-radius: 20px;
+    padding: 10px;
+    text-transform: uppercase;
 
+    /** box shadow styles **/
 
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+
+}
 
 /** Responsive styling **/
 
@@ -183,6 +214,7 @@ footer .orange {
         width: 100%;
     }
 }
+
 
 /* Small devices (landscape phones, less than 768px) */
 
@@ -243,13 +275,14 @@ footer .orange {
 
     /** change password style **/
     .back {
-        
+
         font-size: 14px;
 
     }
-    .insert.back{
+
+    .insert.back {
         font-size: 14px;
-     
+
     }
 
     .form .btn {
@@ -261,6 +294,15 @@ footer .orange {
 
         margin-top: 25%;
         font-size: 16px;
+    }
+
+    /** Developer Style **/
+    .contact .btn {
+        
+        margin-top: 20%;
+        font-size: 16px;
+    
+
     }
 
 }
@@ -290,9 +332,10 @@ footer .orange {
         font-size: 12px;
 
     }
-    .insert.back{
+
+    .insert.back {
         font-size: 12px;
-     
+
     }
 
 
@@ -300,5 +343,16 @@ footer .orange {
 
         margin-top: 25%;
         font-size: 14px;
+    }
+
+    /** Developer Style **/
+    .contact .btn {
+
+        text-align: center;
+        margin-top: 30%;
+        font-size: 15px;
+        color: #fff;
+        padding: 10px;
+
     }
 }
