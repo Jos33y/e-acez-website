@@ -23,60 +23,52 @@
             <a href="index.html" class="nav-title"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
 
             <span class="nav-name">Lagbalu Joseph
-                <img src="img/profile/profile-img.jpg" alt="profile image" class="img-fluid">
+                <img src="img/profile/default.png" alt="profile image" class="img-fluid">
             </span>
 
         </div>
     </nav>
     <!--TODO:  Translate the code to PHP Codes-->
 
-    <div class="container-md">
-       <h3 class="dash-title"> <i class="fas fa-file-upload"></i> Insert Product</h3>
+    <div class="container">
 
-
-
-        <div class="boards row justify-content-center">
+        <div class="row justify-content-center pages">
             <!--row one-->
-            <form method="post" class="form">
-                <div class="col-6">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h3 class="dash-title text-center"> <i class="fas fa-file-upload"></i> Insert Product</h3>
+                <form method="post" class="form">
                     <div class="form-group">
                         <label for="Product Name" class="sr-only">Product Name</label>
                         <input type="text" name="prod-name" class="form-control-md form-control-lg" id=""
                             placeholder="Product Name">
                     </div>
-                </div>
 
-                <div class="col-6">
                     <div class="form-group">
                         <label for="Product Price" class="sr-only">Product Price</label>
                         <input type="text" name="prod-price" class="form-control-md form-control-lg" id=""
                             placeholder="Product Price">
                     </div>
-                </div>
 
-                <div class="col-6">
                     <div class="form-group">
                         <label for="new-password-2" class="sr-only">Product Image</label>
                         <input type="file" name="prod-img" class="form-control-md form-control-lg" id=""
                             placeholder="Product Image">
                     </div>
-                </div>
 
-                <div class="col-6 mx-auto">
-                    <div class="form-group">
+                    <div class="form-group text-center">
                         <button type="submit" class="btn btn-md btn-primary">insert</button>
                     </div>
-                </div>
 
-                <div class="col-6 mx-auto">
-                    <div class="form-group">
-                       <a href="index.html"> <p class="insert back">Back</p></a>
+                    <div class="form-group text-center">
+                        <a href="index.html">
+                            <p class="back">Back</p>
+                        </a>
                     </div>
-                </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
 
-
-            </form>
-        
 
         </div>
     </div>
