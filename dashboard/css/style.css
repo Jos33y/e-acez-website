@@ -108,7 +108,33 @@ nav {
     text-decoration: none;
 }
 
+/** View Products **/
+.card.box{
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 
+}
+.prod-image{
+    border-radius: 15px;
+}
+.edit{
+    color: blue;
+}
+.delete{
+    color: red;
+    float: right;
+}
+.prod-name{
+    font-size: 13px;
+    color: #242323d3;
+    font-weight: 600;
+}
+.prod-price{
+    font-size: 15px;
+    color: #242323d3;
+    font-weight: 700;
+}
 /** footer styles */
 
 footer {
