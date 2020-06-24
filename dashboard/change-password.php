@@ -1,84 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Dashboard</title>
+$pageTitle =  "change password";
+include('header.php');
 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <!--navbar-->
-    <nav>
-        <div class="navbar text-white">
-            <a href="index.html" class="nav-title"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
-
-            <span class="nav-name">Lagbalu Joseph
-                 <img src="img/profile/default.png" alt="profile image" class="img-fluid">
-            </span>
-
-        </div>
-    </nav>
+ ?>
     <!--TODO:  Translate the code to PHP Codes-->
 
     <div class="container">
-    
+
 
         <div class="pages row justify-content-center">
             <div class="col-md-4"></div>
             <!--row one-->
             <div class="col-md-4">
-            <h3 class="dash-title"> <i class="fas fa-user-lock"></i> Change Password</h3>
-            <form method="post" class="form">
-              
+                <h3 class="dash-title"> <i class="fas fa-user-lock"></i> Change Password</h3>
+                <form method="post" class="form">
+
                     <div class="form-group">
                         <label for="old-password" class="sr-only">Old Password</label>
                         <input type="password" name="oldpass" class="form-control-md form-control-lg" id=""
                             placeholder="Old Password">
                     </div>
-          
+
                     <div class="form-group">
                         <label for="new-password" class="sr-only">New Password</label>
                         <input type="password" name="newpass" class="form-control-md form-control-lg" id=""
                             placeholder="New Password">
                     </div>
-             
+
                     <div class="form-group">
                         <label for="new-password-2" class="sr-only">Retype New Password</label>
                         <input type="password" name="newpasstwo" class="form-control-md form-control-lg" id=""
                             placeholder="Retype New Password">
                     </div>
-            
+
                     <div class="form-group text-center">
                         <button type="submit" class="btn btn-md btn-warning">change</button>
                     </div>
-              
+
                     <div class="form-group text-center">
-                        <a href="index.html">
+                        <a href="index.php">
                             <p class="back">Back</p>
                         </a>
                     </div>
 
-            </form>
+                </form>
             </div>
             <div class="col-md-4"></div>
 
         </div>
     </div>
-
-    <footer class="footer text-center">
-        <!--just date-->
-        <p class="copyright"> copyright 2020 <span class="orange"> e-acez.com,</span> All rights reserved.</p>
-    </footer>
 
 </body>
 

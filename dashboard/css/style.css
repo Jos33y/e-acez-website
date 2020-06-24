@@ -47,6 +47,7 @@ nav {
 /** Styles for Dashboard **/
 
 .dash-title {
+    margin-top: 20px;
     text-align: center;
     color: #000000d3;
     font-size: 22px;
@@ -114,6 +115,12 @@ nav {
     -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 
+}
+.products{
+    margin-top: 50px;
+}
+.products .col-6{
+    margin-bottom: 50px;
 }
 .prod-image{
     border-radius: 15px;
@@ -274,5 +281,28 @@ footer .orange {
 
 /* Extra small devices (portrait phones, less than 345px) */
 @media (max-width: 340px) {
+    .nav-title{
+        font-size: 14px;
+        margin-left: 2%;
+    }
+    .nav-name{
+        font-size: 14px;
+    }
+   .dash-title{
+       font-size: 16px;
+   }
    
+
+   .edit{
+       font-size: 11px;
+   }
+   .delete{
+       font-size: 11px;
+   }
+   .prod-name{
+       font-size: 12px;
+   }
+   .prod-price{
+       font-size: 13px;
+   }
 }

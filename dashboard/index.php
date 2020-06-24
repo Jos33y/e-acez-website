@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Dashboard</title>
+$pageTitle =  "dashboard";
+include('header.php');
 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <!--navbar-->
-    <nav>
-        <div class="navbar text-white">
-
-            <a href="index.html" class="nav-title"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
-
-            <span class="nav-name">Lagbalu Joseph
-                <img src="img/profile/default.png" alt="profile image" class="img-fluid">
-            </span>
-
-        </div>
-    </nav>
+ ?>
     <!--TODO:  Translate the code to PHP Codes-->
 
     <div class="container">
@@ -43,7 +18,7 @@
                         <i class="fas fa-file-upload"></i>
                     </div>
                     <div class="card-footer">
-                        <a href="insert-product.html" class="stretched-link">
+                        <a href="insert-product.php" class="stretched-link">
                             <h3 class="card-title"> Insert Product</h3>
                         </a>
                     </div>
@@ -57,7 +32,7 @@
                         <i class="far fa-list-alt"></i>
                     </div>
                     <div class="card-footer">
-                        <a href="view.html" class="stretched-link">
+                        <a href="view.php" class="stretched-link">
                             <h3 class="card-title"><span class="prod-no">100</span> View Products</h3>
                         </a>
                     </div>
@@ -71,7 +46,7 @@
                         <i class="far fa-user-circle"></i>
                     </div>
                     <div class="card-footer">
-                        <a href="profile.html" class="stretched-link">
+                        <a href="profile.php" class="stretched-link">
                             <h3 class="card-title"> View Profile</h3>
                         </a>
                     </div>
@@ -85,7 +60,7 @@
                         <i class="fas fa-user-lock"></i>
                     </div>
                     <div class="card-footer">
-                        <a href="change-password.html" class="stretched-link">
+                        <a href="change-password.php" class="stretched-link">
                             <h3 class="card-title"> Change Password</h3>
                         </a>
                     </div>
@@ -111,7 +86,7 @@
                         <i class="fas fa-headset"></i>
                     </div>
                     <div class="card-footer">
-                        <a href="contact-developer.html" class="stretched-link">
+                        <a href="contact-developer.php" class="stretched-link">
                             <h3 class="card-title"> Talk to Developer</h3>
                         </a>
                     </div>
