@@ -1,3 +1,5 @@
+
+<?php include("include/dbconn.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +25,7 @@
             <a href="index.php" class="nav-title"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
 
             <span class="nav-name">Lagbalu Joseph
-                <img src="img/profile/default.png" alt="profile image" class="img-fluid">
+                <img src="profile_img/default.png" alt="profile image" class="img-fluid">
             </span>
 
         </div>

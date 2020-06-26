@@ -109,6 +109,15 @@ nav {
     text-decoration: none;
 }
 
+#prodDisplay{
+    text-align: center;
+    display: block;
+    width: 60%;
+    margin-left: 60px;
+    border-radius: 5px;
+
+}
+
 /** View Products **/
 .card.box{
     -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);

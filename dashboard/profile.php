@@ -1,7 +1,7 @@
 <?php 
 
 $pageTitle =  "profile";
-include('header.php');
+include("include/header.php");
 
  ?>
     <!--TODO:  Translate the code to PHP Codes-->

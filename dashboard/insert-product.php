@@ -1,10 +1,7 @@
 <?php 
 
 $pageTitle =  "insert products";
-include('include/dbconn.php');
-include('header.php');
-
-
+include("include/header.php");
 
 
  ?>
@@ -17,14 +14,6 @@ include('header.php');
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <h3 class="dash-title text-center"> <i class="fas fa-file-upload"></i> Insert Product</h3>
-
-                <?php if(!empty($msg)){ ?>
-                 <div class="alert <?php echo $css_class; ?>">
-                 <?php echo $msg; ?>
-                 </div>
-
-                <?php } ?>
-
                 <form method="post" class="form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="Product Name" class="sr-only">Product Name</label>
@@ -38,14 +27,15 @@ include('header.php');
                             placeholder="Product Price">
                     </div>
 
-                    <div class="form-group">
-                        <label for="new-password-2" class="sr-only">Product Image</label>
-                        <input type="file" name="prodImage" class="form-control-md form-control-lg" id=""
-                            placeholder="Product Image">
+                    <div class="form-group text-center">
+                        <img src="prod_img/placeholder.png" onclick="triggerClick()" id="prodDisplay" >
+                        <input type="file" name="prodImage" id="prodImage" onchange="displayImage(this)" class="form-control-md form-control-lg"
+                            placeholder="Product Image" style="display: none;">
+                            <label for="prod-image">Select product image</label>
                     </div>
 
                     <div class="form-group text-center">
-                        <button type="submit" name="insert" class="btn btn-md btn-primary">insert</button>
+                        <button name="insert" class="btn btn-md btn-primary">insert</button>
                     </div>
 
                     <div class="form-group text-center">
@@ -61,7 +51,7 @@ include('header.php');
         </div>
     </div>
 
-
+<script src="script.js"></script>
 </body>
 
 </html>
@@ -69,17 +59,22 @@ include('header.php');
 <?php 
 if(isset($_POST['insert'])){
 
-    $msg = "";
-    $css_class = "";
 
     $prod_name = $_POST['prodName'];
     $prod_price = $_POST['prodPrice'];
 
-    $prod_image = time() . '_' . $_FILES['prodImage']['name'];
+    $prod_image = $_FILES['prodImage']['name'];
 
-    $target = 'img/' . $prod_image;
+    $temp_name = $_FILES['prodImage']['tmp_name'];
 
-    if(move_uploaded_file($_FILES['prodImage']['tmp_name'], $target)){
+    move_uploaded_file($temp_name, "prod_img/$prod_image");
+
+    $sql = "insert into products (prod_name, prod_price, prod_image) values ('$prod_name', '$prod_price', '$prod_image')";
+
+    $query = mysqli_query($con, $sql) or die(mysqli_error($con));
+
+
+    if($query){
  
         echo "<script>alert('inserted successfully')</script>";
     }
