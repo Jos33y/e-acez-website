@@ -39,8 +39,8 @@ include("include/header.php");
                     </div>
 
                     <div class="form-group text-center">
-                        <a href="index.php">
-                            <p class="back">Back</p>
+                        <a href="view_products.php">
+                            <p class="back">View Products</p>
                         </a>
                     </div>
                 </form>
@@ -76,11 +76,24 @@ if(isset($_POST['insert'])){
 
     if($query){
  
-        echo "<script>alert('inserted successfully')</script>";
+        echo '
+        <script>
+            swal({
+                    title: "Product Saved!",
+                    icon: "success",
+                 });
+    </script>
+    ';
     }
     else{
-        $msg = "Failed to upload product";
-        $css_class = "alert-danger";
+        echo '
+        <script>
+            swal({
+                    title: "Product Not Saved!",
+                    icon: "error",
+                 });
+    </script>
+    ';
     }
 }
 ?>
