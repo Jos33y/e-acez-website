@@ -3,6 +3,13 @@
 $pageTitle =  "dashboard";
 include("include/header.php");
  ?>
+
+ <?php 
+$sql =  "select * from products";
+$query = mysqli_query($con, $sql);
+$count_prod = mysqli_num_rows($query);
+
+?>
     <!--TODO:  Translate the code to PHP Codes-->
 
     <div class="container">
@@ -32,7 +39,7 @@ include("include/header.php");
                     </div>
                     <div class="card-footer">
                         <a href="view.php" class="stretched-link">
-                            <h3 class="card-title"><span class="prod-no">100</span> View Products</h3>
+                            <h3 class="card-title"><span class="prod-no"><?php echo $count_prod ; ?></span> View Products</h3>
                         </a>
                     </div>
                 </div>
