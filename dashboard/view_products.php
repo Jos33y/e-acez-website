@@ -32,7 +32,7 @@ include("include/header.php");
                     <div class="col-sm-3 col-6">
                         <div class="card box">
                             <div class="card-header">
-                                <a href="editproduct.php?prod_id=<?php echo $pro_id; ?>" class="edit"><i class="fas fa-edit"></i> Edit</a>
+                                <a href="edit_product.php?prod_id=<?php echo $pro_id; ?>" class="edit"><i class="fas fa-edit"></i> Edit</a>
                                 <a href="delete_product.php?prod_id=<?php echo $pro_id; ?>" class="delete"><i class="far fa-trash-alt"></i> Delete</a>
                             </div>
 
