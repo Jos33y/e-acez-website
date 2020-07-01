@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
+    <link rel="stylesheet" href="styles/eacez.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 register-svg">
+                <img src="./images/register-man.svg" alt="">
+
+            </div>
+            <div class="col-md-6">
+                <br>
+                <form method="post" class="register">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" name="firstname" id="firstname" class="form-control"
+                                        maxlength="50" placeholder="Enter First Name">
+                                </td>
+                                <td>
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" name="lastname" id="lastname" class="form-control" maxlength="50"
+                                        placeholder="Enter Last Name">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <label for="email">Email </label>
+                                    <input type="text" name="email" id="email" class="form-control" maxlength="100"
+                                        placeholder="Enter Email">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="phone no">Phone Number</label>
+                                    <input type="tel" name="phone" id="phone" class="form-control" maxlength="15"
+                                        placeholder="Enter Phone Number">
+                                </td>
+                                <td>
+                                    <label for="whatsapp no">Whatsapp Number</label>
+                                    <input type="tel" name="whatsappno" id="whatsappno" class="form-control"
+                                        maxlength="15" placeholder="Enter Business WhatsApp Number ">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="shop-name">Business Name</label>
+                                    <input type="text" name="shopname" id="shopname" class="form-control" maxlength="50"
+                                        placeholder="Enter Business Name">
+                                </td>
+                                <td>
+                                    <label for="shop-url">Store URL</label>
+                                    <input type="text" name="shopurl" id="shopurl" class="form-control" maxlength="50"
+                                        placeholder="Enter Store URL without spacing">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control"
+                                        maxlength="20" placeholder="Enter desired Password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="code">CODE</label>
+                                    <input type="text" name="code" id="code" class="form-control"
+                                        placeholder="Enter discount code">
+                                </td>
+                                <td>
+                                    <label for="plan">Select a plan</label><br>
+                                    <select name="plan" id="plan" class="form-control">
+                                        <option value="nill" disabled>select a plan</option>
+                                        <option value="500" id="plan">One Month -- &#8358;5,000</option>
+                                        <option value="null" disabled>Other plans coming soon!!!</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center">
+                                    <button class="btn btn-md btn-success"> Register</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+
+                    </table>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

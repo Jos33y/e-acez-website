@@ -36,7 +36,7 @@ s0.parentNode.insertBefore(s1,s0);
     </head>
 
 <body>
-<div id="loader"></div>
+
 
 <div id="content">
 
