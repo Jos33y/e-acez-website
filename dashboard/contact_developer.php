@@ -1,10 +1,12 @@
-<?php 
+<?php      
 
-$pageTitle =  "contact developer";
-include("include/header.php");
+if(!isset($_SESSION['email'])){
 
- ?>
-    <!--TODO:  Translate the code to PHP Codes-->
+    echo "<script>window.open('../sign-in.php', '_self')</script>";
+
+}else{
+
+?>
 
     <div class="container">
         <h3 class="dash-title" style="margin-top: 3%;"> <i class="fas fa-headset"></i>Talk to Developer</h3>
@@ -30,7 +32,7 @@ include("include/header.php");
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                    <a style="padding-top: 5%;" href="index.php">
+                    <a style="padding-top: 5%;" href="index.php?dashboard">
                         <p class="back text-center">Back</p>
                     </a>
                 </div>
@@ -43,3 +45,5 @@ include("include/header.php");
 </body>
 
 </html>
+
+<?php } ?>

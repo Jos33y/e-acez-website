@@ -1,5 +1,33 @@
 
 
+<?php 
+ //$con = mysqli_connect("localhost", "root", "", "showroom");
+
+ $con = mysqli_connect("localhost", "u721127448_joseey", "LagbaluJ19", "u721127448_showroom");
+
+if(isset($_GET['shop_url'])){
+    $shop_url =  $_GET['shop_url'];
+
+    $get_shop_owner = "select * from customers where shop_url = '$shop_url'";
+
+    $run_owner = mysqli_query($con, $get_shop_owner);
+
+    $row = mysqli_fetch_array($run_owner);
+
+    $owner_id = $row['customer_id'];
+
+    $email = $row['email'];
+
+    $p_no = $row['phone_no'];
+
+    $w_no = $row['whatsapp_no'];
+
+    $shop_name = $row['shop_name'];
+    
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,10 +50,10 @@
     <!--navbar-->
     <nav>
         <div class="navbar">
-            <span class="shop-name">Storename</span>
+            <span class="shop-name"><?php echo $shop_name; ?></span>
 
             <span class="call text-right">Call: &nbsp;<i class="fas fa-phone-alt"></i> <a
-                    href="tel:+2347037344408">+2347037344408</a></span>
+                    href="tel:+234<?php echo $p_no; ?>"><?php echo $p_no ?></a></span>
         </div>
     </nav>
     <!--TODO:  Translate the code to PHP Codes-->
@@ -38,15 +66,11 @@
         <div class="row">
             <!--col1-->
 
-            <?php 
-
-           // $con = mysqli_connect("localhost", "root", "", "showroom");
-
-       $con = mysqli_connect("localhost", "u721127448_joseey", "LagbaluJ19", "u721127448_showroom");
+            <?php       
 
             $i = 0;
 
-            $get_products = "select * from products";
+            $get_products = "select * from products where customer_id = '$owner_id'";
 
             $run_pro = mysqli_query($con, $get_products);
 
@@ -64,7 +88,7 @@
 
                 <!-- box model design-->
                 <div class="card">
-                    <img src="dashboard/prod_img/<?php echo $prod_img; ?>" alt="car image" class="card-img-top">
+                    <img src="dashboard/prod_img/<?php echo $prod_img; ?>" alt="Product image" class="card-img-top">
                     <div class="card-body">
                         <h3 class="name"><?php echo $prod_name; ?></h3>
                         <!--php codes-->
@@ -73,7 +97,7 @@
                     </div>
                     <div class="card-footer bg-transparent">
                         <!-- whatsapp chat button make number dynamic-->
-                        <a href="https://wa.me/23409051324329/?text=Hello, I want to buy: <?php echo $prod_name; ?> with price: &#8358;<?php echo $prod_price; ?>"
+                        <a href="https://wa.me/234<?php echo $w_no; ?>/?text=Hello, I want to buy: <?php echo $prod_name; ?> with price: &#8358;<?php echo $prod_price; ?>"
                             title="click to open chat">
                             <button class="btn btn-success">Chat with us <i class="fab fa-whatsapp"></i>
                             </button></a>
@@ -109,9 +133,9 @@
 
             <div class="col-sm-4 contact text-center">
                 <ul>
-                    <li> <a style="text-decoration: none;" href="tel:+2347037344408">07037344408</a></li>
+                    <li> <a style="text-decoration: none;" href="tel:+234<?php echo $p_no; ?>"><?php echo $p_no; ?></a></li>
                     <li> <a style="text-decoration: none;"
-                            href="mailto:josephlagbalu@gmail.com">josephlagbalu@gmail.com</a> </li>
+                            href="mailto:<?php echo $email; ?>"></a> <?php echo $email; ?> </li>
                 </ul>
 
             </div>
@@ -129,3 +153,6 @@
 </body>
 
 </html>
+
+
+            <?php } ?>

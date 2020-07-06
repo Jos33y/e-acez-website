@@ -53,6 +53,7 @@ nav {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .boards {
@@ -314,4 +315,49 @@ footer .orange {
    .prod-price{
        font-size: 13px;
    }
+}
+
+/** SOCIAL LINK STYLES **/
+
+.social-link{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 100px;
+    
+}
+.social-link a{
+    text-decoration: none;
+}
+.social-link .fa.fa-facebook{
+    color: #2B56AB;
+    margin-left: 3%;
+}
+
+.social-link .fa.fa-twitter{
+ 
+    color: #00AAFF;
+    margin: 3%;
+}
+.social-link .fa.fa-pinterest-square{
+    color: #E81414;
+    margin: 3%;
+}
+.social-link .fa.fa-whatsapp{
+    color: #24CE24;
+    margin: 3%;
+}
+.social-link .fa.fa-reddit-square{
+    color: #FF2A00;
+    margin: 3%;
+}
+.social-link .fa.fa-linkedin-square{
+    color: #156AEA;
+    margin: 3%;
+}
+@media (max-width: 768px){
+    .social-link{
+        font-size: 50px;
+        
+    }
+
 }

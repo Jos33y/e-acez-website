@@ -1,3 +1,8 @@
+<?php 
+        include('include/dbconn.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="styles/eacez.css">
 </head>
 
@@ -257,7 +263,7 @@
             </div>
             <div class="col-md-6">
                 <br>
-                <form method="post" class="register" id="paymentForm">
+                <form method="POST" class="register" id="paymentForm">
                     <table class="table table-borderless">
                         <tbody>
                             <tr>
@@ -276,7 +282,7 @@
                             <tr>
                                 <td colspan="2">
                                     <label for="email">Email </label>
-                                    <input type="text" name="email" id="email" class="form-control" maxlength="100"
+                                    <input type="email" name="email" id="email" class="form-control" maxlength="100"
                                         placeholder="Enter Email" required>
 
                                 </td>
@@ -331,7 +337,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2" class="text-center">
-                                    <button class="btn btn-md btn-success" type="submit" onclick="payWithPaystack()">
+                                    <button class="btn btn-md btn-success" name="register">
                                         Sign up</button>
                                 </td>
                             </tr>
@@ -344,7 +350,8 @@
             </div>
         </div>
     </div>
-
+    <!-- onclick="payWithPaystack()"
+add it to the button for paystack payment -->
     <!-- Registratio Page Ends -->
 
 
@@ -354,6 +361,55 @@
 
 </html>
 
+<?php
+
+if(isset($_POST['register'])){
+
+    $fname = $_POST['firstname'];
+    $lname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $pno = $_POST['phone'];
+    $wno = $_POST['whatsappno'];
+    $bname = $_POST['shopname'];
+    $surl = $_POST['shopurl'];
+    $pword = $_POST['password'];
+    $code = $_POST['code'];
+    $user_ip = getRealIpUser();
+
+    $check_customer = "select customer_id from customers where email = '$email' ";
+
+    $run_check = mysqli_query ($con, $check_customer);
+
+    if (mysqli_num_rows($run_check) == 0){
+
+    $sql = "INSERT INTO customers (firstname, lastname, email, password, phone_no, whatsapp_no, shop_name, shop_url, code, reg_date, user_ip)
+    VALUES ('$fname', '$lname', '$email', '$pword', '$pno', '$wno', '$bname', '$surl', '$code', NOW(), '$user_ip')";
+
+    $query = mysqli_query($con, $sql) or die(mysqli_error($con));
+
+    if($query){
+
+        echo "<script>window.open('sign-in.php', '_self')</script>";
+    }
+    
+}
+else{
+    echo '
+    <script>
+    swal({
+            title: "Email has been Registered!",
+            icon: "error",
+        });
+</script>';
+  
+}
+
+}
+
+
+?>
+
+<!--
 <script>
     const paymentForm = document.getElementById('paymentForm');
     paymentForm.addEventListener("submit", payWithPaystack, false);

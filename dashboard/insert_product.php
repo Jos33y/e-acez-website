@@ -1,11 +1,13 @@
-<?php 
 
-$pageTitle =  "insert products";
-include("include/header.php");
+<?php      
 
+if(!isset($_SESSION['email'])){
 
- ?>
-    <!--TODO:  Translate the code to PHP Codes-->
+    echo "<script>window.open('../sign-in.php', '_self')</script>";
+
+}else{
+
+?>
 
     <div class="container">
 
@@ -39,7 +41,7 @@ include("include/header.php");
                     </div>
 
                     <div class="form-group text-center">
-                        <a href="view_products.php">
+                        <a href="index.php?view_products">
                             <p class="back">View Products</p>
                         </a>
                     </div>
@@ -62,6 +64,7 @@ if(isset($_POST['insert'])){
 
     $prod_name = $_POST['prodName'];
     $prod_price = $_POST['prodPrice'];
+    $admin_id;
 
     $prod_image = $_FILES['prodImage']['name'];
 
@@ -69,7 +72,8 @@ if(isset($_POST['insert'])){
 
     move_uploaded_file($temp_name, "prod_img/$prod_image");
 
-    $sql = "insert into products (prod_name, prod_price, prod_image) values ('$prod_name', '$prod_price', '$prod_image')";
+    $sql = "INSERT INTO products (prod_name, prod_price, prod_image, customer_id) 
+    VALUES ('$prod_name', '$prod_price', '$prod_image', '$admin_id')";
 
     $query = mysqli_query($con, $sql) or die(mysqli_error($con));
 
@@ -96,4 +100,9 @@ if(isset($_POST['insert'])){
     ';
     }
 }
+?>
+
+<?php
+}
+
 ?>

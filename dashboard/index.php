@@ -1,113 +1,105 @@
-<?php 
+<?php
 
-$pageTitle =  "dashboard";
-include("include/header.php");
- ?>
+ include("include/dbconn.php");
+ include("include/header.php");
+ 
+if(!isset($_SESSION['email'])){
 
- <?php 
-$sql =  "select * from products";
-$query = mysqli_query($con, $sql);
-$count_prod = mysqli_num_rows($query);
+    echo "<script>window.open('../sign-in.php', '_self')</script>";
+ 
+ }else{
+     $admin_session = $_SESSION['email'];
+ 
+     $get_admin = "select * from customers where email = '$admin_session'";
+ 
+     $run_admin = mysqli_query($con, $get_admin);
+ 
+     $row_admin = mysqli_fetch_array($run_admin);
+ 
+     $admin_id = $row_admin['customer_id'];
+ 
+     $firstname = $row_admin['firstname'];
+ 
+     $lastname = $row_admin['lastname'];
+ 
+     $shop_name = $row_admin['shop_name'];
+ 
+     $email = $row_admin['email'];
 
-?>
-    <!--TODO:  Translate the code to PHP Codes-->
+     $sql =  "select * from products where customer_id = '$admin_id'";
+     $query = mysqli_query($con, $sql);
+     $count_prod = mysqli_num_rows($query);
+  
+  ?>
+  <body>
+    <!--navbar-->
+    <nav>
+        <div class="navbar text-white">
+            <a href="index.php?dashboard" class="nav-title"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
 
-    <div class="container">
-
-        <h3 style="margin-top: 3%;" class="dash-title">Shop Name</h3>
-
-        <div class="boards row text-center">
-            <!--row one-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
-                <div class="card bg-primary">
-                    <div class="card-body">
-                        <i class="fas fa-file-upload"></i>
-                    </div>
-                    <div class="card-footer">
-                        <a href="insert-product.php" class="stretched-link">
-                            <h3 class="card-title"> Insert Product</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!--row two-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
-                <div class="card bg-success">
-                    <div class="card-body">
-                        <i class="far fa-list-alt"></i>
-                    </div>
-                    <div class="card-footer">
-                        <a href="view.php" class="stretched-link">
-                            <h3 class="card-title"><span class="prod-no"><?php echo $count_prod ; ?></span> View Products</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!--row three-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
-                <div class="card bg-info">
-                    <div class="card-body">
-                        <i class="far fa-user-circle"></i>
-                    </div>
-                    <div class="card-footer">
-                        <a href="profile.php" class="stretched-link">
-                            <h3 class="card-title"> View Profile</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!--row four-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
-                <div class="card bg-warning">
-                    <div class="card-body">
-                        <i class="fas fa-user-lock"></i>
-                    </div>
-                    <div class="card-footer">
-                        <a href="change-password.php" class="stretched-link">
-                            <h3 class="card-title"> Change Password</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!--row five-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
-                <div class="card bg-danger">
-                    <div class="card-body">
-                        <i class="fas fa-share-alt-square"></i>
-                    </div>
-                    <div class="card-footer">
-                        <h3 class="card-title"> Share Link</h3>
-                    </div>
-                </div>
-            </div>
-
-            <!--row six-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
-                <div class="card bg-secondary">
-                    <div class="card-body">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <div class="card-footer">
-                        <a href="contact-developer.php" class="stretched-link">
-                            <h3 class="card-title"> Talk to Developer</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+            <span class="nav-name"><?php echo $lastname . ' ' . $firstname; ?>
+                <img src="profile_img/default.png" alt="profile image" class="img-fluid">
+            </span>
 
         </div>
-    </div>
-    <br>
-    <footer class="text-center footer">
-        <!--just date-->
-        <p class="copyright"> copyright 2020 <span class="orange"> e-acez.com,</span> All rights reserved.</p>
-    </footer>
+    </nav>
 
-</body>
+          <?php
+          if(isset($_GET['dashboard'])){
 
-</html>
+            include("dashboard.php");
+          }
+          if(isset($_GET['insert_product'])){
+
+            include("insert_product.php");
+          }
+          if(isset($_GET['view_products'])){
+
+            include("view_products.php");
+          }
+
+          if(isset($_GET['edit_product'])){
+
+            include("edit_product.php");
+          }
+
+          if(isset($_GET['delete_product'])){
+
+            include("delete_product.php");
+        }
+
+          if(isset($_GET['profile'])){
+
+            include("profile.php");
+          }
+
+          if(isset($_GET['change_password'])){
+
+            include("change_password.php");
+          }
+
+          if(isset($_GET['contact_developer'])){
+
+            include("contact_developer.php");
+          }
+
+          if(isset($_GET['share_link'])){
+
+            include("share_link.php");
+          }
+
+          if(isset($_GET['sign_out'])){
+
+            include("sign_out.php");
+          }
+
+
+
+
+
+          ?>
+
+  <?php
+ }
+
+ ?>

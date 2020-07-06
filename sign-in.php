@@ -1,3 +1,8 @@
+
+<?php 
+        include('include/dbconn.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -237,7 +242,12 @@
               </tr>
               <tr>
                 <div class="col-md-12 text-center">
-                  <button class="btn btn-md btn-primary">Sign IN</button>
+                  <button class="btn btn-md btn-primary" name="sign-in" type="submit">Sign IN</button>
+                </div>
+              </tr>
+              <tr>
+                <div class="col-md-12 text-center" style="margin-top: 10%;">
+                  <a href="register.php" class="footer" style="text-decoration:none;">Create an Account</a>
                 </div>
               </tr>
             </tbody>
@@ -253,7 +263,7 @@
 </body>
 
 </html>
-<!--
+
 <?php
 
     if(isset($_POST['sign-in'])){
@@ -262,7 +272,7 @@ $user_email = $_POST['email'];
 
 $password = $_POST['password'];
 
-$select_user = "select * from user_db where email='$user_email' AND password = '$password'";
+$select_user = "select * from customers where email='$user_email' AND password = '$password'";
 
 $run_user = mysqli_query($con, $select_user);
 
@@ -270,33 +280,26 @@ $p_ip = getRealIpUser();
 
 $check_user = mysqli_num_rows($run_user);
 
-$select_user_info = "select * from user_db where email='$user_email'"; 
+$select_user_info = "select * from customers where email='$user_email'"; 
 
 $run_info = mysqli_query($con, $select_user_info);
 
 $row = mysqli_fetch_array($run_info);
 
     $user_id = $row['user_id'];
-
-    $first_name = $row['first_name'];
-
-    $last_name = $row['last_name'];
 	
-	$customer_email = $row['email'];
-
-  $get_dashboard = "select  * from dashboard_db where user_id = '$user_id'";
-
-  $run_dashboard = mysqli_query($con, $get_dashboard);
-
-  $row = mysqli_fetch_array($run_dashboard);
-
-      $dash_link = $row['dashboard'];
-      
+  	$user_email = $row['email'];
 
 
 if($check_user==false){
 
-    echo "<script>alert('Your email or password is wrong')</script>";
+  echo '
+  <script>
+  swal({
+          title: "Your Email or Password is wrong!",
+          icon: "error",
+      });
+</script>';
 
     exit();
 
@@ -304,12 +307,10 @@ if($check_user==false){
 if($check_user==true){
 
   $_SESSION['user_id'] = $user_id;
-  $_SESSION['email'] = $customer_email;
-  $_SESSION['firstname'] = $first_name;
-  $_SESSION['lastname'] = $last_name;
+  $_SESSION['email'] = $user_email;
   
 
-  echo "<script>window.open('$dash_link?user_id=$user_id' , '_self')</script>";
+  echo "<script>window.open('dashboard/index.php?dashboard' , '_self')</script>";
   
 
 }

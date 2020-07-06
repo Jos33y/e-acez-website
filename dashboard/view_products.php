@@ -1,10 +1,12 @@
-<?php 
+<?php      
 
-$pageTitle =  "view products";
-include("include/header.php");
+if(!isset($_SESSION['email'])){
 
- ?>
-    <!--TODO:  Translate the code to PHP Codes-->
+    echo "<script>window.open('../sign-in.php', '_self')</script>";
+
+}else{
+
+?>
 
     <div class="container">
 
@@ -16,7 +18,7 @@ include("include/header.php");
                 <?php 
                 $i = 0;
 
-                $get_products = "select * from products";
+                $get_products = "select * from products where customer_id = '$admin_id'";
 
                 $run_pro = mysqli_query($con, $get_products);
 
@@ -32,8 +34,8 @@ include("include/header.php");
                     <div class="col-sm-3 col-6">
                         <div class="card box">
                             <div class="card-header">
-                                <a href="edit_product.php?prod_id=<?php echo $pro_id; ?>" class="edit"><i class="fas fa-edit"></i> Edit</a>
-                                <a href="delete_product.php?prod_id=<?php echo $pro_id; ?>" class="delete"><i class="far fa-trash-alt"></i> Delete</a>
+                                <a href="index.php?edit_product=<?php echo $pro_id; ?>" class="edit"><i class="fas fa-edit"></i> Edit</a>
+                                <a href="index.php?delete_product=<?php echo $pro_id; ?>" class="delete"><i class="far fa-trash-alt"></i> Delete</a>
                             </div>
 
                             <img src="prod_img/<?php echo $prod_img;?>" alt="images" class="card-img-top prod-image">
@@ -54,3 +56,5 @@ include("include/header.php");
 </body>
 
 </html>
+
+                <?php } ?>

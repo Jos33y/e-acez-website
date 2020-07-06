@@ -1,12 +1,11 @@
 
-<?php include("include/dbconn.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title><?php echo $pageTitle; ?></title>
+    <title>Dashboard</title>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -18,15 +17,3 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <!--navbar-->
-    <nav>
-        <div class="navbar text-white">
-            <a href="index.php" class="nav-title"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
-
-            <span class="nav-name">Lagbalu Joseph
-                <img src="profile_img/default.png" alt="profile image" class="img-fluid">
-            </span>
-
-        </div>
-    </nav>

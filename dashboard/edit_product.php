@@ -1,15 +1,17 @@
+
+<?php
+if(!isset($_SESSION['email'])){
+
+echo "<script>window.open('../sign-in.php', '_self')</script>";
+
+}else{
+
+?>
+
 <?php 
 
-$pageTitle =  "Edit product";
-include("include/header.php");
-
- ?>
-    <!--TODO:  Translate the code to PHP Codes-->
-
-<?php 
-
-if(isset($_GET['prod_id'])){
-    $edit_id =  $_GET['prod_id'];
+if(isset($_GET['edit_product'])){
+    $edit_id =  $_GET['edit_product'];
 
     $get_p = "select * from products where prod_id = '$edit_id'";
 
@@ -57,7 +59,7 @@ if(isset($_GET['prod_id'])){
                     </div>
 
                     <div class="form-group text-center">
-                        <a href="view_products.php">
+                        <a href="index.php?view_products">
                             <p class="back">View Products</p>
                         </a>
                     </div>
@@ -99,7 +101,7 @@ if(isset($_POST['update'])){
  
         echo "<script>alert('Product has been Updated Successfully')</script>";
 
-    echo "<script>window.open('view_products.php', '_self')</script>";
+    echo "<script>window.open('index.php?view_products', '_self')</script>";
  
     }
     else{
@@ -114,3 +116,5 @@ if(isset($_POST['update'])){
     }
 }
 ?>
+
+<?php } ?>

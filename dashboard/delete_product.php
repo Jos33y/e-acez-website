@@ -1,9 +1,17 @@
+<?php
 
-<?php include("include/dbconn.php"); ?>
+if(!isset($_SESSION['email'])){
+
+echo "<script>window.open('../sign-in.php', '_self')</script>";
+
+}else{
+
+?>
+
 <?php 
-    if(isset($_GET['prod_id'])){
+    if(isset($_GET['delete_product'])){
 
-        $delete_id = $_GET['prod_id'];
+        $delete_id = $_GET['delete_product'];
 
         $delete_pro = "delete from products where prod_id='$delete_id'";
 
@@ -13,9 +21,11 @@
 
             echo "<script>alert('Product has been Deleted Successfully')</script>";
 
-            echo "<script>window.open('view_products.php', '_self')</script>";
+            echo "<script>window.open('index.php?view_products', '_self')</script>";
 
 
         }
     }
 ?>
+
+<?php } ?>

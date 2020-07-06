@@ -1,10 +1,12 @@
-<?php 
+<?php      
 
-$pageTitle =  "change password";
-include("include/header.php");
+if(!isset($_SESSION['email'])){
 
- ?>
-    <!--TODO:  Translate the code to PHP Codes-->
+    echo "<script>window.open('../sign-in.php', '_self')</script>";
+
+}else{
+
+?>
 
     <div class="container">
 
@@ -39,7 +41,7 @@ include("include/header.php");
                     </div>
 
                     <div class="form-group text-center">
-                        <a href="index.php">
+                        <a href="index.php?dashboard">
                             <p class="back">Back</p>
                         </a>
                     </div>
@@ -54,3 +56,5 @@ include("include/header.php");
 </body>
 
 </html>
+
+<?php } ?>
