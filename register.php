@@ -384,7 +384,6 @@ if(isset($_POST['register'])){
 
     $sql = "INSERT INTO customers (firstname, lastname, email, password, phone_no, whatsapp_no, shop_name, shop_url, code, reg_date, user_ip)
     VALUES ('$fname', '$lname', '$email', '$pword', '$pno', '$wno', '$bname', '$surl', '$code', NOW(), '$user_ip')";
-
     $query = mysqli_query($con, $sql) or die(mysqli_error($con));
 
     if($query){

@@ -1,13 +1,6 @@
 
 
-# DO NOT REMOVE THIS LINE AND THE LINES BELOW SSL_REDIRECT:e-acez.com
-RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^e-acez.com$
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# DO NOT REMOVE THIS LINE AND THE LINES ABOVE SSL_REDIRECT:e-acez.com
-
-#Rewrite for showroom.php?shop_url=xxxxx
-RewriteRule ^showroom/([0-9a-zA-Z+]) showroom.php?shop_url=$1 [NC, L]
+RewriteEngine On
+RewriteRule ^([0-9a-zA-Z]+)$ showroom.php?shop_url=$1 [NC] 
 
 

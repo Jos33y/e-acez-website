@@ -1,12 +1,12 @@
 
 
 <?php 
- //$con = mysqli_connect("localhost", "root", "", "showroom");
+ $con = mysqli_connect("localhost", "root", "", "showroom");
 
- $con = mysqli_connect("localhost", "u721127448_joseey", "LagbaluJ19", "u721127448_showroom");
-
-if(isset($_GET['shop_url'])){
-    $shop_url =  $_GET['shop_url'];
+ //$con = mysqli_connect("localhost", "u721127448_joseey", "LagbaluJ19", "u721127448_showroom");
+$name = preg_replace('#[^0-9a-z]#i', '', $_GET['shop_url']);
+if(isset($name)){
+    $shop_url =  $name;
 
     $get_shop_owner = "select * from customers where shop_url = '$shop_url'";
 
@@ -25,37 +25,38 @@ if(isset($_GET['shop_url'])){
     $shop_name = $row['shop_name'];
     
 
-
+}
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Showroom</title>
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="styles/showroom.css">
-</head>
-
-<body>
-    <!--navbar-->
-    <nav>
-        <div class="navbar">
-            <span class="shop-name"><?php echo $shop_name; ?></span>
-
-            <span class="call text-right">Call: &nbsp;<i class="fas fa-phone-alt"></i> <a
-                    href="tel:+234<?php echo $p_no; ?>"><?php echo $p_no ?></a></span>
-        </div>
-    </nav>
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+     <title><?php echo $shop_url; ?></title>
+ 
+ 
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+     <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <link rel="stylesheet" href="styles/showroom.css">
+ </head>
+ 
+ <body>
+     <!--navbar-->
+     <nav>
+         <div class="navbar">
+             <span class="shop-name"><?php echo $shop_name; ?></span>
+ 
+             <span class="call text-right">Call: &nbsp;<i class="fas fa-phone-alt"></i> <a
+                     href="tel:+234<?php echo $p_no; ?>"><?php echo $p_no ?></a></span>
+         </div>
+     </nav>
     <!--TODO:  Translate the code to PHP Codes-->
 
 
@@ -88,7 +89,7 @@ if(isset($_GET['shop_url'])){
 
                 <!-- box model design-->
                 <div class="card">
-                    <img src="dashboard/prod_img/<?php echo $prod_img; ?>" alt="Product image" class="card-img-top">
+                <img src="dashboard/product_images/<?php echo $prod_img; ?>" alt="Product image" class="card-img-top">
                     <div class="card-body">
                         <h3 class="name"><?php echo $prod_name; ?></h3>
                         <!--php codes-->
@@ -155,4 +156,4 @@ if(isset($_GET['shop_url'])){
 </html>
 
 
-            <?php } ?>
+        

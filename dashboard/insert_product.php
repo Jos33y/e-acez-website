@@ -70,7 +70,7 @@ if(isset($_POST['insert'])){
 
     $temp_name = $_FILES['prodImage']['tmp_name'];
 
-    move_uploaded_file($temp_name, "prod_img/$prod_image");
+    move_uploaded_file($temp_name, "product_images/$prod_image");
 
     $sql = "INSERT INTO products (prod_name, prod_price, prod_image, customer_id) 
     VALUES ('$prod_name', '$prod_price', '$prod_image', '$admin_id')";

@@ -38,7 +38,7 @@ if(!isset($_SESSION['email'])){
                                 <a href="index.php?delete_product=<?php echo $pro_id; ?>" class="delete"><i class="far fa-trash-alt"></i> Delete</a>
                             </div>
 
-                            <img src="prod_img/<?php echo $prod_img;?>" alt="images" class="card-img-top prod-image">
+                            <img src="product_images/<?php echo $prod_img; ?>" alt="images" class="card-img-top prod-image">
 
                             <div class="card-footer text-center">
                                 <span class="prod-name"><?php echo $prod_name; ?></span><br>

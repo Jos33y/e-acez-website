@@ -48,7 +48,7 @@ if(isset($_GET['edit_product'])){
                     </div>
 
                     <div class="form-group text-center">
-                        <img src="prod_img/<?php echo $p_img; ?>" onclick="triggerClick()" id="prodDisplay" >
+                        <img src="product_images/<?php echo $p_img; ?>" onclick="triggerClick()" id="prodDisplay" >
                         <input type="file" name="prodImage" id="prodImage" onchange="displayImage(this)" class="form-control-md form-control-lg"
                             placeholder="Product Image" style="display: none;">
                             <label for="prod-image">Select product image</label>
@@ -88,7 +88,7 @@ if(isset($_POST['update'])){
 
     $temp_name = $_FILES['prodImage']['tmp_name'];
 
-    move_uploaded_file($temp_name, "prod_img/$prod_image");
+    move_uploaded_file($temp_name, "product_images/$prod_image");
 
     $sql = "update products set
     prod_name = '$prod_name', prod_price = '$prod_price', prod_image = '$prod_image'
