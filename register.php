@@ -867,7 +867,7 @@
                         <hr class="light">
                            <ul>
                              <li><a href="sign-in.php">Login</a></li>
-                            <li><a href="sign-up.php">Create acoount</a></li>
+                            <li><a href="register.php">Create acoount</a></li>
                             <li><a href="contact.php">Contact us</a></li>
                            </ul>
                 
@@ -897,8 +897,7 @@
 
             <div class="col-sm-3 col-md-3">
                 <h5>Get latest update</h5>
-                          <hr class="light
-                          ]">
+                          <hr class="light">
 
                     <p class="text-muted">
                     Don't miss our latest news update.
