@@ -104,7 +104,7 @@ if(!isset($_SESSION['email'])){
               <div id="col" class="col-md-6 col-lg-4 col-sm-6">
                 <div class="card bg-secondary">
                     <div class="card-body">
-                        <i class="fas fa-power"></i>
+                    <i class="fas fa-power-off"></i>
                     </div>
                     <div class="card-footer">
                         <a href="index.php?sign_out" class="stretched-link">

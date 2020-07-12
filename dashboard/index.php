@@ -26,6 +26,8 @@ if(!isset($_SESSION['email'])){
  
      $email = $row_admin['email'];
 
+     $url = $row_admin['shop_url'];
+
      $sql =  "select * from products where customer_id = '$admin_id'";
      $query = mysqli_query($con, $sql);
      $count_prod = mysqli_num_rows($query);

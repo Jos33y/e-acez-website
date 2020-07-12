@@ -63,20 +63,11 @@ s0.parentNode.insertBefore(s1,s0);
                             <li class="nav-item <?php if($active=='how-it-works') echo'active';?>">
                                 <a class="nav-link" href="how-it-works.php">How It Works</a>
                               </li>
-                              <li class="nav-item dropdown <?php if($active=='shop') echo'active';?>">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Shops
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item" href="active-shops.php">Active Shops</a>
-                                  <a class="dropdown-item" href="shops-template.php">Shops Template</a>
-                                </div>
-                              </li>
                               <li class="nav-item <?php if($active=='blog') echo'active';?>">
                                 <a class="nav-link" href="https://dazzling-davinci-70e6ae.netlify.com/" target="_blank">Blog</a>
                               </li>
                               <li class="nav-item <?php if($active=='about') echo'active';?>">
-                                <a class="nav-link" href="about.php">About US</a>
+                                <a class="nav-link" href="about.php">About Us</a>
                               </li>
                                <li class="nav-item <?php if($active=='contact') echo'active';?>">
                                 <a class="nav-link" href="contact.php">Contact Us</a>

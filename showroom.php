@@ -1,9 +1,9 @@
 
 
 <?php 
- $con = mysqli_connect("localhost", "root", "", "showroom");
+ //$con = mysqli_connect("localhost", "root", "", "showroom");
 
- //$con = mysqli_connect("localhost", "u721127448_joseey", "LagbaluJ19", "u721127448_showroom");
+ $con = mysqli_connect("localhost", "u721127448_joseey", "LagbaluJ19", "u721127448_showroom");
 $name = preg_replace('#[^0-9a-z]#i', '', $_GET['shop_url']);
 if(isset($name)){
     $shop_url =  $name;

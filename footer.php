@@ -7,9 +7,7 @@
                       <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About us</a></li>
-                        <li><a href="how-it-works.php">How it works</a></li>
-                        <li><a href="active-shops.php">Active shops</a></li>
-                        <li><a href="shops-template.php">Shops templates</a></li>
+                       
 
             </div>
 
