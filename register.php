@@ -831,9 +831,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2" class="text-center">
-                                    <button class="btn btn-md btn-success" name="register" type="submit"
-                                        onclick="payWithPaystack()">
-                                        Sign up</button>
+                                    <button class="btn btn-md btn-success" type="submit" onclick="payWithPaystack()"> Sign up</button>
                                 </td>
                             </tr>
 
@@ -850,83 +848,87 @@
     <!--footer-->
 
     <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3 col-md-3">
-                <h5> Navigations</h5>
-                        <hr class="light">
-                      <ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-3">
+                    <h5> Navigations</h5>
+                    <hr class="light">
+                    <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About us</a></li>
-                       
 
-            </div>
 
-            <div class="col-sm-3 col-md-3">
-               <h5> Join E-acez </h5>
-                        <hr class="light">
-                           <ul>
-                             <li><a href="sign-in.php">Login</a></li>
-                            <li><a href="register.php">Create acoount</a></li>
-                            <li><a href="contact.php">Contact us</a></li>
-                           </ul>
-                
-            </div>
+                </div>
 
-            <div class="col-sm-3 col-md-3">
-                <h5> Contact </h5>
-                        <hr class="light">
-                <table class="table borderless">
-                    <tbody>
-                        <tr>
-                            <th><i class="fas fa-map-marker-alt"></i></th>
-                            <td>E-acez currently operates from  Asa dam, Ilorin Kwara State. </td>
-                        </tr>
-                        <tr>
-                            <th><i class="fas fa-phone-alt"></i></th>
-                            <td>08110867275 </td>
-                        </tr>
-                        <tr>
-                            <th><i class="fas fa-envelope"></i></th>
-                            <td>eacez@e-acez.com </td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-            </div>
+                <div class="col-sm-3 col-md-3">
+                    <h5> Join E-acez </h5>
+                    <hr class="light">
+                    <ul>
+                        <li><a href="sign-in.php">Login</a></li>
+                        <li><a href="register.php">Create acoount</a></li>
+                        <li><a href="contact.php">Contact us</a></li>
+                    </ul>
 
-            <div class="col-sm-3 col-md-3">
-                <h5>Get latest update</h5>
-                          <hr class="light">
+                </div>
+
+                <div class="col-sm-3 col-md-3">
+                    <h5> Contact </h5>
+                    <hr class="light">
+                    <table class="table borderless">
+                        <tbody>
+                            <tr>
+                                <th><i class="fas fa-map-marker-alt"></i></th>
+                                <td>E-acez currently operates from Asa dam, Ilorin Kwara State. </td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-phone-alt"></i></th>
+                                <td>08110867275 </td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-envelope"></i></th>
+                                <td>eacez@e-acez.com </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="col-sm-3 col-md-3">
+                    <h5>Get latest update</h5>
+                    <hr class="light">
 
                     <p class="text-muted">
-                    Don't miss our latest news update.
+                        Don't miss our latest news update.
                     </p>
 
-                    <form action="" method="post"><!-- form Begin-->
-                        <div class="input-group"><!-- input-group Begin-->
+                    <form action="" method="post">
+                        <!-- form Begin-->
+                        <div class="input-group">
+                            <!-- input-group Begin-->
                             <input type="text" class="form-control" name="email">
 
-                            <span class="input-group-btn"><!-- input-group-btn Begin-->
+                            <span class="input-group-btn">
+                                <!-- input-group-btn Begin-->
 
                                 <input type="submit" value="subscribe" class="btn btn-secondary">
 
-                            </span><!--input-group-btn Finish-->
+                            </span>
+                            <!--input-group-btn Finish-->
 
                         </div><!-- input-group Finish-->
 
-                    </form><!-- form Finish-->       
-            </div>
+                    </form><!-- form Finish-->
+                </div>
 
-            <div class="col-md-12 text-center">
-                        <hr class="line" width="100%">
-                        <h6> images from <a href="https://www.pikrepo.com/">nicepik</a></h6>
-                        <h6>&copy; 2020 e-acez.com </h6>
-                           
-                    </div>
+                <div class="col-md-12 text-center">
+                    <hr class="line" width="100%">
+                    <h6> images from <a href="https://www.pikrepo.com/">nicepik</a></h6>
+                    <h6>&copy; 2020 e-acez.com </h6>
+
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
     <!-- onclick="payWithPaystack()"
 add it to the button for paystack payment -->
     <!-- Registratio Page Ends -->
@@ -940,7 +942,7 @@ add it to the button for paystack payment -->
 
 <?php
 
-if(isset($_POST['register'])){
+/**if(isset($_POST['register'])){
 
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
@@ -981,10 +983,9 @@ else{
 }
 
 }
-
+ **/
 
 ?>
-
 
 <script>
     const paymentForm = document.getElementById('paymentForm');
@@ -1005,20 +1006,9 @@ else{
             onClose: function () {
                 alert('Window closed.');
             },
-            callback: function (response) {
-
-
-                $.ajax({
-                    url: 'http://www.yoururl.com/verify_transaction?reference=' + response
-                        .reference,
-                    method: 'get',
-                    success: function (response) {
-                        let message = 'Payment complete! Reference: ' + response.reference;
-                        alert(message);
-                        // the transaction status is in response.data.status
-                    }
-                });
-            }
+            callback: function(response) {
+                window.location = "http://www.yoururl.com/verify_transaction.php?reference=" + response.reference;
+                };
         });
         handler.openIframe();
     }

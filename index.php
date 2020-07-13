@@ -169,60 +169,6 @@ include('header.php')
 </div>
 
 
-<!-- active shops  -->
-<div class="container">
-    <div class="title text-center">
-        <h2 class="one"> Active shops </h2>
-        <hr class="line" width="15%" >
-    </div>
-
-    <div class="row post-box">
-
-    <div class="col-md-3 col-sm-3"> 
-       <span class="steps">Shop One:</span>
-          <div class="card">
-            <div class="card-header"> Archive Mall </div>
-            <img class="card-img-top" src="images/archivemall.jpg" alt="Shop Image">
-          <div class="card-footer">
-              <span class="text-right">General</span>
-              <a href="https://e-acez.com/archivemall/" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
-            </div>
-       </div>
-    </div>
-
-
-        <div class="col-md-3 col-sm-3">
-          <span class="steps">Shop Two:</span>
-          <div class="card">
-            <div class="card-header"> Zanga Wears </div>
-            <img class="card-img-top" src="images/zangawears.jpg" alt="Shop Image">
-            <div class="card-footer">
-              <span class="text-right">Fashion</span>
-              <a href="https://e-acez.com/zangawears/" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
-            </div>
-          </div>
-        </div>
-
-       <!-- shop 2 -->
-       <div class="col-md-3 col-sm-3"> 
-       <span class="steps">Shop Three:</span>
-          <div class="card">
-            <div class="card-header"> Madonna Sweets </div>
-            <img class="card-img-top" src="images/madonnasweets.jpg" alt="Shop Image">
-            <div class="card-footer">
-              <span class="text-right">Cakes and Snacks</span>
-              <a href="https://www.e-acez.com/madonnasweets" target="_blank" class="btn btn-sm btn-primary" style="float: right">Visit Shop</a>
-            </div>
-          </div>
-       </div>
-
-      <!-- shop 3 -->
-        <div class="col-md-3 col-sm-3"> </div>
-         <!-- shop 4 -->
-        <div class="col-md-3 col-sm-3"> </div>
-      </div>
-</div>
-
     <!-- recent blog post  -->
 <div class="container">
     <div class="title text-center">

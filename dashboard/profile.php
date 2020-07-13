@@ -125,11 +125,6 @@ if(!isset($_SESSION['email'])){
     </div>
 
 
-    <footer class="footer text-center">
-        <!--just date-->
-        <p class="copyright"> copyright 2020 <span class="orange"> e-acez.com,</span> All rights reserved.</p>
-    </footer>
-
 </body>
 
 </html>

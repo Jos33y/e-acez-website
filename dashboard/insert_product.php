@@ -41,7 +41,7 @@ if(!isset($_SESSION['email'])){
                     </div>
 
                     <div class="form-group text-center">
-                        <a href="index.php?view_products">
+                        <a href="index.php?view_products=1">
                             <p class="back">View Products</p>
                         </a>
                     </div>

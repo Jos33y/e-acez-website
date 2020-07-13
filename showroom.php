@@ -67,11 +67,13 @@ if(isset($name)){
         <div class="row">
             <!--col1-->
 
-            <?php       
+            <?php     
+
+             
 
             $i = 0;
 
-            $get_products = "select * from products where customer_id = '$owner_id'";
+            $get_products = "select * from products where customer_id = '$owner_id' ";
 
             $run_pro = mysqli_query($con, $get_products);
 
@@ -114,7 +116,7 @@ if(isset($name)){
 
         </div>
     </div>
-
+   
     <footer>
         <div class="row text-center">
             <div class="col-sm-4 social">

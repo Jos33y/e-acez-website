@@ -14,18 +14,13 @@ if(!isset($_SESSION['email'])){
         <div class="developer contact">
             <!--row one-->
             <div class="row">
-                <div class="col-lg-4 text-lg-center">
-                    <a href="#" class="btn btn-md btn-success"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                <div class="col-md-6 text-lg-center bottom">
+                    <a href="https://wa.me/2349011151694/?text=Hello, I am <?php echo $firstname . ' ' . $lastname; ?>" class="btn btn-md btn-success"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
                 </div>
                 <br>
-                <div class="col-lg-4 text-lg-center">
-                    <a href="#" class="btn btn-md btn-primary"><i class="fab fa-facebook-messenger"></i> Chat on
-                        Messenger</a>
-
-                </div>
-                <br>
-                <div class="col-lg-4 text-lg-center">
-                    <a href="#" class="btn btn-md btn-secondary""><i class=" fas fa-mobile-alt"></i> Phone Call</a>
+               
+                <div class="col-md-6 text-lg-center">
+                    <a href="tel:+2347037344408" class="btn btn-md btn-secondary""><i class=" fas fa-mobile-alt"></i> Phone Call</a>
                 </div>
                 <br>
             </div>

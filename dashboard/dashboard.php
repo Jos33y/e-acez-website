@@ -37,7 +37,7 @@ if(!isset($_SESSION['email'])){
                         <i class="far fa-list-alt"></i>
                     </div>
                     <div class="card-footer">
-                        <a href="index.php?view_products" class="stretched-link">
+                        <a href="index.php?view_products=1" class="stretched-link">
                             <h3 class="card-title"><span class="prod-no"><?php echo $count_prod; ?></span> View Products</h3>
                         </a>
                     </div>
@@ -119,10 +119,6 @@ if(!isset($_SESSION['email'])){
         </div>
     </div>
     <br>
-    <footer class="text-center footer">
-        <!--just date-->
-        <p class="copyright"> copyright 2020 <span class="orange"> e-acez.com,</span> All rights reserved.</p>
-    </footer>
 
 </body>
 
