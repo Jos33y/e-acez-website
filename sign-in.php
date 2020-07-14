@@ -15,6 +15,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link rel="stylesheet" href="styles/eacez.css">
 
 </head>
@@ -22,10 +23,13 @@
 <body>
 
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
+
       <div class="col-md-12">
+        <a href="index.php"><img class="logo-sign"  src="images/eiconweb.png" alt=""></a>
         <h3 class="sign-in-head"> sign in</h3>
-      </div>
+       
+      </div> 
 
       <div class="col-md-6 sign-in-svg">
         <svg xmlns="http://www.w3.org/2000/svg" width="803" height="617" viewBox="0 0 803 617">
@@ -248,6 +252,8 @@
               <tr>
                 <div class="col-md-12 text-center" style="margin-top: 10%;">
                   <a href="register.php" class="footer" style="text-decoration:none;">Create an Account</a>
+
+                  <a href="forgot-password/index.php" class="footer" style="text-decoration:none; color: #ff5500">Forgot Password</a>
                 </div>
               </tr>
             </tbody>
@@ -268,9 +274,11 @@
 
     if(isset($_POST['sign-in'])){
 
+      define('SALT', 'd#f453dd');
+
 $user_email = $_POST['email'];
 
-$password = $_POST['password'];
+$password = md5(SALT.$_POST['password']);
 
 $select_user = "select * from customers where email='$user_email' AND password = '$password'";
 

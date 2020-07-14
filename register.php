@@ -785,12 +785,12 @@
                                 <td>
                                     <label for="phone no">Phone Number</label>
                                     <input type="tel" name="phone" id="phone" class="form-control" maxlength="15"
-                                        placeholder="Enter Phone Number" required>
+                                        placeholder="Enter Phone Number">
                                 </td>
                                 <td>
                                     <label for="whatsapp no">Whatsapp Number</label>
                                     <input type="tel" name="whatsappno" id="whatsappno" class="form-control"
-                                        maxlength="15" placeholder="Enter Business WhatsApp Number" required>
+                                        maxlength="15" placeholder="Enter Business WhatsApp Number">
                                 </td>
 
                             </tr>
@@ -798,12 +798,12 @@
                                 <td>
                                     <label for="shop-name">Business Name</label>
                                     <input type="text" name="shopname" id="shopName" class="form-control" maxlength="50"
-                                        placeholder="Enter Business Name" required>
+                                        placeholder="Enter Business Name">
                                 </td>
                                 <td>
                                     <label for="shop-url">Store URL</label>
                                     <input type="text" name="shopurl" id="shopUrl" class="form-control" maxlength="50"
-                                        placeholder="Enter Store URL without spacing" required>
+                                        placeholder="Enter Store URL without spacing">
                                 </td>
                             </tr>
 
@@ -811,14 +811,14 @@
                                 <td colspan="2">
                                     <label for="password">Password</label>
                                     <input type="password" name="password" id="password" class="form-control"
-                                        maxlength="20" placeholder="Enter desired Password" required>
+                                        maxlength="20" placeholder="Enter desired Password">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="code">CODE</label>
                                     <input type="text" name="code" id="code" class="form-control"
-                                        placeholder="Enter discount code" required>
+                                        placeholder="Enter discount code">
                                 </td>
                                 <td>
                                     <label for="plan">Select a plan</label><br>
@@ -845,94 +845,6 @@
     </div>
 
 
-    <!--footer-->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-md-3">
-                    <h5> Navigations</h5>
-                    <hr class="light">
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About us</a></li>
-
-
-                </div>
-
-                <div class="col-sm-3 col-md-3">
-                    <h5> Join E-acez </h5>
-                    <hr class="light">
-                    <ul>
-                        <li><a href="sign-in.php">Login</a></li>
-                        <li><a href="register.php">Create acoount</a></li>
-                        <li><a href="contact.php">Contact us</a></li>
-                    </ul>
-
-                </div>
-
-                <div class="col-sm-3 col-md-3">
-                    <h5> Contact </h5>
-                    <hr class="light">
-                    <table class="table borderless">
-                        <tbody>
-                            <tr>
-                                <th><i class="fas fa-map-marker-alt"></i></th>
-                                <td>E-acez currently operates from Asa dam, Ilorin Kwara State. </td>
-                            </tr>
-                            <tr>
-                                <th><i class="fas fa-phone-alt"></i></th>
-                                <td>08110867275 </td>
-                            </tr>
-                            <tr>
-                                <th><i class="fas fa-envelope"></i></th>
-                                <td>eacez@e-acez.com </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-
-                <div class="col-sm-3 col-md-3">
-                    <h5>Get latest update</h5>
-                    <hr class="light">
-
-                    <p class="text-muted">
-                        Don't miss our latest news update.
-                    </p>
-
-                    <form action="" method="post">
-                        <!-- form Begin-->
-                        <div class="input-group">
-                            <!-- input-group Begin-->
-                            <input type="text" class="form-control" name="email">
-
-                            <span class="input-group-btn">
-                                <!-- input-group-btn Begin-->
-
-                                <input type="submit" value="subscribe" class="btn btn-secondary">
-
-                            </span>
-                            <!--input-group-btn Finish-->
-
-                        </div><!-- input-group Finish-->
-
-                    </form><!-- form Finish-->
-                </div>
-
-                <div class="col-md-12 text-center">
-                    <hr class="line" width="100%">
-                    <h6> images from <a href="https://www.pikrepo.com/">nicepik</a></h6>
-                    <h6>&copy; 2020 e-acez.com </h6>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- onclick="payWithPaystack()"
-add it to the button for paystack payment -->
-    <!-- Registratio Page Ends -->
-
 
     <!--paystack script-->
     <script src="https://js.paystack.co/v1/inline.js"></script>
@@ -940,10 +852,39 @@ add it to the button for paystack payment -->
 
 </html>
 
+<script>
+    const paymentForm = document.getElementById('paymentForm');
+    paymentForm.addEventListener("submit", payWithPaystack, false);
+    function payWithPaystack(e) {
+        e.preventDefault();
+
+        let handler = PaystackPop.setup({
+            key: 'pk_test_6915e45b1bb5261b2fd67ea798081b572cb74753', // Replace with your public key
+            email: document.getElementById("email").value,
+            amount: document.getElementById("amount").value * 100,
+            firstname: document.getElementById("firstName").value,
+            lastname: document.getElementById("lastName").value,
+            ref: '' + Math.floor((Math.random() * 1000000000) +
+                1
+            ), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+            // label: "Optional string that replaces customer email"
+            onClose: function(){
+      alert('Window closed.');
+    },
+    callback: function(response){
+      let message = 'Payment complete! Reference: ' + response.reference;
+      alert(message);
+    }
+  });
+  handler.openIframe();
+    }
+</script>
+
 <?php
 
-/**if(isset($_POST['register'])){
+if(isset($_POST['register'])){
 
+    define('SALT', 'd#f453dd');
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
     $email = $_POST['email'];
@@ -951,13 +892,13 @@ add it to the button for paystack payment -->
     $wno = $_POST['whatsappno'];
     $bname = $_POST['shopname'];
     $surl = $_POST['shopurl'];
-    $pword = $_POST['password'];
+    $pword = md5(SALT.$_POST['password']);
     $code = $_POST['code'];
     $user_ip = getRealIpUser();
 
     $check_customer = "select customer_id from customers where email = '$email' ";
 
-    $run_check = mysqli_query ($con, $check_customer);
+    $run_check = mysqli_query($con, $check_customer);
 
     if (mysqli_num_rows($run_check) == 0){
 
@@ -983,33 +924,6 @@ else{
 }
 
 }
- **/
+ 
 
 ?>
-
-<script>
-    const paymentForm = document.getElementById('paymentForm');
-    paymentForm.addEventListener("submit", payWithPaystack, false);
-
-    function payWithPaystack(e) {
-        e.preventDefault();
-        let handler = PaystackPop.setup({
-            key: 'pk_test_6915e45b1bb5261b2fd67ea798081b572cb74753', // Replace with your public key
-            email: document.getElementById("email").value,
-            amount: document.getElementById("amount").value * 100,
-            firstname: document.getElementById("firstName").value,
-            lastname: document.getElementById("lastName").value,
-            ref: '' + Math.floor((Math.random() * 1000000000) +
-                1
-            ), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-            // label: "Optional string that replaces customer email"
-            onClose: function () {
-                alert('Window closed.');
-            },
-            callback: function(response) {
-                window.location = "http://www.yoururl.com/verify_transaction.php?reference=" + response.reference;
-                };
-        });
-        handler.openIframe();
-    }
-</script>

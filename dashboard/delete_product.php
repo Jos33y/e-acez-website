@@ -21,7 +21,7 @@ echo "<script>window.open('../sign-in.php', '_self')</script>";
 
             echo "<script>alert('Product has been Deleted Successfully')</script>";
 
-            echo "<script>window.open('index.php?view_products', '_self')</script>";
+            echo "<script>window.open('index.php?view_products=1', '_self')</script>";
 
 
         }

@@ -97,14 +97,7 @@ if(!isset($_SESSION['email'])){
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td colspan="2">
-                                        <label for="Image" class="sr-only">Profile Image</label>
-                                        <input type="file" name="profileImg" class="form-control-md form-control-lg"
-                                            id="" placeholder="Profile Image">
-
-                                    </td>
-                                </tr>
+                                
                             </tbody>
                         </table>
 
@@ -128,6 +121,52 @@ if(!isset($_SESSION['email'])){
 </body>
 
 </html>
+
+
+<?php
+
+if(isset($_POST['update'])){
+
+    $fname = $_POST['firstName'];
+    $lname = $_POST['lastName'];
+    $email = $_POST['email'];
+    $pno = $_POST['phoneNo'];
+    $wno = $_POST['whatsappNo'];
+    $bname = $_POST['shopName'];
+    $surl = $_POST['shopUrl'];
+
+
+    $sql = "UPDATE customers
+     SET firstname='$fname', lastname='$lname', email='$email', phone_no='$pno', whatsapp_no='$wno', shop_name='$bname',
+      shop_url='$surl' WHERE customer_id = '$admin_id'";
+    
+    $query = mysqli_query($con, $sql) or die(mysqli_error($con));
+
+    if($query){
+
+        echo "
+        <script>
+        alert('update successfull')
+    </script>";
+    echo "<script>window.open('index.php?profile' , '_self')</script>";
+    }
+    
+else{
+    echo '
+    <script>
+    swal({
+            title: "Update Error",
+            icon: "error",
+        });
+</script>';
+  
+}
+
+}
+
+
+?>
+
 
 
 

@@ -30,7 +30,7 @@ if(!isset($_SESSION['email'])){
                     </div>
 
                     <div class="form-group text-center">
-                        <img src="prod_img/placeholder.png" onclick="triggerClick()" id="prodDisplay" >
+                        <img src="product_images/placeholder.png" onclick="triggerClick()" id="prodDisplay" >
                         <input type="file" name="prodImage" id="prodImage" onchange="displayImage(this)" class="form-control-md form-control-lg"
                             placeholder="Product Image" style="display: none;">
                             <label for="prod-image">Select product image</label>
