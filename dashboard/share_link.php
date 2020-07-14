@@ -24,6 +24,16 @@ if(!isset($_SESSION['email'])){
             <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://www.e-acez.com/<?php echo $url; ?>" target="_blank" class="fa fa-linkedin-square"></a>
         </div>
    
+
+        <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <a style="padding-top: 5%;" href="index.php?dashboard">
+                        <p class="back text-center">Back</p>
+                    </a>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
 </div>
 
 <?php } ?>

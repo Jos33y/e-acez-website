@@ -1,4 +1,3 @@
-
 <?php 
         include('include/dbconn.php');
 
@@ -26,10 +25,10 @@
     <div class="row justify-content-center">
 
       <div class="col-md-12">
-        <a href="index.php"><img class="logo-sign"  src="images/eiconweb.png" alt=""></a>
+        <a href="index.php"><img class="logo-sign" src="images/eiconweb.png" alt=""></a>
         <h3 class="sign-in-head"> sign in</h3>
-       
-      </div> 
+
+      </div>
 
       <div class="col-md-6 sign-in-svg">
         <svg xmlns="http://www.w3.org/2000/svg" width="803" height="617" viewBox="0 0 803 617">
@@ -253,7 +252,8 @@
                 <div class="col-md-12 text-center" style="margin-top: 10%;">
                   <a href="register.php" class="footer" style="text-decoration:none;">Create an Account</a>
 
-                  <a href="forgot-password/index.php" class="footer" style="text-decoration:none; color: #ff5500">Forgot Password</a>
+                  <a href="forgot-password/index.php" class="footer" style="text-decoration:none; color: #ff5500">Forgot
+                    Password</a>
                 </div>
               </tr>
             </tbody>

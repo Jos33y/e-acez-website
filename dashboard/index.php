@@ -38,11 +38,11 @@ if(!isset($_SESSION['email'])){
     <nav>
         <div class="navbar text-white">
             <a href="index.php?dashboard" class="nav-title"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
-
-            <span class="nav-name"><?php echo $lastname . ' ' . $firstname; ?>
-                <img src="profile_img/default.png" alt="profile image" class="img-fluid">
-            </span>
-
+           
+            <a href="index.php?profile" class="nav-title"><?php echo $lastname . ' ' . $firstname; ?>
+                
+            </a>
+            <a href="http://localhost/e-acez-4.0/<?php echo $url; ?>" target="_blank" class="nav-title" style="text-decoration:none; margin-right:80px;">   view shop </a>
         </div>
     </nav>
 

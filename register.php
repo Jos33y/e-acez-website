@@ -789,7 +789,7 @@
                                 </td>
                                 <td>
                                     <label for="whatsapp no">Whatsapp Number</label>
-                                    <input type="tel" name="whatsappno" id="whatsappno" class="form-control"
+                                    <input type="tel" name="whatsappno" id="whatsAppNo" class="form-control"
                                         maxlength="15" placeholder="Enter Business WhatsApp Number">
                                 </td>
 
@@ -831,7 +831,8 @@
                             </tr>
                             <tr>
                                 <td colspan="2" class="text-center">
-                                    <button class="btn btn-md btn-success" type="submit" onclick="payWithPaystack()"> Sign up</button>
+                                    <button class="btn btn-md btn-success" type="submit"
+                                        onclick="payWithPaystack()"> Sign up</button>
                                 </td>
                             </tr>
 
@@ -855,6 +856,7 @@
 <script>
     const paymentForm = document.getElementById('paymentForm');
     paymentForm.addEventListener("submit", payWithPaystack, false);
+
     function payWithPaystack(e) {
         e.preventDefault();
 
@@ -868,62 +870,34 @@
                 1
             ), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
             // label: "Optional string that replaces customer email"
-            onClose: function(){
-      alert('Window closed.');
-    },
-    callback: function(response){
-      let message = 'Payment complete! Reference: ' + response.reference;
-      alert(message);
-    }
-  });
-  handler.openIframe();
+            onClose: function () {
+                alert('Window closed.');
+            },
+            callback: function (response) {
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                var email = document.getElementById("email").value;
+                var phoneNumber = document.getElementById("phone").value;
+                var whatsAppNo = document.getElementById("whatsAppNo").value;
+                var shopName = document.getElementById("shopName").value;
+                var shopUrl = document.getElementById("shopUrl").value;
+                var password = document.getElementById("password").value;
+                var code = document.getElementById("code").value;
+                var amount = document.getElementById("amount").value;
+
+
+                let message = 'Payment complete! Reference: ' + response.reference;
+                alert(message);
+                let queryString = "?reference=" + response.reference + "&fName=" + firstName + "&lName=" +
+                    lastName +
+                    "&email=" + email + "&pno=" + phoneNumber + "&wno=" + whatsAppNo + "&sname=" +
+                    shopName +
+                    "&surl=" + shopUrl + "&pwd=" + password + "&code=" + code + "&amt=" + amount;
+                window.location.href = "http://localhost/e-acez-4.0/verify_transaction.php" + queryString;
+
+                // window.location = "http://localhost/e-acez-4.0/verify_transaction.php?reference=" + response.reference; 
+            }
+        });
+        handler.openIframe();
     }
 </script>
-
-<?php
-
-if(isset($_POST['register'])){
-
-    define('SALT', 'd#f453dd');
-    $fname = $_POST['firstname'];
-    $lname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $pno = $_POST['phone'];
-    $wno = $_POST['whatsappno'];
-    $bname = $_POST['shopname'];
-    $surl = $_POST['shopurl'];
-    $pword = md5(SALT.$_POST['password']);
-    $code = $_POST['code'];
-    $user_ip = getRealIpUser();
-
-    $check_customer = "select customer_id from customers where email = '$email' ";
-
-    $run_check = mysqli_query($con, $check_customer);
-
-    if (mysqli_num_rows($run_check) == 0){
-
-    $sql = "INSERT INTO customers (firstname, lastname, email, password, phone_no, whatsapp_no, shop_name, shop_url, code, reg_date, user_ip)
-    VALUES ('$fname', '$lname', '$email', '$pword', '$pno', '$wno', '$bname', '$surl', '$code', NOW(), '$user_ip')";
-    $query = mysqli_query($con, $sql) or die(mysqli_error($con));
-
-    if($query){
-
-        echo "<script>window.open('sign-in.php', '_self')</script>";
-    }
-    
-}
-else{
-    echo '
-    <script>
-    swal({
-            title: "Email has been Registered!",
-            icon: "error",
-        });
-</script>';
-  
-}
-
-}
- 
-
-?>
