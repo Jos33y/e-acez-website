@@ -14,42 +14,35 @@ background-color: #f2f1f6;
     background-color: #17192e;
     box-shadow: 1px 1px 10px #888;
 }
-.nav-link{
-    font-size: 14px;
-    font-weight: 600;
-    margin: 5px;
+.nav-link {
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 50px;
     color: white !important;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: #0055FF !important;
 }
-.active .nav-link{
+
+.active .nav-link {
     color: #FF5500 !important;
     text-decoration: none;
 }
 
-.menu-right-btn{
-    padding: 5px 20px;
-    background-color: transparent;
-    transition: all 3000ms ease-in;
+.logo {
+    width: 40px;
+    height: 40px;
 }
-.menu-right-btn:hover{
-    color:  rgb(124, 212, 124);
-    
 
-}
-.logo{
-    width: 50px;
-    height: 50px;
-}
-.logo-head{
+.logo-head {
     margin-left: 3px;
-    font-size: 22px;
+    font-size: 19px;
     color: white;
-    font-weight: 600;
-    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
 
@@ -682,38 +675,74 @@ hr.line{
 
 
 /** footer styles **/
-footer{
+
+footer {
     background: #17192e;
     padding: 10px 0;
-    color: #888;
+    color: rgb(158, 157, 157);
 }
 
-footer ul{
+.footer-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-head {
+    margin-left: 3px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    font-family: 'PT Serif', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+footer ul {
     list-style: none;
     padding-left: 0px;
-    font-size: 14px;
+    font-size: 13px;
 }
-footer a{
-    color: #888;
+
+footer a {
+    color: rgb(158, 157, 157);
     padding: 0;
     text-decoration: none;
 }
-footer a:hover{
+
+footer a:hover {
     color: #5133d4;
 }
-footer h5{
+
+footer h5 {
     padding-top: 5vh;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     color: #d5d5d5;
     font-family: 'Noto Sans KR', sans-serif;
 }
-footer .table .fas{
-    color: #888;
-    font-size:20px;
+
+footer .table .fas {
+    color: rgb(158, 157, 157);
+    font-size: 16px;
 }
-footer .table{
-    color: #888;
+
+footer td {
+    font-size: 13px;
+}
+
+footer .table {
+    color: rgb(158, 157, 157);
+}
+
+hr.line {
+    border: 1px solid #888;
+}
+
+footer h6 {
+
+    font-size: 12px;
+
 }
 
 /** template Styles **/

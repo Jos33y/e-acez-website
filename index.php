@@ -1,7 +1,7 @@
 <?php
 $active = "index";
 $title = "welcome to e-acez";
-include('header.php')
+include('include/header.php')
 
 ?>
 
@@ -14,7 +14,7 @@ include('header.php')
               <span class="header-text">Get Your Business Online</span> <br>
               <span class="sub-text">The best place to rent an online shop</span>               
                 <div class="button">
-                <a href="sign-up.php" class="btn btn-outline-light"> Get Started</a>
+                <a href="customer/register.php" class="btn btn-outline-light"> Get Started</a>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@ include('header.php')
             <br>
             <span class="sub-title">Super Responsive Stores</span>
             <p class="card-text">
-            The store are so responsive that they go through no lag.
+            The stores are so responsive that they go through no lag.
              A tap and your customer’s are in.
             </p>
             </div>
@@ -53,8 +53,8 @@ include('header.php')
             <div class="card-body text-center">
             <i class="far fa-comments"></i>
             <br>
-                <span class="sub-title">In-house Chat System</span>
-            <p class="card-text">Stores possess a chat system where customers and sellers can communicate efficiently.
+                <span class="sub-title">Chat Redirect</span>
+            <p class="card-text">Stores possess a chat function where customers and sellers can communicate efficiently on whatsapp.
                  This makes communication between sellers and customers easier.</p>
             </div>
         </div>
@@ -106,8 +106,8 @@ include('header.php')
             <span class="sub-title">Personalization</span>
             <br>
             <p class="title-text">
-            Each ecommerce store is built to suit the taste of the store owner(seller), 
-            the store carries the brand name, brand logo, and everything the store owner wants to integrate.
+            Each e-commerce store is built to suit the taste of the store owner(seller), 
+            the store carries the Brand's name, Brand's logo, and everything the Store's owner wants to integrate.
             </p>
         </div>
 
@@ -117,7 +117,7 @@ include('header.php')
             <span class="sub-title">99.8% store uptime</span>
             <br>
             <p class="title-text">
-            Every store has 99.8% uptime which means your store is accessible at every hour. 
+            Every store has a 99.8% uptime which means your store is accessible at every hour. 
                 Smoky put, all stores are available 24/7.
             </p>
 
@@ -162,7 +162,7 @@ include('header.php')
             </div>
 
         <div class="button">
-        <a href="sign-up.php" class="btn btn-light"> Rent shop</a>
+        <a href="customer/register.php" class="btn btn-light"> Rent shop</a>
         </div>
     </div>
     </div>
@@ -231,7 +231,7 @@ include('header.php')
 
 <?php
 
-include('footer.php');
+include('include/footer.php');
 
 ?>
 

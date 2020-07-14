@@ -1,7 +1,7 @@
 <?php
 $active = "contact";
 $title = "contact us";
-include('header.php')
+include('include/header.php')
 
 ?>
 
@@ -11,7 +11,7 @@ include('header.php')
     <div class="col-md-4 col-sm-4 col-xs-12"></div>
     <div class="col-md-4 col-sm-4 col-xs-12">
     <!-- Form Start -->
-        <form method="POST" action="in-process.php" class="form-container">
+        <form method="POST" class="form-container">
           <div class="text-center">
               <h3> Contact US </h3>
           </div>
@@ -47,7 +47,7 @@ include('header.php')
 
 <?php
 
-include('footer.php');
+include('include/footer.php');
 
 ?>
     </div>
@@ -68,7 +68,7 @@ include('footer.php');
 
                         $sender_message = $_POST['message'];
 
-                        $receiver_email = "eacez999@gmail.com";
+                        $receiver_email = "info@e-acez.com";
 
                         mail($receiver_email, $sender_name, $sender_subject, $sender_message, $sender_email);
 

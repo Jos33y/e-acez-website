@@ -4,9 +4,12 @@
 * Author: Lagbalu Joseph (Jos33y)
 ======================================================== */
 
-html,
+
 body {
     height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
     background: rgb(248, 248, 253);
     overflow-x: hidden;
 }
@@ -59,21 +62,24 @@ nav {
 .boards {
     margin: 5%;
 }
-.pages{
+
+.pages {
     margin-top: 3%
+}
+
+ul.pagination li {
+    border: 2px solid #ff5500;
 
 }
-ul.pagination li{
-    border: 2px solid #ff5500;
-  
-}
-.pagination li{
+
+.pagination li {
     font-size: 16px;
     font-weight: 550;
     padding: 10px;
 
 }
-.prod-no{
+
+.prod-no {
     border: 1px solid #fff;
     background-color: #fff;
     color: #ff5500;
@@ -82,13 +88,15 @@ ul.pagination li{
     border-radius: 30px;
     float: left;
 }
+
 .developer {
     margin: 5%;
 }
 
-.developer .bottom{
+.developer .bottom {
     margin-bottom: 20%;
 }
+
 .margin {
     margin-top: 22%;
 }
@@ -101,7 +109,8 @@ ul.pagination li{
     color: #fff;
     font-size: 80px;
 }
-.boards .far{
+
+.boards .far {
     color: #fff;
     font-size: 80px;
 }
@@ -123,7 +132,7 @@ ul.pagination li{
     text-decoration: none;
 }
 
-#prodDisplay{
+#prodDisplay {
     text-align: center;
     display: block;
     width: 60%;
@@ -133,38 +142,46 @@ ul.pagination li{
 
 
 /** View Products **/
-.card.box{
+.card.box {
     -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 
 }
-.products{
+
+.products {
     margin-top: 50px;
 }
-.products .col-6{
+
+.products .col-6 {
     margin-bottom: 50px;
 }
-.prod-image{
+
+.prod-image {
     border-radius: 15px;
 }
-.edit{
+
+.edit {
     color: blue;
 }
-.delete{
+
+.delete {
     color: red;
     float: right;
 }
-.prod-name{
+
+.prod-name {
     font-size: 13px;
     color: #242323d3;
     font-weight: 600;
 }
-.prod-price{
+
+.prod-price {
     font-size: 15px;
     color: #242323d3;
     font-weight: 700;
 }
+
 /** footer styles */
 
 footer {
@@ -174,7 +191,7 @@ footer {
 }
 
 .copyright {
-   
+
     font-size: 12px;
     font-weight: 550px;
 }
@@ -201,7 +218,8 @@ footer .orange {
     font-size: 16px;
     font-weight: 550;
 }
-.profile .btn{
+
+.profile .btn {
     margin-top: 1%;
     font-size: 14px;
     color: #fff;
@@ -218,8 +236,9 @@ footer .orange {
     border-radius: 20px;
     text-transform: uppercase;
 }
-    /** box shadow styles **/
-.btn{
+
+/** box shadow styles **/
+.btn {
     -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
@@ -238,6 +257,7 @@ footer .orange {
     font-size: 18px;
     width: 100%;
 }
+
 .profile input {
     border: solid #000000d3;
     border-top: 0;
@@ -253,6 +273,7 @@ footer .orange {
 .form input::placeholder {
     color: gray;
 }
+
 .profile input::placeholder {
     color: gray;
 }
@@ -285,92 +306,163 @@ footer .orange {
 
 /* Medium devices (tablets, less than 992px) */
 
-@media (max-width: 991.98px) {
-   
-}
+@media (max-width: 991.98px) {}
 
 /* Small devices (landscape phones, less than 768px) */
 
-@media (max-width: 767.98px) {
-
-   
-}
+@media (max-width: 767.98px) {}
 
 /* Extra small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575.95px) {
-   
+    .nav-title {
+        font-size: 12px;
+        margin-left: 2%;
+    }
+
+    .nav-name {
+        font-size: 12px;
+    }
+
+    .dash-title {
+        font-size: 14px;
+    }
+
 }
 
 /* Extra small devices (portrait phones, less than 345px) */
-@media (max-width: 340px) {
-    .nav-title{
-        font-size: 14px;
+@media (max-width: 375px) {
+    .nav-title {
+        font-size: 12px;
         margin-left: 2%;
     }
-    .nav-name{
-        font-size: 14px;
-    }
-   .dash-title{
-       font-size: 16px;
-   }
-   
 
-   .edit{
-       font-size: 11px;
-   }
-   .delete{
-       font-size: 11px;
-   }
-   .prod-name{
-       font-size: 12px;
-   }
-   .prod-price{
-       font-size: 13px;
-   }
+    .nav-name {
+        font-size: 12px;
+    }
+
+    .dash-title {
+        font-size: 13px;
+    }
+
+
+    .edit {
+        font-size: 11px;
+    }
+
+    .delete {
+        font-size: 11px;
+    }
+
+    .prod-name {
+        font-size: 12px;
+    }
+
+    .prod-price {
+        font-size: 13px;
+    }
+
+    .boards .card-title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .boards .fas {
+
+        font-size: 70px;
+    }
+
+    .boards .far {
+
+        font-size: 70px;
+    }
+
+    .profile .back {
+        font-size: 12px;
+    }
+
+    .profile .btn {
+        font-size: 13px;
+
+    }
+
+    .form .btn {
+        font-size: 13px;
+
+    }
+
+    .form input {  
+        font-size: 15px;
+
+    }
+    
+    .profile input {
+    
+        font-size: 13px;
+
+    }
+    
+    
+    /** Developer Style **/
+    .contact .btn {
+        font-size: 15px;
+    }
+    
+    .pagination li {
+        font-size: 12px;
+        padding: 5px;
+    
+    }
 }
 
 /** SOCIAL LINK STYLES **/
 
-.social-link{
+.social-link {
     text-align: center;
     margin-top: 10%;
     font-size: 100px;
-    
+
 }
-.social-link a{
+
+.social-link a {
     text-decoration: none;
 }
-.social-link .fa.fa-facebook{
+
+.social-link .fa.fa-facebook {
     color: #2B56AB;
     margin-left: 3%;
 }
 
-.social-link .fa.fa-twitter{
- 
+.social-link .fa.fa-twitter {
+
     color: #00AAFF;
     margin: 3%;
 }
-.social-link .fa.fa-pinterest-square{
+
+.social-link .fa.fa-pinterest-square {
     color: #E81414;
     margin: 3%;
 }
-.social-link .fa.fa-whatsapp{
+
+.social-link .fa.fa-whatsapp {
     color: #24CE24;
     margin: 3%;
 }
-.social-link .fa.fa-reddit-square{
+
+.social-link .fa.fa-reddit-square {
     color: #FF2A00;
     margin: 3%;
 }
-.social-link .fa.fa-linkedin-square{
+
+.social-link .fa.fa-linkedin-square {
     color: #156AEA;
     margin: 3%;
 }
-@media (max-width: 768px){
-    .social-link{
+
+@media (max-width: 768px) {
+    .social-link {
         font-size: 50px;
-        
+
     }
 
 }

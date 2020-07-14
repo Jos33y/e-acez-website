@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="543.878" height="404.51" viewBox="0 0 543.878 404.51">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #f50;
+      }
+
+      .cls-4 {
+        fill: #bdbdbd;
+      }
+
+      .cls-5 {
+        fill: #e0e0e0;
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-7 {
+        fill: #6c63ff;
+        opacity: 0.1;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1.198" x2="0.5" y2="-0.168" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="gray" stop-opacity="0.251"/>
+      <stop offset="0.535" stop-color="gray" stop-opacity="0.122"/>
+      <stop offset="1" stop-color="gray" stop-opacity="0.102"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1" x2="0.5" y2="0" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="credit-card" transform="translate(6.915 6.911)">
+    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-1" width="429.525" height="262.33" rx="27.5" transform="translate(-6.915 120.542) rotate(-17.261)"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-2" width="420.762" height="253.046" rx="27.5" transform="translate(-0.51 121.409) rotate(-17.261)"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" class="cls-3" width="420.762" height="36.289" transform="translate(9.385 153.254) rotate(-17.261)"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-4" width="106.907" height="15.693" transform="translate(92.452 308.204) rotate(-17.261)"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-5" width="185.371" height="15.693" transform="translate(84.594 282.915) rotate(-17.261)"/>
+    <rect id="Rectangle_15" data-name="Rectangle 15" class="cls-6" width="431.947" height="262.588" rx="27.5" transform="translate(105.016 135.01)"/>
+    <rect id="Rectangle_16" data-name="Rectangle 16" class="cls-2" width="420.762" height="253.046" rx="27.5" transform="translate(109.92 137.688)"/>
+    <rect id="Rectangle_17" data-name="Rectangle 17" class="cls-5" width="12.26" height="34.818" transform="translate(209.98 260.53)"/>
+    <rect id="Rectangle_18" data-name="Rectangle 18" class="cls-5" width="12.26" height="34.818" transform="translate(225.673 260.53)"/>
+    <rect id="Rectangle_19" data-name="Rectangle 19" class="cls-5" width="12.26" height="34.818" transform="translate(241.365 260.53)"/>
+    <rect id="Rectangle_20" data-name="Rectangle 20" class="cls-5" width="12.26" height="34.818" transform="translate(268.828 260.53)"/>
+    <rect id="Rectangle_21" data-name="Rectangle 21" class="cls-5" width="12.26" height="34.818" transform="translate(284.52 260.53)"/>
+    <rect id="Rectangle_22" data-name="Rectangle 22" class="cls-5" width="12.26" height="34.818" transform="translate(300.213 260.53)"/>
+    <rect id="Rectangle_23" data-name="Rectangle 23" class="cls-5" width="12.26" height="34.818" transform="translate(327.675 260.53)"/>
+    <rect id="Rectangle_24" data-name="Rectangle 24" class="cls-5" width="12.26" height="34.818" transform="translate(343.368 260.53)"/>
+    <rect id="Rectangle_25" data-name="Rectangle 25" class="cls-5" width="12.26" height="34.818" transform="translate(359.061 260.53)"/>
+    <rect id="Rectangle_26" data-name="Rectangle 26" class="cls-5" width="12.26" height="34.818" transform="translate(386.523 260.53)"/>
+    <rect id="Rectangle_27" data-name="Rectangle 27" class="cls-5" width="12.26" height="34.818" transform="translate(402.216 260.53)"/>
+    <rect id="Rectangle_28" data-name="Rectangle 28" class="cls-5" width="12.26" height="34.818" transform="translate(417.908 260.53)"/>
+    <rect id="Rectangle_29" data-name="Rectangle 29" class="cls-3" width="73.098" height="40.086" transform="translate(136.69 203.982)"/>
+    <rect id="Rectangle_30" data-name="Rectangle 30" class="cls-7" width="44.802" height="44.802" transform="translate(420.831 335.441)"/>
+    <rect id="Rectangle_31" data-name="Rectangle 31" class="cls-7" width="44.802" height="44.802" transform="translate(443.232 335.441)"/>
+  </g>
+</svg>

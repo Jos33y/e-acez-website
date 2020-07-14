@@ -42,7 +42,7 @@ if(!isset($_SESSION['email'])){
             <a href="index.php?profile" class="nav-title"><?php echo $lastname . ' ' . $firstname; ?>
                 
             </a>
-            <a href="http://localhost/e-acez-4.0/<?php echo $url; ?>" target="_blank" class="nav-title" style="text-decoration:none; margin-right:80px;">   view shop </a>
+            <a href="https://e-acez.com/<?php echo $url; ?>" target="_blank" class="nav-title" style="text-decoration:none; margin-right:80px;">   View Shop </a>
         </div>
     </nav>
 

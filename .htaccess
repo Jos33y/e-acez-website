@@ -1,7 +1,8 @@
 
 
 RewriteEngine On
-RewriteRule ^([0-9a-zA-Z]+)$ showroom.php?shop_url=$1 [NC] 
+RewriteRule ^([0-9a-zA-Z]+)$ showroom/showroom.php?shop_url=$1 [NC] 
+RewriteRule customer/register customer/register.php [NC] 
 # DO NOT REMOVE THIS LINE AND THE LINES BELOW SSL_REDIRECT:e-acez.com
 RewriteEngine on
 RewriteCond %{HTTPS} off
