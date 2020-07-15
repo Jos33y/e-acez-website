@@ -159,7 +159,7 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
             <div class="col-sm-6">
                 <div class="sub-hero">
-                    <img src="images/register-man.svg" class="img-fluid">
+                    <img src="images/register-man-orange.svg" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -244,7 +244,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <div class="col-sm-6">
                             <label for="code">CODE</label>
                             <input type="text" name="code" id="code" class="form-control"
-                                placeholder="Enter discount code">
+                                placeholder="Enter discount code" required>
                         </div>
                         <div class="col-sm-6">
                             <label for="plan">Select a plan</label><br>
@@ -345,6 +345,25 @@ $(document).ready(function(){
         $("#url").text(currentText);
     });
 });
+
+document.getElementById('email').addEventListener('keydown' ,function(e) {
+    var k =e.keyCode
+    k ==32 &&e.preventDefault()
+});
+
+document.getElementById('shopUrl').addEventListener('keydown' ,function(e) {
+    var k =e.keyCode
+    k ==32 &&e.preventDefault()
+});
+document.getElementById('whatsAppNo').addEventListener('keydown' ,function(e) {
+    var k =e.keyCode
+    k ==32 &&e.preventDefault()
+});
+
+document.getElementById('phone').addEventListener('keydown' ,function(e) {
+    var k =e.keyCode
+    k ==32 &&e.preventDefault()
+});
 </script>
 <script>
     $(document).ready(function () {
@@ -423,7 +442,7 @@ $(document).ready(function(){
                     "&email=" + email + "&pno=" + phoneNumber + "&wno=" + whatsAppNo + "&sname=" +
                     shopName +
                     "&surl=" + shopUrl + "&pwd=" + password + "&code=" + code + "&amt=" + amount;
-                window.location.href = "https://e-acez.com/customer/verify_transaction.php" +
+                window.location.href = "http://localhost/e-acez-4.0/customer/verify_transaction.php" +
                     queryString;
 
                 // window.location = "http://localhost/e-acez-4.0/verify_transaction.php?reference=" + response.reference; 

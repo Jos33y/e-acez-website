@@ -62,7 +62,7 @@ if(!isset($_SESSION['email'])){
                                 <tr>
                                     <td colspan="2">
                                         <label for="Product Name" class="sr-only">Email</label>
-                                        <input type="email" name="email" class="form-control-md form-control-lg"
+                                        <input type="email" name="email" id="email" class="form-control-md form-control-lg"
                                             id="" value="<?php echo $email; ?>" placeholder="Email">
 
                                     </td>
@@ -71,13 +71,13 @@ if(!isset($_SESSION['email'])){
                                 <tr>
                                     <td>
                                         <label for="Phone No" class="sr-only">Phone No</label>
-                                        <input type="tel" name="phoneNo" class="form-control-md form-control-lg"
+                                        <input type="tel" name="phoneNo" id="phone" class="form-control-md form-control-lg"
                                             id="" value="<?php echo $p_no; ?>" placeholder="Phone No.">
 
                                     </td>
                                     <td>
                                         <label for="Whatsapp No" class="sr-only">WhatsApp No.</label>
-                                        <input type="tel" name="whatsappNo" class="form-control-md form-control-lg"
+                                        <input type="tel" name="whatsappNo" id="whatsAppNo" class="form-control-md form-control-lg"
                                             id="" value="<?php echo $w_no; ?>" placeholder="WhatsApp No.">
 
                                     </td>
@@ -92,7 +92,7 @@ if(!isset($_SESSION['email'])){
                                     </td>
                                     <td>
                                         <label for="Shop Url" class="sr-only">Shop URL</label>
-                                        <input type="text" name="shopUrl" class="form-control-md form-control-lg"
+                                        <input type="text" name="shopUrl" id="shopUrl" class="form-control-md form-control-lg"
                                             id="" value="<?php echo $shop_url ; ?>" placeholder="Shop URL">
                                     </td>
                                 </tr>
@@ -121,6 +121,27 @@ if(!isset($_SESSION['email'])){
 </body>
 
 </html>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    document.getElementById('email').addEventListener('keydown' ,function(e) {
+    var k =e.keyCode
+    k ==32 &&e.preventDefault()
+});
+
+document.getElementById('shopUrl').addEventListener('keydown' ,function(e) {
+    var k =e.keyCode
+    k ==32 &&e.preventDefault()
+});
+document.getElementById('whatsAppNo').addEventListener('keydown' ,function(e) {
+    var k =e.keyCode
+    k ==32 &&e.preventDefault()
+});
+
+document.getElementById('phone').addEventListener('keydown' ,function(e) {
+    var k =e.keyCode
+    k ==32 &&e.preventDefault()
+});
+</script>
 
 
 <?php
