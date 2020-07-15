@@ -23,7 +23,7 @@ if(!isset($_SESSION['email'])){
         }else {
             $pageno = 1;
         }
-        $no_of_records_per_page = 3;
+        $no_of_records_per_page = 20;
         $offset = ($pageno-1) * $no_of_records_per_page;
 
         $total_pages_sql = "SELECT COUNT(*) FROM products where customer_id = '$admin_id'";

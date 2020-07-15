@@ -220,8 +220,8 @@ s0.parentNode.insertBefore(s1,s0);
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
-                            <label for="shop-url">Store URL</label>
-                            <input type="text" name="shopUrl" id="shopUrl" class="form-control" maxlength="50"
+                            <label for="shop-url">Store URL </label><span class="url-one">www.e-acez.com/</span><span class="url-two" id="url"></span> 
+                            <input type="text" name="shopUrl" id="shopUrl" class="form-control" maxlength="20"
                                 placeholder="Store URL without spacing" required>
                             <span id="availability"></span>
                         </div>
@@ -283,7 +283,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <hr class="light">
                     <ul>
                         <li><a href="../index.php">Home</a></li>
-                        <li><a href="about.php">About us</a></li>
+                        <li><a href="../about.php">About us</a></li>
 
 
                 </div>
@@ -294,7 +294,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <ul>
                         <li><a href="sign-in.php">Login</a></li>
                         <li><a href="register.php#register">Create acoount</a></li>
-                        <li><a href="contact.php">Contact us</a></li>
+                        <li><a href="../contact.php">Contact us</a></li>
                     </ul>
 
                 </div>
@@ -307,8 +307,6 @@ s0.parentNode.insertBefore(s1,s0);
                             <tr>
                                 <th><i class="fas fa-phone-alt"></i></th>
                                 <td><a href="tel: +2348110867275" style="text-decoration: none; ">+2348110867275</a>
-                                </td>
-                                <td><a href="tel: +2347037344408" style="text-decoration: none;">+2347037344408</a>
                                 </td>
                             </tr>
                             <tr>
@@ -336,6 +334,18 @@ s0.parentNode.insertBefore(s1,s0);
 </body>
 
 </html>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#shopUrl").keyup(function(){
+        // Getting the current value of textarea
+        var currentText = $(this).val();
+        
+        // Setting the Div content
+        $("#url").text(currentText);
+    });
+});
+</script>
 <script>
     $(document).ready(function () {
         $('#shopUrl').blur(function () {

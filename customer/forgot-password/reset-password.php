@@ -1,7 +1,7 @@
 <?php
   include('dbconn.php');
   
-if (!isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) 
+if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) 
 && ($_GET["action"]=="reset") && !isset($_POST["action"])){
   $key = $_GET["key"];
   $email = $_GET["email"];
@@ -18,7 +18,7 @@ if (!isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
         from the email, or you have already used the key in which case it is 
         deactivated.!')
     </script>";
-   // echo "<script>window.open('http://localhost/e-acez-4.0/forgot-password/index.php', '_self')</script>";
+   // echo "<script>window.open('https://e-acez.com/customer/forgot-password/index.php', '_self')</script>";
 
  }else{
   $row = mysqli_fetch_assoc($query);
@@ -48,7 +48,7 @@ if (!isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
     <div class="row justify-content-center">
 
       <div class="col-md-12">
-        <a href="../index.php"><img class="logo-sign" src="../images/eiconweb.png" alt=""></a>
+        <a href="../../index.php"><img class="logo-sign" src="../images/eiconweb.png" alt=""></a>
         <h3 class="sign-in-head"> Reset Password</h3>
 
       </div>

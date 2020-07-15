@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <meta
   name="description"           
-  content="e-acez is an ecommerce store provider company.">
+  content="e-acez is an online showroom provider.">
 		
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
 			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,10 +14,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script data-ad-client="ca-pub-3739740059258858" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <link rel="stylesheet" href="styles/index.css">
-        <script data-ad-client="ca-pub-3739740059258858" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/eacez.css">
+   <script type="text/javascript" src="js/script.js"></script>
 
         <!--Start of Tawk.to Script-->
 <script type="text/javascript">

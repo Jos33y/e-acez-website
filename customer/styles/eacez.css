@@ -324,7 +324,17 @@ footer h6 {
 }
 
 
+.url-one {
+    font-size: 12px;
+    color: #FF5500;
+    font-weight: 550;
+}
 
+.url-two {
+    font-size: 12px;
+    color: #0b168f;
+    font-weight: 550;
+}
 
 
 

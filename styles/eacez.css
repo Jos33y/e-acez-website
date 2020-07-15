@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto&display=swap');
+
+.contact-us {
+
+    font-family: 'Lato', sans-serif;
+    color: #222;
+    background-color: #f2f1f6;
+    background-image: url(../images/backgroud-svg.svg);
+    overflow-x: hidden;
+}
+
+
+
+/** footer styles **/
+footer {
+    background: #17192e;
+    padding: 10px 0;
+    color: rgb(158, 157, 157);
+}
+
+.footer-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-head {
+    margin-left: 3px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    font-family: 'PT Serif', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 13px;
+}
+
+footer a {
+    color: rgb(158, 157, 157);
+    padding: 0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #5133d4;
+}
+
+footer h5 {
+    padding-top: 5vh;
+    font-size: 15px;
+    font-weight: 600;
+    color: #d5d5d5;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+footer .table .fas {
+    color: rgb(158, 157, 157);
+    font-size: 16px;
+}
+
+footer td {
+    font-size: 13px;
+}
+
+footer .table {
+    color: rgb(158, 157, 157);
+}
+
+hr.line {
+    border: 1px solid #888;
+}
+
+footer h6 {
+
+    font-size: 12px;
+
+}
+
+
+.url-one {
+    font-size: 12px;
+    color: #FF5500;
+    font-weight: 550;
+}
+
+.url-two {
+    font-size: 12px;
+    color: #0b168f;
+    font-weight: 550;
+}
+
+
+
+
+/** SIGN IN STYLES **/
+.sign-in-head {
+    margin-top: 2%;
+    color: #020b6b;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 5px;
+}
+
+.reg-line {
+    border: 1px solid #020b6b;
+    ;
+}
+
+.logo-sign {
+    margin-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.sign-in {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 2px solid #0b168f;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.sign-in label {
+    margin-left: 10px;
+    color: #17192e;
+    font-weight: 550;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sign-in input::placeholder {
+    color: rgb(155, 155, 182);
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sign-in input {
+    border: 1px solid #0b168f;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+}
+
+.sign-in .btn {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #020b6b;
+    border: 0px solid #010424;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 3px 0.5px rgba(23, 25, 46, 1);
+    -moz-box-shadow: 0px 0px 3px 0.5px rgba(23, 25, 46, 1);
+    box-shadow: 0px 0px 3px 0.5px rgba(23, 25, 46, 1);
+}
+
+.sign-in-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    margin-top: 20%;
+    text-align: center;
+    font-size: 12px;
+    color: #0b168f;
+}
+
+@media (max-width: 767.98px) {
+    .sign-in-head {
+        font-size: 20px;
+    }
+
+    .sign-in label {
+
+        font-size: 15px;
+    }
+
+    .sign-in input::placeholder {
+        font-size: 14px;
+
+    }
+
+    .sign-in .btn {
+        font-size: 14px;
+    }
+}
+
+
+
+
+/** Media Queries **/
+@media (max-width: 992px) {
+
+    .nav-link {
+        font-size: 12px;
+
+    }
+
+    .login .btn-primary {
+
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .login .btn-sign-up {
+
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    
+}
+
+@media (max-width: 767px) {
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-head {
+        font-size: 17px;
+    }
+
+    .login .btn-primary {
+        margin-top: 20px;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .login .btn-sign-up {
+        margin-top: 20px;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+
+}
+

@@ -38,8 +38,6 @@
                                 <th><i class="fas fa-phone-alt"></i></th>
                                 <td><a href="tel: +2348110867275" style="text-decoration: none; ">+2348110867275</a>
                                 </td>
-                                <td><a href="tel: +2347037344408" style="text-decoration: none;">+2347037344408</a>
-                                </td>
                             </tr>
                             <tr>
                                 <th><i class="fas fa-envelope"></i></th>

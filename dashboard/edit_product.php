@@ -35,6 +35,7 @@ if(isset($_GET['edit_product'])){
             <div class="col-md-4">
                 <h3 class="dash-title text-center"> <i class="fas fa-edit"></i> Edit Product</h3>
                 <form method="post" class="form" enctype="multipart/form-data">
+                <h6 class="text-center text-warning">reupload image when making changes</h6>
                     <div class="form-group">
                         <label for="Product Name" class="sr-only">Product Name</label>
                         <input type="text" name="prodName" class="form-control-md form-control-lg" 
@@ -50,7 +51,7 @@ if(isset($_GET['edit_product'])){
                     <div class="form-group text-center">
                         <img src="product_images/<?php echo $p_img; ?>" onclick="triggerClick()" id="prodDisplay" >
                         <input type="file" name="prodImage" id="prodImage" onchange="displayImage(this)" class="form-control-md form-control-lg"
-                            placeholder="Product Image" style="display: none;">
+                            placeholder="Product Image" style="display: none;" required>
                             <label for="prod-image">Select product image</label>
                     </div>
 
@@ -101,7 +102,7 @@ if(isset($_POST['update'])){
  
         echo "<script>alert('Product has been Updated Successfully')</script>";
 
-    echo "<script>window.open('index.php?view_products', '_self')</script>";
+    echo "<script>window.open('index.php?view_products=1', '_self')</script>";
  
     }
     else{

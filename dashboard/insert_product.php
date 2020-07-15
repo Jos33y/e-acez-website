@@ -17,22 +17,23 @@ if(!isset($_SESSION['email'])){
             <div class="col-md-4">
                 <h3 class="dash-title text-center"> <i class="fas fa-file-upload"></i> Insert Product</h3>
                 <form method="post" class="form" enctype="multipart/form-data">
+                <h6 class="text-center text-warning">make sure image is neatly cropped and named</h6>
                     <div class="form-group">
                         <label for="Product Name" class="sr-only">Product Name</label>
                         <input type="text" name="prodName" class="form-control-md form-control-lg" id=""
-                            placeholder="Product Name">
+                            placeholder="Product Name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="Product Price" class="sr-only">Product Price</label>
                         <input type="text" name="prodPrice" class="form-control-md form-control-lg" id=""
-                            placeholder="Product Price">
+                            placeholder="Product Price" required>
                     </div>
 
                     <div class="form-group text-center">
                         <img src="product_images/placeholder.png" onclick="triggerClick()" id="prodDisplay" >
                         <input type="file" name="prodImage" id="prodImage" onchange="displayImage(this)" class="form-control-md form-control-lg"
-                            placeholder="Product Image" style="display: none;">
+                            placeholder="Product Image" style="display: none;" required>
                             <label for="prod-image">Select product image</label>
                     </div>
 

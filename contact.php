@@ -4,54 +4,65 @@ $title = "contact us";
 include('include/header.php')
 
 ?>
+<style>
 
-<div class="container-fluid bg" style="color:#fff;">
-         
-  <div class="row">
-    <div class="col-md-4 col-sm-4 col-xs-12"></div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-    <!-- Form Start -->
-        <form method="POST" class="form-container">
-          <div class="text-center">
-              <h3> Contact US </h3>
-          </div>
-          <div class="form-group">
-              <label for="Full Name" class="form-text">Full Name</label>
-              <input type="text" name="name" class="form-control" placeholder="Enter Full Name" required autofocus>
-            </div>
-          <div class="form-group">
-              <label for="Email" class="form-text">Email</label>
-              <input type="email" name="email" class="form-control" placeholder="Enter Email" required autofocus>
-            </div>
+  </style>
 
-            <div class="form-group">
-              <label for="message" class="form-text">Message</label>
-             <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Type your message here..."></textarea>
-            </div>
+  <div class="container-fluid contact-us">
+    <div class="row justify-content-center">
 
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-block" name="submit" >Send Message</button>
-            </div>
-            <div class="footer text-center">
-        
-                <hr>
-                <p class="lead" style="clear:both; color: #fff">&copy; e-acez.com 2020</p>
-          </div>
+      <div class="col-md-12">
+        <h3 class="sign-in-head"> Contact US </h3>
+      </div>
+
+      <div class="col-md-6 d-none">
+      </div>
+
+      <div class="col-md-6 mx-auto">
+        <form method="post" class="sign-in">
+          <table>
+            <tbody>
+              <tr>
+
+                <label for="Full Name" class="form-text">Full Name</label>
+                <input type="text" name="name" class="form-control" placeholder="Enter Full Name" required autofocus>
+
+              </tr>
+              <tr>
+
+                <label for="Email" class="form-text">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter Email" maxlength="200" required
+                  autofocus>
+
+              </tr>
+
+              <tr>
+                <label for="message" class="form-text">Message</label>
+                <textarea name="message" id="message" cols="30" rows="3" class="form-control"
+                  placeholder="Type your message here..."></textarea>
+              </tr>
+
+              <tr>
+                <br>
+                <div class="col-md-12 text-center">
+                  <button class="btn btn-md btn-primary" name="submit" type="submit">Send Message</button>
+                </div>
+              </tr>
+
+            </tbody>
+          </table>
         </form>
- 
+
+      </div>
+      <div class="col-md-12">
+        <p class="footer">Copyright &copy; 2020 e-acez</p>
+      </div>
     </div>
-    <div class="col-md-4 col-sm-4 col-xs-12"></div>
   </div>
-</div>
-</div>
-
-<?php
-
-include('include/footer.php');
-
-?>
-    </div>
 </body>
+</div>
+</body>
+
 </html>
 
 <?php 

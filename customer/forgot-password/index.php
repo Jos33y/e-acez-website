@@ -48,7 +48,7 @@ VALUES ('".$email."', '".$key."', '".$expDate."');");
 $output='<p>Dear user,</p>';
 $output.='<p>Please click on the following link to reset your password.</p>';
 $output.='<p>-------------------------------------------------------------</p>';
-$output.='<p><a href="https://e-acez.com/customer/forgot-password/reset-password.php
+$output.='<p><a href="https://e-acez.com/customer/forgot-password/reset-password.php?
 key='.$key.'&email='.$email.'&action=reset" target="_blank">
 https://e-acez.com/customer/forgot-password/reset-password.php?key='.$key.'&email='.$email.'&action=reset</a></p>'; 
 $output.='<p>-------------------------------------------------------------</p>';
@@ -60,26 +60,24 @@ your account and change your security password as someone may have guessed it.</
 $output.='<p>Thanks,</p>';
 $output.='<p>E-ACEZ Team</p>';
 $body = $output; 
-$subject = "Password Recovery - E-ACEZ.com";
+$subject = "Password Recovery - E-ACEZ";
  
 $email_to = $email;
-$fromserver = "noreply@e-acez.com"; 
+$fromserver = "info@e-acez.com"; 
 
 
-
-
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 $mail = new PHPMailer\PHPMailer\PHPMailer;
 
 $mail->IsSMTP();
-//$mail->SMTPDebug = 3;
-$mail->Host = "smtp.gmail.com"; // Enter your host here
+$mail->SMTPDebug = 0;
+$mail->Host = 'smtp.flockmail.com'; 
 $mail->SMTPAuth = true;
-$mail->Username = "josephlagbalu@gmail.com"; // Enter your email here
-$mail->Password = " "; //Enter your password here
+$mail->Username = "info@e-acez.com";
+$mail->Password = "LagbaluJ20";
 $mail->Port = 587;
 $mail->IsHTML(true);
-$mail->From = "eacez@e-acez.com";
+$mail->From = "info@e-acez.com";
 $mail->FromName = "E-ACEZ";
 $mail->Sender = $fromserver; // indicates ReturnPath header
 $mail->Subject = $subject;
@@ -125,7 +123,7 @@ else{
     <div class="row justify-content-center">
 
       <div class="col-md-12">
-        <a href="../index.php"><img class="logo-sign" src="../images/eiconweb.png" alt=""></a>
+        <a href="../../index.php"><img class="logo-sign" src="../images/eiconweb.png" alt=""></a>
         <h3 class="sign-in-head"> Reset</h3>
 
       </div>
