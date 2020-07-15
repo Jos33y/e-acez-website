@@ -74,7 +74,7 @@ $mail->SMTPDebug = 0;
 $mail->Host = 'smtp.flockmail.com'; 
 $mail->SMTPAuth = true;
 $mail->Username = "info@e-acez.com";
-$mail->Password = "LagbaluJ20";
+$mail->Password = "";
 $mail->Port = 587;
 $mail->IsHTML(true);
 $mail->From = "info@e-acez.com";
