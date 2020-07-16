@@ -1,9 +1,12 @@
 <?php
 session_start();
 
-//$con = mysqli_connect("localhost", "Joseey", "", "e-acez-3.0");
 
-$con = mysqli_connect("localhost", "u721127448_Admin", "LagbaluJ19", "u721127448_eacez");
+//$con = mysqli_connect("localhost", "root", "", "showroom");
+//$connect = new PDO("mysql:host=localhost;dbname=showroom", "root", "");
+
+$con = mysqli_connect("localhost", "u721127448_joseey", "LagbaluJ19", "u721127448_showroom");
+$connect = new PDO("mysql:host=localhost;dbname=u721127448_showroom", "u721127448_joseey", "LagbaluJ19");
 
 function getRealIpUser(){
 
