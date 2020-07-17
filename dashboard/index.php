@@ -5,7 +5,7 @@
  
 if(!isset($_SESSION['email'])){
 
-    echo "<script>window.open('../sign-in.php', '_self')</script>";
+    echo "<script>window.open('../customer/sign-in.php', '_self')</script>";
  
  }else{
      $admin_session = $_SESSION['email'];

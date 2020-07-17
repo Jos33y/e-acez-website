@@ -18,18 +18,20 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="styles/eacez.css">
 
-            <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5d6501adeb1a6b0be6098f3d/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5d6501adeb1a6b0be6098f3d/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
 </head>
 
 <body>
@@ -96,7 +98,7 @@ s0.parentNode.insertBefore(s1,s0);
     <!-- three easy steps -->
     <div class="container-lg">
         <div class="row sub-hero">
-            <div  id="#howitworks" class="col-sm-6">
+            <div id="#howitworks" class="col-sm-6">
                 <h1> <span class="number">1</span> <span class="h1"> Register your showroom<span /></h1>
                 <p>
                     You can easily register for a showroom by filling the form in the registration
@@ -220,7 +222,8 @@ s0.parentNode.insertBefore(s1,s0);
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
-                            <label for="shop-url">Store URL </label><span class="url-one">www.e-acez.com/</span><span class="url-two" id="url"></span> 
+                            <label for="shop-url">Store URL </label><span class="url-one">www.e-acez.com/</span><span
+                                class="url-two" id="url"></span>
                             <input type="text" name="shopUrl" id="shopUrl" class="form-control" maxlength="20"
                                 placeholder="Store URL without spacing" required>
                             <span id="availability"></span>
@@ -243,14 +246,14 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="code">CODE</label>
-                            <input type="text" name="code" id="code" class="form-control"
+                            <input type="text" name="code" id="code" class="form-control" maxlength="7"
                                 placeholder="Enter discount code" required>
                         </div>
                         <div class="col-sm-6">
                             <label for="plan">Select a plan</label><br>
                             <select name="amount" id="amount" class="form-control">
                                 <option value="nil" disabled>select a plan</option>
-                                <option value="500" id="plan">One Month -- &#8358;500</option>
+                                <option value="500" id="plan">One Month -- &#8358;3000</option>
                                 <option value="null" disabled>Other plans coming soon!!!</option>
                             </select>
                         </div>
@@ -335,35 +338,67 @@ s0.parentNode.insertBefore(s1,s0);
 
 </html>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 <script>
-$(document).ready(function(){
-    $("#shopUrl").keyup(function(){
-        // Getting the current value of textarea
-        var currentText = $(this).val();
-        
-        // Setting the Div content
-        $("#url").text(currentText);
+    code.onchange = function () {
+        var disCode = code.value;
+        var codeOne = "SOEACEZ";
+        var codeTwo = "ABEACEZ";
+        var codeThree = "JDEACEZ";
+        var codeFour = "EACEZ";
+        var codeFive = "JKEACEZ";
+
+        var codeCase = disCode.toUpperCase();
+        /* ;
+         */
+        if (codeCase === codeOne ||
+            codeCase === codeTwo ||
+            codeCase === codeThree ||
+            codeCase === codeFour ||
+            codeCase === codeFive) {
+
+            var price = "One Month -- &#8358;500";
+            plan.innerHTML = price;
+        } else {
+            var price = "One Month -- &#8358;3000";
+
+            plan.innerHTML = price;
+        }
+
+
+
+    };
+</script>
+<script>
+    $(document).ready(function () {
+        $("#shopUrl").keyup(function () {
+            // Getting the current value of textarea
+            var currentText = $(this).val();
+
+            // Setting the Div content
+            $("#url").text(currentText);
+        });
     });
-});
 
-document.getElementById('email').addEventListener('keydown' ,function(e) {
-    var k =e.keyCode
-    k ==32 &&e.preventDefault()
-});
 
-document.getElementById('shopUrl').addEventListener('keydown' ,function(e) {
-    var k =e.keyCode
-    k ==32 &&e.preventDefault()
-});
-document.getElementById('whatsAppNo').addEventListener('keydown' ,function(e) {
-    var k =e.keyCode
-    k ==32 &&e.preventDefault()
-});
+    document.getElementById('email').addEventListener('keydown', function (e) {
+        var k = e.keyCode
+        k == 32 && e.preventDefault()
+    });
 
-document.getElementById('phone').addEventListener('keydown' ,function(e) {
-    var k =e.keyCode
-    k ==32 &&e.preventDefault()
-});
+    document.getElementById('shopUrl').addEventListener('keydown', function (e) {
+        var k = e.keyCode
+        k == 32 && e.preventDefault()
+    });
+    document.getElementById('whatsAppNo').addEventListener('keydown', function (e) {
+        var k = e.keyCode
+        k == 32 && e.preventDefault()
+    });
+
+    document.getElementById('phone').addEventListener('keydown', function (e) {
+        var k = e.keyCode
+        k == 32 && e.preventDefault()
+    });
 </script>
 <script>
     $(document).ready(function () {
@@ -442,11 +477,13 @@ document.getElementById('phone').addEventListener('keydown' ,function(e) {
                     "&email=" + email + "&pno=" + phoneNumber + "&wno=" + whatsAppNo + "&sname=" +
                     shopName +
                     "&surl=" + shopUrl + "&pwd=" + password + "&code=" + code + "&amt=" + amount;
-                window.location.href = "http://localhost/e-acez-4.0/customer/verify_transaction.php" +
+                window.location.href = "https://e-acez.com/customer/verify_transaction.php" +
                     queryString;
 
-                // window.location = "http://localhost/e-acez-4.0/verify_transaction.php?reference=" + response.reference; 
-            }
+                   // window.location.href = "http://localhost/e-acez-4.0/customer/verify_transaction.php" +
+                   // queryString;
+
+                       }
         });
         handler.openIframe();
     }
