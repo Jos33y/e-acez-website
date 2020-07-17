@@ -21,19 +21,19 @@ if(!isset($_SESSION['email'])){
                     <div class="form-group">
                         <label for="old-password" class="sr-only">Old Password</label>
                         <input type="password" name="opwd" class="form-control-md form-control-lg" id="opwd"
-                            placeholder="Old Password" maxlength="20" required>
+                            placeholder="Old Password" maxlength="20" required onkeypress="return blockSpecialChar(event)">
                     </div>
 
                     <div class="form-group">
                         <label for="new-password" class="sr-only">New Password</label>
                         <input type="password" name="npwd" class="form-control-md form-control-lg" id="npwd"
-                            placeholder="New Password" maxlength="20" required>
+                            placeholder="New Password" maxlength="20" required onkeypress="return blockSpecialChar(event)">
                     </div>
 
                     <div class="form-group">
                         <label for="new-password-2" class="sr-only">Retype New Password</label>
                         <input type="password" name="cpwd" class="form-control-md form-control-lg" id="cpwd"
-                            placeholder="Retype New Password" maxlength="20" required>
+                            placeholder="Retype New Password" maxlength="20" required onkeypress="return blockSpecialChar(event)">
                     </div>
 
                     <div class="form-group text-center">
@@ -56,8 +56,12 @@ if(!isset($_SESSION['email'])){
 </body>
 
 </html>
-
-
+<script type="text/javascript">
+function blockSpecialChar(e) {
+            var k = e.keyCode;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8   || (k >= 48 && k <= 57));
+      }
+      </script>
 <script type="text/javascript">
 function valid()
 {
@@ -103,7 +107,7 @@ $sql=mysqli_query($con,"SELECT password FROM customers where password='$oldpass'
 $num=mysqli_fetch_array($sql);
 if($num>0)
 {
- $con=mysqli_query($con,"UPDATE customers SET password=' $newpassword' where email='$useremail'");
+ $con=mysqli_query($con,"UPDATE customers SET password='$newpassword' where email='$useremail'");
  echo "
         <script>
         alert('password changed successfull')

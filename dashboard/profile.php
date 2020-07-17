@@ -50,12 +50,12 @@ if(!isset($_SESSION['email'])){
                                     <td>
                                         <label for="Product Name" class="sr-only">First Name</label>
                                         <input type="text" name="firstName" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $firstname ; ?>" placeholder="First Name">
+                                            id="" value="<?php echo $firstname ; ?>" placeholder="First Name" onkeypress="return blockSpecialChar(event)">
                                     </td>
                                     <td>
                                         <label for="Product Name" class="sr-only">Last Name</label>
                                         <input type="text" name="lastName" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $lastname ; ?>" placeholder="Last Name">
+                                            id="" value="<?php echo $lastname ; ?>" placeholder="Last Name" onkeypress="return blockSpecialChar(event)">
                                     </td>
                                 </tr>
 
@@ -63,7 +63,7 @@ if(!isset($_SESSION['email'])){
                                     <td colspan="2">
                                         <label for="Product Name" class="sr-only">Email</label>
                                         <input type="email" name="email" id="email" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $email; ?>" placeholder="Email">
+                                            id="" value="<?php echo $email; ?>" placeholder="Email" onkeypress="return blockChar(event)">
 
                                     </td>
                                 </tr>
@@ -72,13 +72,13 @@ if(!isset($_SESSION['email'])){
                                     <td>
                                         <label for="Phone No" class="sr-only">Phone No</label>
                                         <input type="tel" name="phoneNo" id="phone" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $p_no; ?>" placeholder="Phone No.">
+                                            id="" value="<?php echo $p_no; ?>" placeholder="Phone No." onkeypress="return IsNumeric(event);">
 
                                     </td>
                                     <td>
                                         <label for="Whatsapp No" class="sr-only">WhatsApp No.</label>
                                         <input type="tel" name="whatsappNo" id="whatsAppNo" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $w_no; ?>" placeholder="WhatsApp No.">
+                                            id="" value="<?php echo $w_no; ?>" placeholder="WhatsApp No." onkeypress="return IsNumeric(event);">
 
                                     </td>
                                 </tr>
@@ -88,12 +88,12 @@ if(!isset($_SESSION['email'])){
                                     <td>
                                         <label for="Shop Name" class="sr-only">Shop Name</label>
                                         <input type="text" name="shopName" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $shop_name ; ?>" placeholder="Shop Name">
+                                            id="" value="<?php echo $shop_name ; ?>" placeholder="Shop Name" onkeypress="return blockChar(event)">
                                     </td>
                                     <td>
                                         <label for="Shop Url" class="sr-only">Shop URL</label>
                                         <input type="text" name="shopUrl" id="shopUrl" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $shop_url ; ?>" placeholder="Shop URL">
+                                            id="" value="<?php echo $shop_url ; ?>" placeholder="Shop URL" onkeypress="return blockSpecialChar(event)">
                                     </td>
                                 </tr>
 
@@ -122,25 +122,48 @@ if(!isset($_SESSION['email'])){
 
 </html>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+<script type="text/javascript">
+        var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
+        function IsNumeric(e) {
+            var keyCode = e.which ? e.which : e.keyCode
+            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);     
+            return ret;
+        }
+
+        function blockChar(e) {
+          var k = e.keyCode;
+          return (k != 39);
+      }
+    </script>
+
 <script>
-    document.getElementById('email').addEventListener('keydown' ,function(e) {
-    var k =e.keyCode
-    k ==32 &&e.preventDefault()
-});
+      document.getElementById('email').addEventListener('keydown', function (e) {
+        var k = e.keyCode
+        k == 32 && e.preventDefault()
+    });
 
-document.getElementById('shopUrl').addEventListener('keydown' ,function(e) {
-    var k =e.keyCode
-    k ==32 &&e.preventDefault()
-});
-document.getElementById('whatsAppNo').addEventListener('keydown' ,function(e) {
-    var k =e.keyCode
-    k ==32 &&e.preventDefault()
-});
+    document.getElementById('shopUrl').addEventListener('keydown', function (e) {
+        var k = e.keyCode
+        k == 32 && e.preventDefault()
+    });
+    
+      function blockSpecialChar(e) {
+            var k = e.keyCode;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8   || (k >= 48 && k <= 57));
+      }
 
-document.getElementById('phone').addEventListener('keydown' ,function(e) {
-    var k =e.keyCode
-    k ==32 &&e.preventDefault()
-});
+    document.getElementById('whatsAppNo').addEventListener('keydown', function (e) {
+        var k = e.keyCode
+        k == 32 && e.preventDefault()
+    });
+
+    document.getElementById('phone').addEventListener('keydown', function (e) {
+        var k = e.keyCode
+        k == 32 && e.preventDefault()
+    });
 </script>
 
 

@@ -189,12 +189,12 @@
                         <div class="col-sm-6">
                             <label for="first-name">First Name</label>
                             <input type="text" name="firstname" id="firstName" class="form-control" maxlength="50"
-                                placeholder="Enter First Name" required>
+                                placeholder="Enter First Name" onkeypress="return blockSpecialChar(event)"  required >
                         </div>
                         <div class="col-sm-6">
                             <label for="last-name">Last Name</label>
                             <input type="text" name="lastname" id="lastName" class="form-control" maxlength="50"
-                                placeholder="Enter Last Name" required>
+                                placeholder="Enter Last Name" onkeypress="return blockSpecialChar(event)" required>
                         </div>
                     </div>
 
@@ -202,7 +202,7 @@
                         <div class="col-sm-12">
                             <label for="email">Email </label>
                             <input type="email" name="email" id="email" class="form-control" maxlength="100"
-                                placeholder="Enter Email" required>
+                                placeholder="Enter Email" onkeypress="return blockChar(event)" required>
                             <span id="emailcheck"></span>
 
                         </div>
@@ -211,12 +211,12 @@
                         <div class="col-sm-6">
                             <label for="phone no">Phone Number</label>
                             <input type="tel" name="phone" id="phone" class="form-control" maxlength="15"
-                                placeholder="Enter Phone Number" required>
+                                placeholder="Enter Phone Number" onkeypress="return IsNumeric(event);" required>
                         </div>
                         <div class="col-sm-6">
                             <label for="whatsapp no">Whatsapp Number</label>
                             <input type="tel" name="whatsappno" id="whatsAppNo" class="form-control" maxlength="15"
-                                placeholder="WhatsApp Number for Business" required>
+                                placeholder="WhatsApp Number for Business" onkeypress="return IsNumeric(event);" required>
                         </div>
 
                     </div>
@@ -225,13 +225,13 @@
                             <label for="shop-url">Store URL </label><span class="url-one">www.e-acez.com/</span><span
                                 class="url-two" id="url"></span>
                             <input type="text" name="shopUrl" id="shopUrl" class="form-control" maxlength="20"
-                                placeholder="Store URL without spacing" required>
+                                placeholder="Store URL without spacing" onkeypress="return blockSpecialChar(event)" required>
                             <span id="availability"></span>
                         </div>
                         <div class="col-sm-6">
                             <label for="shop-name">Brand Name</label>
                             <input type="text" name="shopname" id="shopName" class="form-control" maxlength="50"
-                                placeholder="Enter Brand Name" required>
+                                placeholder="Enter Brand Name" onkeypress="return blockChar(event)" required>
                         </div>
 
                     </div>
@@ -240,14 +240,14 @@
                         <div class="col-sm-12">
                             <label for="password">Password</label>
                             <input type="password" name="password" id="password" class="form-control" maxlength="20"
-                                placeholder="Enter desired Password" required>
+                                placeholder="Enter desired Password" onkeypress="return blockSpecialChar(event)" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="code">CODE</label>
                             <input type="text" name="code" id="code" class="form-control" maxlength="7"
-                                placeholder="Enter discount code" required>
+                                placeholder="Enter discount code" onkeypress="return blockSpecialChar(event)" required>
                         </div>
                         <div class="col-sm-6">
                             <label for="plan">Select a plan</label><br>
@@ -347,6 +347,7 @@
         var codeThree = "JDEACEZ";
         var codeFour = "EACEZ";
         var codeFive = "JKEACEZ";
+        var codeSix = "SFEACEZ";
 
         var codeCase = disCode.toUpperCase();
         /* ;
@@ -355,7 +356,8 @@
             codeCase === codeTwo ||
             codeCase === codeThree ||
             codeCase === codeFour ||
-            codeCase === codeFive) {
+            codeCase === codeFive ||
+            codeCase === codeSix) {
 
             var price = "One Month -- &#8358;500";
             plan.innerHTML = price;
@@ -369,6 +371,21 @@
 
     };
 </script>
+<script type="text/javascript">
+        var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
+        function IsNumeric(e) {
+            var keyCode = e.which ? e.which : e.keyCode
+            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);     
+            return ret;
+        }
+
+        function blockChar(e) {
+          var k = e.keyCode;
+          return (k != 39);
+      }
+    </script>
+
 <script>
     $(document).ready(function () {
         $("#shopUrl").keyup(function () {
@@ -390,6 +407,12 @@
         var k = e.keyCode
         k == 32 && e.preventDefault()
     });
+    
+      function blockSpecialChar(e) {
+            var k = e.keyCode;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8   || (k >= 48 && k <= 57));
+      }
+
     document.getElementById('whatsAppNo').addEventListener('keydown', function (e) {
         var k = e.keyCode
         k == 32 && e.preventDefault()
@@ -477,11 +500,11 @@
                     "&email=" + email + "&pno=" + phoneNumber + "&wno=" + whatsAppNo + "&sname=" +
                     shopName +
                     "&surl=" + shopUrl + "&pwd=" + password + "&code=" + code + "&amt=" + amount;
-                window.location.href = "https://e-acez.com/customer/verify_transaction.php" +
+               // window.location.href = "https://e-acez.com/customer/verify_transaction.php" +
                     queryString;
 
-                   // window.location.href = "http://localhost/e-acez-4.0/customer/verify_transaction.php" +
-                   // queryString;
+                    window.location.href = "http://localhost/e-acez-4.0/customer/verify_transaction.php" +
+                    queryString;
 
                        }
         });
