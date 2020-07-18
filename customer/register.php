@@ -247,13 +247,13 @@
                         <div class="col-sm-6">
                             <label for="code">CODE</label>
                             <input type="text" name="code" id="code" class="form-control" maxlength="7"
-                                placeholder="Enter discount code" onkeypress="return blockSpecialChar(event)" required>
+                                placeholder="Enter discount code" onkeypress="return blockSpecialChar(event)">
                         </div>
                         <div class="col-sm-6">
                             <label for="plan">Select a plan</label><br>
                             <select name="amount" id="amount" class="form-control">
                                 <option value="nil" disabled>select a plan</option>
-                                <option value="500" id="plan">One Month -- &#8358;3000</option>
+                                <option value="500" id="plan">One Month -- &#8358;500</option>
                                 <option value="null" disabled>Other plans coming soon!!!</option>
                             </select>
                         </div>
@@ -362,7 +362,7 @@
             var price = "One Month -- &#8358;500";
             plan.innerHTML = price;
         } else {
-            var price = "One Month -- &#8358;3000";
+            var price = "One Month -- &#8358;500";
 
             plan.innerHTML = price;
         }

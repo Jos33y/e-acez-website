@@ -1,13 +1,52 @@
 <?php 
         include('include/dbconn.php');
 ?>
+
+
+<?php
+$name = preg_replace('#[^0-9a-z]#i', '', $_GET['shop_url']);
+if(isset($name)){
+    $shop_url =  $name;
+
+    $get_shop_owner = "select * from customers where shop_url = '$shop_url'";
+
+    $run_owner = mysqli_query($con, $get_shop_owner);
+
+    $check_owner = mysqli_num_rows($run_owner);
+
+}
+
+    if($check_owner==false){
+
+            echo "<h1 class='text-center' style='text-align:center; margin-top:10%;font-weight:600;color:red;'>No Shop with that URL </h1> ";
+            echo "<h3 class='text-center' style='text-align:center; margin-top:5%;font-weight:500;'> Check and make sure the url is typed correctly </h3> ";
+            echo "<a href='index.php' style='text-align:center; margin-top:10%; margin-left:50%;font-weight:600;'>Home </a> ";
+        }
+        else{
+        
+    $row = mysqli_fetch_array($run_owner);
+
+    $owner_id = $row['customer_id'];
+
+    $email = $row['email'];
+
+    $p_no = $row['phone_no'];
+
+    $w_no = $row['whatsapp_no'];
+
+    $shop_name = $row['shop_name'];
+      
+
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-  <title><?php echo $_GET['shop_url']; ?></title>
+  <title><?php echo $shop_name; ?></title>
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -285,46 +324,6 @@
   </style>
 </head>
 
-
-
-
-
-<?php
-$name = preg_replace('#[^0-9a-z]#i', '', $_GET['shop_url']);
-if(isset($name)){
-    $shop_url =  $name;
-
-    $get_shop_owner = "select * from customers where shop_url = '$shop_url'";
-
-    $run_owner = mysqli_query($con, $get_shop_owner);
-
-    $check_owner = mysqli_num_rows($run_owner);
-
-}
-
-    if($check_owner==false){
-
-            echo "<h3 class='text-center' style='margin-top:10%;font-weight:600;color:red;'>No Shop with that URL </h3> ";
-            echo "<h5 class='text-center' style='margin-top:5%;font-weight:500;'> Check and make sure the url is typed correctly </h5> ";
-            echo "<a href='index.php' style='margin-top:10%; margin-left:50%;font-weight:600;'>Home </a> ";
-        }
-        else{
-        
-    $row = mysqli_fetch_array($run_owner);
-
-    $owner_id = $row['customer_id'];
-
-    $email = $row['email'];
-
-    $p_no = $row['phone_no'];
-
-    $w_no = $row['whatsapp_no'];
-
-    $shop_name = $row['shop_name'];
-      
-
-  
-?>
 
 
 <body>
