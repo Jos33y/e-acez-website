@@ -271,14 +271,14 @@
 </html>
 
 <?php
-
+ //define('SALT', 'd#f453dd');
     if(isset($_POST['sign-in'])){
 
-      define('SALT', 'd#f453dd');
+     
 
 $user_email = $_POST['email'];
 
-$password = md5(SALT.$_POST['password']);
+$password = $_POST['password'];
 
 $select_user = "select * from customers where email='$user_email' AND password = '$password'";
 

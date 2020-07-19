@@ -21,13 +21,13 @@ if(!isset($_SESSION['email'])){
                     <div class="form-group">
                         <label for="Product Name" class="sr-only">Product Name</label>
                         <input type="text" name="prodName" class="form-control-md form-control-lg" id=""
-                            placeholder="Product Name" required>
+                        onkeypress="return blockChar(event)"    placeholder="Product Name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="Product Price" class="sr-only">Product Price</label>
                         <input type="text" name="prodPrice" class="form-control-md form-control-lg" id=""
-                            placeholder="Product Price" required>
+                        onkeypress="return IsNumeric(event);"    placeholder="Product Price" required>
                     </div>
 
                     <div class="form-group text-center">
@@ -56,8 +56,24 @@ if(!isset($_SESSION['email'])){
 
 <script src="script.js"></script>
 </body>
+<script type="text/javascript">
+        var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
+        function IsNumeric(e) {
+            var keyCode = e.which ? e.which : e.keyCode
+            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);     
+            return ret;
+        }
+
+        function blockChar(e) {
+          var k = e.keyCode;
+          return (k != 39);
+      }
+    </script>
 
 </html>
+
+
 
 <?php 
 if(isset($_POST['insert'])){

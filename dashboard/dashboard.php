@@ -100,9 +100,24 @@ if(!isset($_SESSION['email'])){
                 </div>
             </div>
 
-              <!--row seven-->
+             <!--row seven-->
+             <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+                <div class="card bg-light">
+                    <div class="card-body">
+                    <i class="fab fa-intercom"></i>
+                    </div>
+                    <div class="card-footer">
+                        <a href="index.php?review" class="stretched-link">
+                            <h3 class="card-title text-black-50"> Feedback Box</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+              <!--row eight-->
               <div id="col" class="col-md-6 col-lg-4 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bg-dark">
                     <div class="card-body">
                     <i class="fas fa-power-off"></i>
                     </div>

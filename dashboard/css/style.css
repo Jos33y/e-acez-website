@@ -109,6 +109,10 @@ ul.pagination li {
     color: #fff;
     font-size: 80px;
 }
+.boards .fab {
+    color: rgb(80, 79, 79);
+    font-size: 80px;
+}
 
 .boards .far {
     color: #fff;
@@ -371,7 +375,10 @@ footer .orange {
 
         font-size: 70px;
     }
+    .boards .fab {
 
+        font-size: 70px;
+    }
     .boards .far {
 
         font-size: 70px;

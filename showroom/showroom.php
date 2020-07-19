@@ -46,6 +46,7 @@ if(isset($name)){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <meta name="title" content="<?php echo $shop_name; ?>">
   <title><?php echo $shop_name; ?></title>
 
 
@@ -81,7 +82,7 @@ if(isset($name)){
     }
 
     .navbar {
-      margin-left: 3%;
+      margin-left: 2%;
       margin-right: 2%;
     }
 
@@ -119,9 +120,14 @@ if(isset($name)){
     /** Product Styles **/
 
     .product {
-      margin-top: 3%;
+      margin-top: 5%;
       margin-bottom: 8%;
 
+    }
+
+    .card-header {
+      padding-top: 5px;
+      padding-bottom: 0;
     }
 
     .product .card {
@@ -129,16 +135,104 @@ if(isset($name)){
       min-height: 310px;
       background-color: #fcf9f9;
       border: 0px solid #707070;
-      border-radius: 27px;
+      border-radius: 15px;
       /**shadow box style **/
-      -webkit-box-shadow: inset 0px 0px 3px 0.2px rgba(23, 25, 46, 1);
-      -moz-box-shadow: inset 0px 0px 3px 0.2px rgba(23, 25, 46, 1);
-      box-shadow: inset 0px 0px 3px 0.2px rgba(23, 25, 46, 1);
+      -webkit-box-shadow: 0px 0px 4px 1px rgba(143, 139, 143, 1);
+      -moz-box-shadow: 0px 0px 4px 1px rgba(143, 139, 143, 1);
+      box-shadow: 0px 0px 4px 1px rgba(143, 139, 143, 1);
     }
 
     .card-img-top {
-      border-radius: 27px;
+      border-radius: 15px;
       min-height: 160px;
+    }
+
+    .card-body {
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+
+    .row {
+      padding: 0;
+    }
+
+    /* Style the Image Used to Trigger the Modal */
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content (Image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+
+    /* Add Animation - Zoom in the Modal */
+    .modal-content,
+    #caption {
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .product .name {
@@ -162,6 +256,11 @@ if(isset($name)){
       border: #075e54;
       border-radius: 20px;
       text-transform: lowercase;
+    }
+
+    .product .col-6 {
+      padding: 10px;
+      margin-bottom: 20px;
     }
 
     .product .btn {
@@ -209,8 +308,8 @@ if(isset($name)){
       color: #ff5500;
     }
 
-   
-/* Medium devices (tablets, less than 992px) */
+
+    /* Medium devices (tablets, less than 992px) */
     @media (max-width: 991.98px) {
 
       .navbar .shop-name {
@@ -234,7 +333,7 @@ if(isset($name)){
       }
     }
 
- /* Small devices (landscape phones, less than 768px) */
+    /* Small devices (landscape phones, less than 768px) */
     @media (max-width: 767.98px) {
       .navbar .shop-name {
         font-size: 24px;
@@ -242,6 +341,10 @@ if(isset($name)){
 
       nav .call {
         font-size: 13px;
+      }
+
+      .modal-content {
+        width: 100%;
       }
 
       .product .name {
@@ -256,8 +359,9 @@ if(isset($name)){
         font-size: 13px;
       }
     }
-  /* Extra small devices (portrait phones, less than 576px) */
- 
+
+    /* Extra small devices (portrait phones, less than 576px) */
+
     @media (max-width: 575.98px) {
       .navbar .shop-name {
         font-size: 22px;
@@ -267,13 +371,7 @@ if(isset($name)){
         font-size: 12px;
       }
 
-      .product {
-        margin: 8%;
-      }
 
-      .product .card {
-        width: 80%;
-      }
 
       .product .name {
         font-size: 13px;
@@ -284,6 +382,10 @@ if(isset($name)){
       }
 
       .product .btn {
+        font-size: 12px;
+      }
+
+      p.text-primary {
         font-size: 12px;
       }
     }
@@ -301,13 +403,8 @@ if(isset($name)){
         font-size: 10px;
       }
 
-      .product {
-        margin: 5%;
-      }
 
-      .product .card {
-        width: 90%;
-      }
+
 
       .product .name {
         font-size: 12px;
@@ -328,6 +425,7 @@ if(isset($name)){
 
 <body>
   <!--navbar-->
+
   <nav>
     <div class="navbar">
       <span class="shop-name"><?php echo $shop_name; ?></span>
@@ -366,11 +464,26 @@ if(isset($name)){
 
 ?>
       <!-- start of column-->
-      <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="col-lg-3 col-md-4 col-6">
 
         <!-- box model design-->
         <div class="card">
-          <img src="dashboard/product_images/<?php echo $prod_img; ?>" alt="Product image" class="card-img-top">
+          <div class="card-header">
+            <p class="text-center text-primary">Tap to view image </p>
+          </div>
+          <img src="dashboard/product_images/<?php echo $prod_img; ?>" id="myImg" alt="Product Image"
+            class="card-img-top">
+          <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img">
+
+          </div>
+          <!--end of box model-->
+
           <div class="card-body">
             <h3 class="name"><?php echo $prod_name; ?></h3>
             <!--php codes-->
@@ -386,7 +499,6 @@ if(isset($name)){
             <!--whatsapp api-->
           </div>
         </div>
-        <!--end of box model-->
 
       </div>
       <!--end of column-->
@@ -400,14 +512,6 @@ if(isset($name)){
     <div class="row text-center">
       <div class="col-sm-4 social">
         <br>
-        <ul>
-          <li> <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
-          <li> <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li> <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
-          <li> <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube-square"></i></a>
-          </li>
-        </ul>
 
       </div>
 
@@ -432,6 +536,35 @@ if(isset($name)){
 
 
 </body>
+
+<script type="text/javascript">
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img");
+
+  Array.from(document.querySelectorAll("img")).forEach(item => {
+    item.addEventListener("click", event => {
+      modal.style.display = "block";
+      modalImg.src = event.target.src;
+    });
+  });
+  /*img.onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }*/
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+</script>
 
 </html>
 

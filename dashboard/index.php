@@ -90,13 +90,16 @@ if(!isset($_SESSION['email'])){
             include("share_link.php");
           }
 
+          if(isset($_GET['review'])){
+
+            include("review.php");
+          }
+
+
           if(isset($_GET['sign_out'])){
 
             include("sign_out.php");
           }
-
-
-
 
 
           ?>

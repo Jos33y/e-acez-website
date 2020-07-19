@@ -47,7 +47,7 @@ if(!isset($_SESSION['email'])){
                     $i++;
 
 ?>
-                <div class="col-sm-3 col-6">
+                <div class="col-sm-3 col-md-4 col-6">
                     <div class="card box">
                         <div class="card-header">
                             <a href="index.php?edit_product=<?php echo $pro_id; ?>" class="edit"><i
