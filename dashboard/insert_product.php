@@ -17,7 +17,36 @@ if(!isset($_SESSION['email'])){
             <div class="col-md-4">
                 <h3 class="dash-title text-center"> <i class="fas fa-file-upload"></i> Insert Product</h3>
                 <form method="post" class="form" enctype="multipart/form-data">
-                <h6 class="text-center text-warning">make sure image is neatly cropped and named</h6>
+                <h6 class="text-center text-danger">make sure image is neatly cropped and named</h6>
+
+                <div class="form-group">
+
+                <select name="productCategory" class="form-control"><!--form-control Begin --> 
+
+                                <option selected disabled> Select a Product Category</option>
+
+                                <?php
+
+                                $get_p_cats = "select * from product_categories where customer_id =  '$admin_id' ORDER BY category_name ASC";
+                                $run_p_cats = mysqli_query($con , $get_p_cats);
+
+                                while ($row_p_cats=mysqli_fetch_array($run_p_cats)){
+
+                                    $p_cat_id = $row_p_cats['p_cat_id'];
+                                    $cat_name = $row_p_cats['category_name'];
+
+                                    echo "
+                                    
+                                    <option value='$p_cat_id'> $cat_name </option>
+                                    
+                                    ";
+                                }
+
+                                ?>
+
+                        </select><!--form-control Finish --> 
+                    </div>
+
                     <div class="form-group">
                         <label for="Product Name" class="sr-only">Product Name</label>
                         <input type="text" name="prodName" class="form-control-md form-control-lg" id=""
@@ -78,7 +107,7 @@ if(!isset($_SESSION['email'])){
 <?php 
 if(isset($_POST['insert'])){
 
-
+    $cat_id = $_POST['productCategory'];
     $prod_name = $_POST['prodName'];
     $prod_price = $_POST['prodPrice'];
     $admin_id;
@@ -89,8 +118,8 @@ if(isset($_POST['insert'])){
 
     move_uploaded_file($temp_name, "product_images/$prod_image");
 
-    $sql = "INSERT INTO products (prod_name, prod_price, prod_image, customer_id) 
-    VALUES ('$prod_name', '$prod_price', '$prod_image', '$admin_id')";
+    $sql = "INSERT INTO products (p_cat_id, prod_name, prod_price, prod_image, customer_id) 
+    VALUES ('$cat_id', '$prod_name', '$prod_price', '$prod_image', '$admin_id')";
 
     $query = mysqli_query($con, $sql) or die(mysqli_error($con));
 

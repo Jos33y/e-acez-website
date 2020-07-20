@@ -51,6 +51,12 @@ if(!isset($_SESSION['email'])){
 
             include("dashboard.php");
           }
+
+          if(isset($_GET['view_categories'])){
+
+            include("view_categories.php");
+          }
+
           if(isset($_GET['insert_product'])){
 
             include("insert_product.php");
@@ -73,6 +79,11 @@ if(!isset($_SESSION['email'])){
           if(isset($_GET['profile'])){
 
             include("profile.php");
+          }
+
+          if(isset($_GET['social'])){
+
+            include("social.php");
           }
 
           if(isset($_GET['change_password'])){

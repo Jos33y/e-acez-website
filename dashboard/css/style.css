@@ -50,7 +50,7 @@ nav {
 /** Styles for Dashboard **/
 
 .dash-title {
-    margin-top: 20px;
+
     text-align: center;
     color: #000000d3;
     font-size: 22px;
@@ -60,7 +60,7 @@ nav {
 }
 
 .boards {
-    margin: 5%;
+    margin-top: 5%;
 }
 
 .pages {
@@ -109,6 +109,7 @@ ul.pagination li {
     color: #fff;
     font-size: 80px;
 }
+
 .boards .fab {
     color: rgb(80, 79, 79);
     font-size: 80px;
@@ -233,7 +234,6 @@ footer .orange {
 }
 
 .form .btn {
-    margin-top: 10%;
     font-size: 14px;
     color: #fff;
     font-weight: 550;
@@ -250,6 +250,17 @@ footer .orange {
 }
 
 /** change password input styles **/
+
+.form select {
+    border: solid #000000d3;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    background-color: rgb(248, 248, 253);
+    margin-top: 2%;
+}
+
 .form input {
     border: solid #000000d3;
     border-top: 0;
@@ -257,7 +268,7 @@ footer .orange {
     border-right: 0;
     border-radius: 0;
     background-color: rgb(248, 248, 253);
-    margin-top: 12%;
+    margin-top: 2%;
     font-size: 18px;
     width: 100%;
 }
@@ -331,6 +342,25 @@ footer .orange {
     .dash-title {
         font-size: 14px;
     }
+    .boards .card-title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .boards .fas {
+
+        font-size: 60px;
+    }
+
+    .boards .fab {
+
+        font-size: 60px;
+    }
+
+    .boards .far {
+
+        font-size: 60px;
+    }
 
 }
 
@@ -367,21 +397,23 @@ footer .orange {
     }
 
     .boards .card-title {
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
     }
 
     .boards .fas {
 
-        font-size: 70px;
+        font-size: 50px;
     }
+
     .boards .fab {
 
-        font-size: 70px;
+        font-size: 50px;
     }
+
     .boards .far {
 
-        font-size: 70px;
+        font-size: 50px;
     }
 
     .profile .back {
@@ -398,27 +430,27 @@ footer .orange {
 
     }
 
-    .form input {  
+    .form input {
         font-size: 15px;
 
     }
-    
+
     .profile input {
-    
+
         font-size: 13px;
 
     }
-    
-    
+
+
     /** Developer Style **/
     .contact .btn {
         font-size: 15px;
     }
-    
+
     .pagination li {
         font-size: 12px;
         padding: 5px;
-    
+
     }
 }
 

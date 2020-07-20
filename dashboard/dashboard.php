@@ -16,9 +16,23 @@ if(!isset($_SESSION['email'])){
         <h3 style="margin-top: 3%;" class="dash-title"><?php echo $shop_name; ?></h3>
 
         <div class="boards row text-center">
-            <!--row one-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+
+         <!--row one a-->
+         <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-primary">
+                    <div class="card-body">
+                    <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="card-footer">
+                        <a href="index.php?view_categories" class="stretched-link">
+                            <h3 class="card-title"> Insert Category</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--row one b-->
+            <div id="col" class="col-md-6 col-lg-4 col-6">
+                <div class="card" style="background-color: #ff5500">
                     <div class="card-body">
                         <i class="fas fa-file-upload"></i>
                     </div>
@@ -31,7 +45,7 @@ if(!isset($_SESSION['email'])){
             </div>
 
             <!--row two-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+            <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-success">
                     <div class="card-body">
                         <i class="far fa-list-alt"></i>
@@ -45,7 +59,7 @@ if(!isset($_SESSION['email'])){
             </div>
 
             <!--row three-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+            <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-info">
                     <div class="card-body">
                         <i class="far fa-user-circle"></i>
@@ -58,8 +72,22 @@ if(!isset($_SESSION['email'])){
                 </div>
             </div>
 
+             <!--row three-->
+             <div id="col" class="col-md-6 col-lg-4 col-6">
+                <div class="card" style="background-color: #ff5500">
+                    <div class="card-body">
+                    <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="card-footer">
+                        <a href="index.php?social" class="stretched-link">
+                            <h3 class="card-title"> Social Link</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <!--row four-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+            <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-warning">
                     <div class="card-body">
                         <i class="fas fa-user-lock"></i>
@@ -73,7 +101,7 @@ if(!isset($_SESSION['email'])){
             </div>
 
             <!--row five-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+            <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-danger">
                     <div class="card-body">
                         <i class="fas fa-share-alt-square"></i>
@@ -87,7 +115,7 @@ if(!isset($_SESSION['email'])){
             </div>
 
             <!--row six-->
-            <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+            <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-secondary">
                     <div class="card-body">
                         <i class="fas fa-headset"></i>
@@ -101,7 +129,7 @@ if(!isset($_SESSION['email'])){
             </div>
 
              <!--row seven-->
-             <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+             <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-light">
                     <div class="card-body">
                     <i class="fab fa-intercom"></i>
@@ -116,7 +144,7 @@ if(!isset($_SESSION['email'])){
 
 
               <!--row eight-->
-              <div id="col" class="col-md-6 col-lg-4 col-sm-6">
+              <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-dark">
                     <div class="card-body">
                     <i class="fas fa-power-off"></i>

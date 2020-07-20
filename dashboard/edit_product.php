@@ -8,7 +8,7 @@ echo "<script>window.open('../customer/sign-in.php', '_self')</script>";
 
 ?>
 
-<?php 
+<?php
 
 if(isset($_GET['edit_product'])){
     $edit_id =  $_GET['edit_product'];
@@ -20,11 +20,33 @@ if(isset($_GET['edit_product'])){
     $row = mysqli_fetch_array($run_p);
 
     $p_id = $row['prod_id'];
+    $p_cat_id = $row['p_cat_id'];
     $p_name = $row['prod_name'];
     $p_price = $row['prod_price'];
     $p_img = $row['prod_image'];
- }
 
+ }
+        $get_p_cat = "select * from product_categories where p_cat_id = '$p_cat_id'";
+
+        $run_p_cat = mysqli_query($con, $get_p_cat);
+
+        $check_p_cat = mysqli_num_rows($run_p_cat);
+
+        if($check_p_cat==false){
+           
+            $cat_name = "Select a Product Category";
+            $cat_name = " <option value='selected disabled'>$cat_name </option>";
+        }
+
+        else{
+
+            $row_p_cat = mysqli_fetch_array($run_p_cat);
+
+            $cat_name = "<option value='$p_cat_id'> " .  $row_p_cat['category_name'] . "</option>";
+        }
+
+
+       
 ?>
 
     <div class="container">
@@ -35,11 +57,38 @@ if(isset($_GET['edit_product'])){
             <div class="col-md-4">
                 <h3 class="dash-title text-center"> <i class="fas fa-edit"></i> Edit Product</h3>
                 <form method="post" class="form" enctype="multipart/form-data">
-                <h6 class="text-center text-warning">reupload image when making changes</h6>
+                <p class="text-center text-warning">no need to reupload image when making changes (except you want to change the image)</p>
+
                     <div class="form-group">
+                    <select name="productCategory" class="form-control"><!--form-control Begin --> 
+
+                 <?php echo $cat_name ;?>
+
+                                <?php
+
+                                $get_p_cats = "select * from product_categories where customer_id =  '$admin_id' ORDER BY category_name ASC";
+                                $run_p_cats = mysqli_query($con , $get_p_cats);
+
+                                while ($row_p_cats=mysqli_fetch_array($run_p_cats)){
+
+                                    $p_cat_id = $row_p_cats['p_cat_id'];
+                                    $cat_name = $row_p_cats['category_name'];
+
+                                    echo "
+                                    
+                                    <option value='$p_cat_id'> $cat_name </option>
+                                    
+                                    ";
+                                }
+
+                                ?>
+
+</select><!--form-control Finish --> 
+                   </div>
+                   <div class="form-group">
                         <label for="Product Name" class="sr-only">Product Name</label>
-                        <input type="text" name="prodName" class="form-control-md form-control-lg" 
-                        onkeypress="return blockChar(event)"   placeholder="Product Name" required value="<?php echo $p_name; ?>">
+                        <input type="text" name="prodName" class="form-control-md form-control-lg" id=""
+                        onkeypress="return blockChar(event)"    placeholder="Product Name" required value="<?php echo $p_name; ?>">
                     </div>
 
                     <div class="form-group">
@@ -51,7 +100,7 @@ if(isset($_GET['edit_product'])){
                     <div class="form-group text-center">
                         <img src="product_images/<?php echo $p_img; ?>" onclick="triggerClick()" id="prodDisplay" >
                         <input type="file" name="prodImage" id="prodImage" onchange="displayImage(this)" class="form-control-md form-control-lg"
-                            placeholder="Product Image" style="display: none;" required>
+                            placeholder="Product Image" style="display: none;" <?php if(empty($p_img)){ echo "required"; } else{ echo "";} ?>>
                             <label for="prod-image">Select product image</label>
                     </div>
 
@@ -95,18 +144,23 @@ if(isset($_GET['edit_product'])){
 <?php 
 if(isset($_POST['update'])){
 
-
+    $cat_id = $_POST['productCategory'];
     $prod_name = $_POST['prodName'];
     $prod_price = $_POST['prodPrice'];
+
+if(empty($p_img)){
 
     $prod_image = $_FILES['prodImage']['name'];
 
     $temp_name = $_FILES['prodImage']['tmp_name'];
 
     move_uploaded_file($temp_name, "product_images/$prod_image");
+}else{
+        $prod_image = $p_img;
+}
 
     $sql = "update products set
-    prod_name = '$prod_name', prod_price = '$prod_price', prod_image = '$prod_image'
+    p_cat_id = '$cat_id',  prod_name = '$prod_name', prod_price = '$prod_price', prod_image = '$prod_image'
     where prod_id = '$p_id'";
 
     $query = mysqli_query($con, $sql) or die(mysqli_error($con));

@@ -247,7 +247,7 @@
                         <div class="col-sm-6">
                             <label for="code">CODE</label>
                             <input type="text" name="code" id="code" class="form-control" maxlength="7"
-                                placeholder="Enter discount code" onkeypress="return blockSpecialChar(event)">
+                                placeholder="Enter discount code" onkeypress="return blockSpecialChar(event)" required>
                         </div>
                         <div class="col-sm-6">
                             <label for="plan">Select a plan</label><br>
