@@ -160,6 +160,11 @@ background-color: #f2f1f6;
 /** ends **/
 
 /** Header Templates Backgrounds **/
+.home-bg{
+    background-image: url('../images/home-page.jpg');
+    width: 100vw;
+    background-size: cover;
+}
 
 .home-page-header{
     background-image: url('../images/home-page.jpg');
@@ -731,7 +736,7 @@ footer td {
     font-size: 13px;
 }
 
-footer .table {
+footer .table { 
     color: rgb(158, 157, 157);
 }
 

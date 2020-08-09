@@ -57,7 +57,7 @@ if(isset($_GET['edit_product'])){
             <div class="col-md-4">
                 <h3 class="dash-title text-center"> <i class="fas fa-edit"></i> Edit Product</h3>
                 <form method="post" class="form" enctype="multipart/form-data">
-                <p class="text-center text-warning">no need to reupload image when making changes (except you want to change the image)</p>
+                <p class="text-center text-warning">no need to reUpload image when making changes (except you want to change the image)</p>
 
                     <div class="form-group">
                     <select name="productCategory" class="form-control"><!--form-control Begin --> 

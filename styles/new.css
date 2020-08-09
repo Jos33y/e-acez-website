@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans|PT+Sans|PT+Serif|PT+Serif+Caption|Roboto|Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Acme|Courgette|Noto+Sans+KR|Nunito+Sans&display=swap");
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  font-family: "Lato", sans-serif;
+  color: #222;
+  background-color: #FFF9FF;
+  overflow-x: hidden;
+}
+
+/** Navbar Styles **/
+.navbar {
+  background-color: #17192e;
+  box-shadow: 1px 1px 10px #888;
+}
+
+.nav-link {
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 50px;
+  color: white !important;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #0055ff !important;
+}
+
+.active .nav-link {
+  color: #ff5500 !important;
+  text-decoration: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-head {
+  margin-left: 3px;
+  font-size: 19px;
+  color: white;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login .btn-primary {
+  color: #ffff;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: 10px;
+}
+
+.login .btn-sign-up {
+  color: #ffff;
+  background-color: #ff5500;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: 200px;
+}
+
+/** Home Styles **/
+
+.home-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.index {
+  background-color: #202059;
+}
+
+.index h1 {
+  color: #ff5500;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.index h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  padding-bottom: 2%;
+
+}
+
+#button {
+  padding-bottom: 3%;
+}
+
+#button .btn-primary {
+  color: #fff;
+  background-color: transparent;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 3px solid #ff5500;
+
+}
+
+#button .btn-login {
+  color: #fff;
+  background-color: transparent;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 3px solid #0055ff;
+  padding-right: 25px;
+  padding-left: 25px;
+
+}
+
+/** Stories **/
+.columns {
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+.sub-title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+
+
+.line {
+  border: 1px solid #17192e;
+  margin-bottom: 5%;
+}
+
+.qualities .card {
+  height: 100%;
+  border: 2px solid #707070;
+  border-radius: 50px;
+  padding: 10px;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 5px 5px 10px 5px rgba(191, 189, 191, 1);
+  -moz-box-shadow: 5px 5px 10px 5px rgba(191, 189, 191, 1);
+  box-shadow: 5px 5px 10px 5px rgba(191, 189, 191, 1);
+}
+
+.qualities {
+  margin-bottom: 8%;
+}
+
+.q-title {
+  color: #ff5500;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding-bottom: 3%;
+}
+
+.card-text {
+  color: #222;
+  font-size: 14px;
+  letter-spacing: .5px;
+}
+
+.features {
+  background: #FFA781;
+  color: #5B0E2D;
+}
+
+.feat-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-top: 5%;
+  padding-bottom: 8%;
+}
+
+.feat {
+  padding-bottom: 5%;
+}
+
+.feat .fas {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.feat-text {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.call-head {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+.btn-call {
+  color: #222222;
+  background-color: transparent;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 3px solid #ff5500;
+  margin-bottom: 5%;
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(191, 189, 191, 1);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(191, 189, 191, 1);
+  box-shadow: 0px 0px 3px 3px rgba(191, 189, 191, 1);
+
+}
+
+.blog {
+  background: #F2BC94;
+  color: #5B0E2D;
+}
+
+.blog-head {
+  color: #5B0E2D;
+  padding-top: 5%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.blog .card {
+  height: 90%;
+  margin-bottom: 20%;
+  background-color: transparent;
+  border: 1px solid #707070;
+  border-radius: 25px;
+  padding-bottom: 20px;
+
+  -webkit-box-shadow: 2px 2px 3px 2px rgba(117, 113, 117, 1);
+  -moz-box-shadow: 2px 2px 3px 2px rgba(117, 113, 117, 1);
+  box-shadow: 2px 2px 3px 2px rgba(117, 113, 117, 1);
+}
+
+.blog .card-head {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-bottom: 3%;
+
+}
+
+.blog .card-text {
+  font-size: 16px;
+  letter-spacing: .5px;
+  padding-top: 5%;
+}
+
+.btn-read {
+  margin-top: 10%;
+  color: #0055ff;
+  background-color: transparent;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  border: 3px solid #5B0E2D;
+  float: right;
+
+}
+
+.svgs {
+  width: 100%;
+  height: 100%;
+}
+
+
+.btn-speak {
+  color: #222222;
+  background-color: #ff5500;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  border: 0px solid #ff5500;
+
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(191, 189, 191, 1);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(191, 189, 191, 1);
+  box-shadow: 0px 0px 3px 3px rgba(191, 189, 191, 1);
+
+}
+
+.speakers {
+  margin-bottom: 40px;
+}
+
+
+
+/** social icons **/
+
+.connect {
+  background: #fff;
+  color: #888;
+}
+
+.social a {
+  font-size: 4.5rem;
+  padding: 3rem;
+}
+
+.connect .social {
+  padding-bottom: 10vh;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-instagram {
+  color: #517fa4;
+}
+
+.fa-youtube {
+  color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-youtube:hover {
+  color: #d5d5d5;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+footer {
+  background: #17192e;
+  padding: 10px 0;
+  color: rgb(158, 157, 157);
+}
+
+.footer-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-head {
+  margin-left: 3px;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  font-family: 'PT Serif', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 13px;
+}
+
+footer a {
+  color: rgb(158, 157, 157);
+  padding: 0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #5133d4;
+}
+
+footer h5 {
+  padding-top: 5vh;
+  font-size: 15px;
+  font-weight: 600;
+  color: #d5d5d5;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+footer .table .fas {
+  color: rgb(158, 157, 157);
+  font-size: 16px;
+}
+
+footer td {
+  font-size: 13px;
+}
+
+footer .table {
+  color: rgb(158, 157, 157);
+}
+
+hr.line {
+  border: 1px solid #888;
+}
+
+footer h6 {
+
+  font-size: 12px;
+
+}
+
+
+/** Media Queries **/
+@media (max-width: 992px) {
+
+  .nav-link {
+    font-size: 12px;
+
+  }
+
+  .index h1 {
+    font-size: 35px;
+  }
+
+  .index h4 {
+    font-size: 16px;
+  }
+
+  #button .btn-primary {
+    font-size: 13px;
+  }
+
+  #button .btn-login {
+    font-size: 13px;
+  }
+
+  .sub-title {
+    font-size: 27px;
+  }
+
+  .qualities .card {
+    border: 2px solid #707070;
+    border-radius: 50px;
+    padding-bottom: 20px;
+  }
+
+  .qualities {
+    margin-bottom: 5%;
+  }
+
+  .q-title {
+    font-size: 16px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  .feat-title {
+    font-size: 22px;
+  }
+
+  .feat .fas {
+    font-size: 45px;
+  }
+
+  .feat-text {
+    font-size: 16px;
+  }
+
+  .call-head {
+    font-size: 30px;
+  }
+
+  .btn-call {
+    font-size: 15px;
+  }
+
+  .blog-head {
+    font-size: 27px;
+  }
+
+  .blog .card-head {
+    font-size: 17px;
+  }
+
+  .blog .card-text {
+    font-size: 14px;
+  }
+
+  .btn-read {
+    font-size: 13px;
+
+  }
+
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-head {
+    font-size: 17px;
+  }
+
+  .login .btn-primary {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .login .btn-sign-up {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .sub-title {
+    font-size: 25px;
+  }
+
+  .call-head {
+    font-size: 25px;
+  }
+
+  .btn-call {
+    font-size: 13px;
+  }
+
+  .blog-head {
+    font-size: 25px;
+  }
+
+  .blog .card-head {
+    font-size: 15px;
+  }
+
+  .blog .card-text {
+    font-size: 13px;
+  }
+
+  .btn-read {
+    font-size: 12px;
+
+  }
+}
+
+@media (max-width: 576px) {
+  .index h1 {
+    font-size: 25px;
+  }
+
+  .index h4 {
+    font-size: 14px;
+  }
+
+  #button .btn-primary {
+    font-size: 11px;
+  }
+
+  #button .btn-login {
+    font-size: 11px;
+  }
+
+  .sub-title {
+    font-size: 22px;
+  }
+
+  .q-title {
+    font-size: 15px;
+  }
+
+  .card-text {
+    font-size: 13px;
+  }
+
+  .feat-title {
+    font-size: 20px;
+  }
+
+  .feat .fas {
+    font-size: 35px;
+  }
+
+  .feat-text {
+    font-size: 14px;
+  }
+
+  .call-head {
+    font-size: 20px;
+  }
+
+  .btn-call {
+    font-size: 12px;
+  }
+
+  .blog-head {
+    font-size: 22px;
+  }
+
+  .blog .card-head {
+    font-size: 14px;
+  }
+
+  .blog .card-text {
+    font-size: 12px;
+  }
+
+  .btn-read {
+    font-size: 11px;
+
+  }
+
+  .btn-speak {
+    font-size: 12px;
+  }
+
+  .social a {
+    font-size: 2em;
+    padding: .7rem;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-head {
+    font-size: 16px;
+  }
+
+
+}
+
+@media (max-width: 376px) {
+  .index h1 {
+    font-size: 20px;
+  }
+
+  .index h4 {
+    font-size: 12px;
+  }
+
+  #button .btn-primary {
+    font-size: 9px;
+  }
+
+  #button .btn-login {
+    font-size: 9px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .feat-title {
+    font-size: 18px;
+  }
+
+  .feat .fas {
+    font-size: 30px;
+  }
+
+  .feat-text {
+    font-size: 12px;
+  }
+
+  .blog-head {
+    font-size: 22px;
+  }
+
+  .blog .card-head {
+    font-size: 13px;
+  }
+
+  .blog .card-text {
+    font-size: 12px;
+  }
+
+  .btn-read {
+    font-size: 11px;
+
+  }
+}

@@ -94,7 +94,7 @@ while($row = mysqli_fetch_array($run_cat)){
 
             if($pCat){ 
                 $id  =  $_GET['pCat'];
-              $get_products = "select * from products where p_cat_id='$id' and customer_id = '$owner_id'";
+              $get_products = "select * from products where p_cat_id='$id' and customer_id = '$owner_id' ORDER BY prod_id DESC";
 
               $i = 0;
               $run_pro = mysqli_query($con, $get_products);
@@ -166,7 +166,7 @@ while($row = mysqli_fetch_array($run_cat)){
 
             
             else{
-              $get_products = "select * from products where customer_id = '$owner_id'";
+              $get_products = "select * from products where customer_id = '$owner_id' ORDER BY prod_id DESC";
           
               $i = 0;
               $run_pro = mysqli_query($con, $get_products);

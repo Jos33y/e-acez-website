@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Now</title>
+    <title>Register Now</title> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -171,11 +171,12 @@
 
     <!--registration section-->
 
-    <div id="register" class="container-fluid-xl">
+    <div id="register" >
         <div class="row sub-hero">
             <div class="col-md-12">
                 <h3 class="sign-in-head" style="color: #ff5500;"> Register</h3>
                 <hr width="50%" class="reg-line">
+                <h6 class="text-center" style="font-size:14px; color:#222;">If you have issues registering <a href="../index.php#contact"> contact us</a> </h6>
             </div>
             <div class="col-md-5 register-svg d-none d-xl-block">
                 <img src="images/profile.svg" class="img-fluid">
@@ -231,7 +232,7 @@
                         <div class="col-sm-6">
                             <label for="shop-name">Brand Name</label>
                             <input type="text" name="shopname" id="shopName" class="form-control" maxlength="50"
-                                placeholder="Enter Brand Name" onkeypress="return blockChar(event)" required>
+                                placeholder="No Apostrophe in Brands Name" onkeypress="return blockChar(event)" required>
                         </div>
 
                     </div>
@@ -244,13 +245,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <label for="code">CODE</label>
-                            <input type="text" name="code" id="code" class="form-control" maxlength="7"
-                                placeholder="Enter discount code" onkeypress="return blockSpecialChar(event)" required>
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="plan">Select a plan</label><br>
+                        <div class="col-sm-12">
+                            <label for="plan">Select a plan </label><span
+                                class="url-two"> &nbsp; 90% discount <del>5000</del></span><br>
                             <select name="amount" id="amount" class="form-control">
                                 <option value="nil" disabled>select a plan</option>
                                 <option value="500" id="plan">One Month -- &#8358;500</option>
@@ -469,6 +466,7 @@
         let handler = PaystackPop.setup({
             key: 'pk_test_6915e45b1bb5261b2fd67ea798081b572cb74753', // Replace with your public key
             email: document.getElementById("email").value,
+            phonenumber: document.getElementById("phone").value,
             amount: document.getElementById("amount").value * 100,
             currency: 'NGN',
             firstname: document.getElementById("firstName").value,
@@ -489,7 +487,7 @@
                 var shopName = document.getElementById("shopName").value;
                 var shopUrl = document.getElementById("shopUrl").value;
                 var password = document.getElementById("password").value;
-                var code = document.getElementById("code").value;
+                var code = "EACEZ";
                 var amount = document.getElementById("amount").value;
 
 
