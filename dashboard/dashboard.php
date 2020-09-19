@@ -25,7 +25,8 @@ if(!isset($_SESSION['email'])){
                     </div>
                     <div class="card-footer">
                         <a href="index.php?view_categories" class="stretched-link">
-                            <h3 class="card-title"> Insert Category</h3>
+                        <h3 class="card-title"><span class="prod-no"><?php echo $count_cat; ?></span>  Insert Category</h3>
+                            <h3 class="card-title"></h3>
                         </a>
                     </div>
                 </div>
@@ -142,8 +143,28 @@ if(!isset($_SESSION['email'])){
                 </div>
             </div>
 
+             <!--row ten -->
+             <?php 
+             if( $admin_id == 2){
+                 echo ' 
+             <div id="col" class="col-md-6 col-lg-4 col-6">
+                <div class="card" style="background-color: #9370DB">
+                    <div class="card-body">
+                    <style= class="fas fa-sort-amount-up" style="color:white"></i>
+                    </div>
+                    <div class="card-footer">
+                        <a href="index.php?review" class="stretched-link">
+                        <h3 class="card-title"><span class="prod-no">' . $visits . '</span> Customers Count</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            ';
+             }
+             ?>
 
-              <!--row eight-->
+
+              <!--row eleven-->
               <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card bg-dark">
                     <div class="card-body">

@@ -36,86 +36,98 @@ if(!isset($_SESSION['email'])){
 
     ?>
 
-    <div class="container">
+<div class="container">
 
-        <div class="pages row justify-content-center">
-            <div class="col-md-8">
-                <h3 class="dash-title"> <i class="far fa-user-circle"></i> View Profile</h3>
-                <form method="post">
+    <div class="pages row justify-content-center">
+        <div class="col-md-8">
+            <h3 class="dash-title"> <i class="far fa-user-circle"></i> View Profile</h3>
+            <form method="post" enctype="multipart/form-data">
 
-                    <div class="profile">
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <label for="Product Name" class="sr-only">First Name</label>
-                                        <input type="text" name="firstName" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $firstname ; ?>" placeholder="First Name" onkeypress="return blockSpecialChar(event)">
-                                    </td>
-                                    <td>
-                                        <label for="Product Name" class="sr-only">Last Name</label>
-                                        <input type="text" name="lastName" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $lastname ; ?>" placeholder="Last Name" onkeypress="return blockSpecialChar(event)">
-                                    </td>
-                                </tr>
+                <div class="profile">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="Product Name" class="sr-only">First Name</label>
+                                    <input type="text" name="firstName" class="form-control-md form-control-lg" id=""
+                                        value="<?php echo $firstname ; ?>" placeholder="First Name"
+                                        onkeypress="return blockSpecialChar(event)">
+                                </td>
+                                <td>
+                                    <label for="Product Name" class="sr-only">Last Name</label>
+                                    <input type="text" name="lastName" class="form-control-md form-control-lg" id=""
+                                        value="<?php echo $lastname ; ?>" placeholder="Last Name"
+                                        onkeypress="return blockSpecialChar(event)">
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td colspan="2">
-                                        <label for="Product Name" class="sr-only">Email</label>
-                                        <input type="email" name="email" id="email" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $email; ?>" placeholder="Email" onkeypress="return blockChar(event)">
+                            <tr>
+                                <td colspan="2">
+                                    <label for="Product Name" class="sr-only">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control-md form-control-lg"
+                                        id="" value="<?php echo $email; ?>" placeholder="Email"
+                                        onkeypress="return blockChar(event)">
 
-                                    </td>
-                                </tr>
+                                </td>
+                            </tr>
 
-                                <tr>
-                                    <td>
-                                        <label for="Phone No" class="sr-only">Phone No</label>
-                                        <input type="tel" name="phoneNo" id="phone" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $p_no; ?>" placeholder="Phone No." onkeypress="return IsNumeric(event);">
+                            <tr>
+                                <td>
+                                    <label for="Phone No" class="sr-only">Phone No</label>
+                                    <input type="tel" name="phoneNo" id="phone" class="form-control-md form-control-lg"
+                                        id="" value="<?php echo $p_no; ?>" placeholder="Phone No."
+                                        onkeypress="return IsNumeric(event);">
 
-                                    </td>
-                                    <td>
-                                        <label for="Whatsapp No" class="sr-only">WhatsApp No.</label>
-                                        <input type="tel" name="whatsappNo" id="whatsAppNo" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $w_no; ?>" placeholder="WhatsApp No." onkeypress="return IsNumeric(event);">
+                                </td>
+                                <td>
+                                    <label for="Whatsapp No" class="sr-only">WhatsApp No.</label>
+                                    <input type="tel" name="whatsappNo" id="whatsAppNo"
+                                        class="form-control-md form-control-lg" id="" value="<?php echo $w_no; ?>"
+                                        placeholder="WhatsApp No." onkeypress="return IsNumeric(event);">
 
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td>
-                                        <label for="Shop Name" class="sr-only">Shop Name</label>
-                                        <input type="text" name="shopName" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $shop_name ; ?>" placeholder="Shop Name" onkeypress="return blockChar(event)">
-                                    </td>
-                                    <td>
-                                        <label for="Shop Url" class="sr-only">Shop URL</label>
-                                        <input type="text" name="shopUrl" id="shopUrl" class="form-control-md form-control-lg"
-                                            id="" value="<?php echo $shop_url ; ?>" placeholder="Shop URL" onkeypress="return blockSpecialChar(event)">
-                                    </td>
-                                </tr>
-
-                                
-                            </tbody>
-                        </table>
+                                </td>
+                            </tr>
 
 
-                        <div class="form-group text-center">
-                            <button type="submit" name="update" class="btn btn-md btn-info">Save</button>
-                        </div>
+                            <tr>
+                                <td>
+                                    <label for="Shop Name" class="sr-only">Shop Name</label>
+                                    <input type="text" name="shopName" class="form-control-md form-control-lg" id=""
+                                        value="<?php echo $shop_name ; ?>" placeholder="Shop Name"
+                                        onkeypress="return blockChar(event)">
+                                </td>
+                                <td>
+                                    <label for="Shop Url" class="sr-only">Shop URL</label>
+                                    <input type="text" name="shopUrl" id="shopUrl"
+                                        class="form-control-md form-control-lg" id="" value="<?php echo $shop_url ; ?>"
+                                        placeholder="Shop URL" onkeypress="return blockSpecialChar(event)">
+                                </td>
+                            </tr>
 
-                        <div class="form-group text-center">
-                            <a href="index.php?dashboard">
-                                <p class="back">Back</p>
-                            </a>
-                        </div>
+                            <tr>
+                                <td>
+                                    <label for="myfile">Select brand Logo</label>
+                                    <input type="file" id="profImg" name="profImg">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="form-group text-center">
+                        <button type="submit" name="update" class="btn btn-md btn-info">Save</button>
                     </div>
-                </form>
-            </div>
+
+                    <div class="form-group text-center">
+                        <a href="index.php?dashboard">
+                            <p class="back">Back</p>
+                        </a>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
 
 </body>
@@ -125,22 +137,22 @@ if(!isset($_SESSION['email'])){
 
 
 <script type="text/javascript">
-        var specialKeys = new Array();
-        specialKeys.push(8); //Backspace
-        function IsNumeric(e) {
-            var keyCode = e.which ? e.which : e.keyCode
-            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);     
-            return ret;
-        }
+    var specialKeys = new Array();
+    specialKeys.push(8); //Backspace
+    function IsNumeric(e) {
+        var keyCode = e.which ? e.which : e.keyCode
+        var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+        return ret;
+    }
 
-        function blockChar(e) {
-          var k = e.keyCode;
-          return (k != 39);
-      }
-    </script>
+    function blockChar(e) {
+        var k = e.keyCode;
+        return (k != 39);
+    }
+</script>
 
 <script>
-      document.getElementById('email').addEventListener('keydown', function (e) {
+    document.getElementById('email').addEventListener('keydown', function (e) {
         var k = e.keyCode
         k == 32 && e.preventDefault()
     });
@@ -149,11 +161,11 @@ if(!isset($_SESSION['email'])){
         var k = e.keyCode
         k == 32 && e.preventDefault()
     });
-    
-      function blockSpecialChar(e) {
-            var k = e.keyCode;
-            return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8   || (k >= 48 && k <= 57));
-      }
+
+    function blockSpecialChar(e) {
+        var k = e.keyCode;
+        return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || (k >= 48 && k <= 57));
+    }
 
     document.getElementById('whatsAppNo').addEventListener('keydown', function (e) {
         var k = e.keyCode
@@ -179,10 +191,16 @@ if(isset($_POST['update'])){
     $bname = $_POST['shopName'];
     $surl = $_POST['shopUrl'];
 
+    $prof_image = $_FILES['profImg']['name'];
+
+    $temp_name = $_FILES['profImg']['tmp_name'];
+
+    move_uploaded_file($temp_name, "profile_img/$prof_image");
+
 
     $sql = "UPDATE customers
      SET firstname='$fname', lastname='$lname', email='$email', phone_no='$pno', whatsapp_no='$wno', shop_name='$bname',
-      shop_url='$surl' WHERE customer_id = '$admin_id'";
+      shop_url='$surl', profile_image='$prof_image' WHERE customer_id = '$admin_id'";
     
     $query = mysqli_query($con, $sql) or die(mysqli_error($con));
 

@@ -28,10 +28,19 @@ if(!isset($_SESSION['email'])){
 
      $url = $row_admin['shop_url'];
 
+     $prof_img = $row_admin['profile_image'];
+
+     $visits = $row_admin['visits'];
+
      $sql =  "select * from products where customer_id = '$admin_id'";
      $query = mysqli_query($con, $sql);
      $count_prod = mysqli_num_rows($query);
-  
+
+     $sql =  "select * from product_categories where customer_id = '$admin_id'";
+     $query = mysqli_query($con, $sql);
+     $count_cat = mysqli_num_rows($query);
+
+
   ?>
   <body>
     <!--navbar-->
@@ -40,7 +49,7 @@ if(!isset($_SESSION['email'])){
             <a href="index.php?dashboard" class="nav-title"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
            
             <a href="index.php?profile" class="nav-title"><?php echo $lastname . ' ' . $firstname; ?>
-                
+            <img src="profile_img/<?php echo $prof_img; ?>" alt="" class="img-fluid">
             </a>
             <a href="https://e-acez.com/<?php echo $url; ?>" target="_blank" class="nav-title" style="text-decoration:none; margin-right:80px;">   View Shop </a>
         </div>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.611" y1="1" x2="0.609" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00afef" stop-opacity="0.18"/>
+      <stop offset="0.116" stop-color="#bfe8f7" stop-opacity="0.549"/>
+      <stop offset="1" stop-color="#d6eff8"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_7" data-name="Group 7" transform="translate(0 -1880)">
+    <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-1" width="1920" height="1080" transform="translate(0 1880)"/>
+  </g>
+</svg>

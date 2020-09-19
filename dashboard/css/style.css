@@ -22,10 +22,13 @@ nav {
 }
 
 .img-fluid {
+    border: 2px solid #ff5500;
     border-radius: 30px;
     height: 50px;
     width: 50px;
     margin-left: 10px;
+    background: #bbb;
+
 }
 
 .nav-title {
@@ -140,10 +143,11 @@ ul.pagination li {
 #prodDisplay {
     text-align: center;
     display: block;
-    width: 60%;
+    width: 50%;
     margin-left: 60px;
     border-radius: 5px;
 }
+
 
 
 /** View Products **/
@@ -233,6 +237,10 @@ footer .orange {
     text-transform: uppercase;
 }
 
+.prof-img{
+    width: 100px;
+    height: 100px;
+}
 .form .btn {
     font-size: 14px;
     color: #fff;
@@ -292,6 +300,7 @@ footer .orange {
 .profile input::placeholder {
     color: gray;
 }
+
 
 /** Developer Style **/
 .contact .btn {

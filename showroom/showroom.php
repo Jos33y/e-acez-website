@@ -36,11 +36,30 @@ if(isset($name) OR ($pCat)){
     $w_no = $row['whatsapp_no'];
 
     $shop_name = $row['shop_name'];
+
+    $prof_img = $row['profile_image']
       
 
   
 ?>
 <?php include('include/header.php'); ?>
+
+<?php 
+
+$sql = "SELECT * FROM social WHERE customer_id = '$owner_id'";
+
+$query = mysqli_query($con, $sql);
+
+$row = mysqli_fetch_array($query);
+
+ $fpixel = $row['facebook_pixel'];
+
+
+echo $fpixel; 
+?>
+
+</head>
+
 
 <body>
   <!--categories side nav -->
@@ -64,12 +83,19 @@ while($row = mysqli_fetch_array($run_cat)){
   <!--end -->
 
   <!--navbar-->
+  
   <nav>
     <div class="navbar">
-      <span class="shop-name"><?php echo $shop_name; ?></span>
+    
+      <span class="shop-name">
+      <img src="dashboard/profile_img/<?php echo $prof_img; ?>" alt="shop name" class="prof_fluid" 
+    style="border: 2px solid #ff5500; border-radius: 30px; height: 50px; width: 50px; margin-left: 10px; background: #bbb;">
+        <?php echo $shop_name; ?>
+      </span>
 
       <span class="call text-right">Call: &nbsp;<i class="fas fa-phone-alt"></i> <a
           href="tel:+234<?php echo $p_no; ?>"><?php echo $p_no ?></a></span>
+         
     </div>
   </nav>
 
@@ -80,6 +106,7 @@ while($row = mysqli_fetch_array($run_cat)){
   <!--product rows-->
   <div class="container top">
     <span class="pointer" onclick="openNav()">&#9776; categories</span>
+   
   </div>
 
 
@@ -223,16 +250,16 @@ while($row = mysqli_fetch_array($run_cat)){
       <?php } }
      
       ?>
-              
+
 
     </div>
   </div>
 
   <footer>
     <div class="row text-center">
-    <div class="col-sm-4 social">
+      <div class="col-sm-4 social">
 
-    <?php 
+        <?php 
 
       $sql = "SELECT * FROM social WHERE customer_id = '$owner_id'";
 
@@ -252,11 +279,15 @@ while($row = mysqli_fetch_array($run_cat)){
 ?>
         <br>
         <ul>
-          <li> <a href="<?php echo $insta; ?>" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
-          <li> <a href="<?php echo $twitter; ?>" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <li> <a href="<?php echo $insta; ?>" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-instagram"></i></a></li>
+          <li> <a href="<?php echo $twitter; ?>" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-twitter"></i></a>
           </li>
-          <li> <a href="<?php echo $fb; ?>" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
-          <li> <a href="<?php echo $ytube; ?>" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube-square"></i></a>
+          <li> <a href="<?php echo $fb; ?>" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-facebook-f"></i></a></li>
+          <li> <a href="<?php echo $ytube; ?>" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-youtube-square"></i></a>
           </li>
         </ul>
 

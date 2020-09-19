@@ -80,7 +80,7 @@ nav {
 }
 
 .navbar {
-  margin-left: 2%;
+  margin-left: 1%;
   margin-right: 2%;
 }
 
@@ -91,6 +91,11 @@ nav {
   font-style: italic;
   text-transform: lowercase;
   letter-spacing: 1px;
+}
+
+.prof_fluid{
+  height: 50px;
+  width: 50px;
 }
 
 nav .call {
@@ -110,6 +115,8 @@ h3.no-url {
   font-size: 40px;
   font-weight: 700;
 }
+
+
 
 /** responsive design **/
 

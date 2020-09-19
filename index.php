@@ -29,7 +29,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
     <link rel="stylesheet" href="styles/new.css">
-
+    
     <style>
         .columns .sub-t {
             padding-top: 30%;

@@ -7,6 +7,11 @@ $con = mysqli_connect("localhost", "root", "", "showroom");
 
 date_default_timezone_set('Africa/Lagos');
 
+$sql = "UPDATE customers SET visits = visits+1 WHERE customer_id = 2";
+$con->query($sql);
+
+   
+
 function getRealIpUser(){
 
             switch(true){

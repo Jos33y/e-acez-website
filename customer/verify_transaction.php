@@ -25,8 +25,18 @@ $reference = isset($_GET['reference']) ? $_GET['reference'] : '';
       $startDate =  date("Y-m-d");
   
       // Add days to date and display it 
-      $endDate = date('Y-m-d', strtotime($startDate. ' + 30 days')); 
+      if ($amt == 1000)
+      {
+        $endDate = date('Y-m-d', strtotime($startDate. ' + 30 days')); 
+      }
+      elseif($amt == 2500){
+        $endDate = date('Y-m-d', strtotime($startDate. ' + 90 days')); 
+      }
 
+      elseif($amt == 5000){
+        $endDate = date('Y-m-d', strtotime($startDate. ' + 180 days')); 
+      }
+      
       //store data to customers table
 
       $customer_sql = "INSERT INTO customers (firstname, lastname, email, password, phone_no, whatsapp_no, shop_name, shop_url, code, reg_date, user_ip)
@@ -43,7 +53,7 @@ $reference = isset($_GET['reference']) ? $_GET['reference'] : '';
   
       $c_id = $row['customer_id'];
 
-    $sql = "INSERT subscription (customer_id, firstname, lastname, reference_no, startDate, endDate) VALUES('$c_id', '$fName', '$lName', '$reference', '$startDate', '$endDate')";
+    $sql = "INSERT subscription (customer_id, firstname, lastname, reference_no, startDate, endDate, amount) VALUES('$c_id', '$fName', '$lName', '$reference', '$startDate', '$endDate' , '$amt')";
 
     $query2 = mysqli_query($con, $sql) or die(mysqli_error($con));
 

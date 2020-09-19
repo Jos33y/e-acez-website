@@ -3,7 +3,7 @@ $active = "index";
 $title = "welcome to e-acez";
 include('include/header.php')
 
-?> 
+?>
 
  <!-- home page header-->
 
