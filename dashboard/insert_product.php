@@ -20,7 +20,7 @@ if(!isset($_SESSION['email'])){
                 <h6 class="text-center text-danger">make sure image is neatly cropped and named</h6>
 
                 <div class="form-group">
-
+                    
                 <select name="productCategory" class="form-control"><!--form-control Begin --> 
 
                                 <option selected disabled> Select a Product Category</option>

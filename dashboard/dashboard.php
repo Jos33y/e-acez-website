@@ -144,25 +144,20 @@ if(!isset($_SESSION['email'])){
             </div>
 
              <!--row ten -->
-             <?php 
-             if( $admin_id == 2){
-                 echo ' 
+            
              <div id="col" class="col-md-6 col-lg-4 col-6">
                 <div class="card" style="background-color: #9370DB">
                     <div class="card-body">
                     <style= class="fas fa-sort-amount-up" style="color:white"></i>
                     </div>
                     <div class="card-footer">
-                        <a href="index.php?review" class="stretched-link">
-                        <h3 class="card-title"><span class="prod-no">' . $visits . '</span> Customers Count</h3>
+                        <a href="#" class="stretched-link">
+                        <h3 class="card-title"><span class="prod-no"> <?php echo $visits ?></span> Showroom Visitors</h3>
                         </a>
                     </div>
                 </div>
             </div>
-            ';
-             }
-             ?>
-
+        
 
               <!--row eleven-->
               <div id="col" class="col-md-6 col-lg-4 col-6">

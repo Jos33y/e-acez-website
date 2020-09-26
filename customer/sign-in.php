@@ -287,15 +287,15 @@
 
 </html>
 
-<?php
- //define('SALT', 'd#f453dd');
+<?php 
+define('SALT', 'd#f453dd');
     if(isset($_POST['sign-in'])){
 
      
 
 $user_email = $_POST['email'];
 
-$password = $_POST['password'];
+$password = md5(SALT.$_POST['password']);
 
 $select_user = "select * from customers where email='$user_email' AND password = '$password'";
 
@@ -333,10 +333,14 @@ if($check_user==true){
 
   $_SESSION['user_id'] = $user_id;
   $_SESSION['email'] = $user_email;
-  
 
-  echo "<script>window.open('../dashboard/index.php?dashboard' , '_self')</script>";
+ 
+  $date =  date("Y-m-d h:i:s");
+
+  $login_time = "UPDATE customers SET last_login = $date WHERE customer_id = '$user_id'";
+  mysqli_query($con, $login_time);
   
+  echo "<script>window.open('../dashboard/index.php?dashboard' , '_self')</script>";
 
 }
 

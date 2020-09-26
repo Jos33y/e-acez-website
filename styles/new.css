@@ -186,6 +186,8 @@ body {
 }
 
 .features {
+  padding-top: 5%;
+  padding-bottom: 5%;
   background: #FFA781;
   color: #5B0E2D;
 }
@@ -238,6 +240,46 @@ body {
   box-shadow: 0px 0px 3px 3px rgba(191, 189, 191, 1);
 
 }
+
+/** active showrooms **/
+
+.active-show{
+  background-color: #f5f6fa;
+  padding-top:8% ;
+  padding-bottom: 8%;
+}
+
+.active-show .col-6{
+  margin-bottom: 5%;
+}
+
+.active-show .card{
+  
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+
+
+.active-show .card-img-top{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.active-show .card-text{
+  color: #ff5500;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.active-show a{
+  text-decoration: none;
+}
+
 
 .blog {
   background: #F2BC94;
@@ -716,4 +758,11 @@ footer h6 {
     font-size: 11px;
 
   }
+
+  .active-show .card-img-top{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
 }

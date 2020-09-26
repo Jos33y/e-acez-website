@@ -39,8 +39,8 @@ if(!isset($_SESSION['email'])){
      $sql =  "select * from product_categories where customer_id = '$admin_id'";
      $query = mysqli_query($con, $sql);
      $count_cat = mysqli_num_rows($query);
-
-
+ 
+     
   ?>
   <body>
     <!--navbar-->

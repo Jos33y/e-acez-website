@@ -52,6 +52,8 @@
                 <div class="col-md-12 text-center">
                     <hr class="line" width="100%">
                     <h6> images from <a href="https://www.pikrepo.com/">nicepik</a></h6>
+                    <h6>Icons made by <a href="https://www.flaticon.com/authors/dinosoftlabs" title="DinosoftLabs">DinosoftLabs</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></h6>
+                    
                     <h6>Copyright &copy; 2020 e-acez </h6>
 
                 </div>

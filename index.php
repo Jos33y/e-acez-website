@@ -1,3 +1,12 @@
+<?php
+include('include/dbconn.php'); 
+$i = 0;
+$get_stores = "SELECT * FROM customers ORDER BY RAND() LIMIT 6;";
+$run_stores = mysqli_query($con, $get_stores);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +38,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/eedc5762fd.js"></script>
     <link rel="stylesheet" href="styles/new.css">
-    
+
     <style>
         .columns .sub-t {
             padding-top: 30%;
@@ -149,7 +158,7 @@
             </div>
         </div>
     </div>
-
+    <!--showroom row -->
     <div class="container columns">
         <h1 class="sub-title">Everything your online business needs to grow in one place </h1>
         <hr class="line" width="50%">
@@ -166,7 +175,8 @@
         </div>
     </div>
 
-    <div class="features columns">
+    <!-- features row -->
+    <div class="features">
         <div class="container">
             <h3 class="feat-title">Features</h3>
             <div class="row feat text-center">
@@ -210,6 +220,41 @@
         </div>
     </div>
 
+    <!--active showroom -->
+    <div class="active-show">
+        <div class="container">
+            <h3 class="sub-title">Active Showrooms</h3>
+            <hr class="line" width="20%">
+
+            <!-- showrooms -->
+            <div class="row">
+
+                <?php
+                    while($row = mysqli_fetch_array($run_stores)){
+                        $store_name = $row['shop_name'];
+                        $store_url = $row['shop_url'];
+                        $i++;         
+                ?>
+
+                <div class="col-sm-2 col-6">
+                    <div class="card">
+                        <img src="images/grow-shop.svg" alt="showroom image" class="card-img-top">
+                        <div class="card-footer">
+                            <a href="<?php echo $store_url;  ?>" class="stretched-link">
+                                <h3 class="card-text"><?php echo $store_name; ?></h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                    <?php } ?>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <!--Ecommerce Store -->
     <div class="container columns">
         <div class="row">
@@ -225,6 +270,7 @@
     </div>
 
 
+    <!--featured get started -->
     <div class="features text-center columns">
         <h2 class="call-head">Build and grow your business into perfection</h2>
 
@@ -296,7 +342,7 @@
         </div>
     </div>
 
-
+    <!--blog section rows -->
     <div class="blog columns">
         <div class="container">
             <h3 class="blog-head">Blog Post</h3>
@@ -339,6 +385,7 @@
         </div>
     </div>
 
+    <!--contact rows -->
     <div id="contact" class="container columns">
         <h3 class="blog-head">Need Help?</h3>
         <hr class="line" width="15%">

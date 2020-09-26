@@ -36,7 +36,7 @@ $reference = isset($_GET['reference']) ? $_GET['reference'] : '';
       elseif($amt == 5000){
         $endDate = date('Y-m-d', strtotime($startDate. ' + 180 days')); 
       }
-      
+     
       //store data to customers table
 
       $customer_sql = "INSERT INTO customers (firstname, lastname, email, password, phone_no, whatsapp_no, shop_name, shop_url, code, reg_date, user_ip)
@@ -60,7 +60,7 @@ $reference = isset($_GET['reference']) ? $_GET['reference'] : '';
 
     if($query2){
 
-      echo "<script>window.open('sign-in.php', '_self')</script>";
+     
 }
     
 

@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <!--second row-->
+        <!--second row--> <!--
         <div class="row sub-hero">
             <div class="col-sm-6">
                 <h1> <span class="number">2</span> <span class="h1"> Make payment<span /></h1>
@@ -158,11 +158,13 @@
             </div>
         </div>
 
+    -->
+
         <!--- third row-->
 
         <div class="row sub-hero">
             <div class="col-sm-6">
-                <h1> <span class="number">3</span> <span class="h1"> Log in<span /></h1>
+                <h1> <span class="number">2</span> <span class="h1"> Log in<span /></h1>
 
                 <p>
                     After making payment you can login to your dashboard to start uploading your product online.
@@ -260,16 +262,24 @@
                             <input type="password" name="password" id="password" class="form-control" maxlength="20"
                                 placeholder="Enter desired Password" onkeypress="return blockSpecialChar(event)" required>
                         </div>
+                        <!-- commenting freelancers code -->
+                        <!--
                         <div class="col-sm-6">
                             <label for="code">CODE</label>
                             <input type="password" name="code" id="code" class="form-control" maxlength="7"
                                 placeholder="Enter CODE" onkeypress="return blockSpecialChar(event)" required>
-                        </div>
+                        </div> 
+    -->
                     </div>
+
+                    <!-- commenting the payment -->
+
+                    <!--
                     <div class="row">
                         <div class="col-sm-12">
                             <label for="plan">Select a plan </label><!--<span
                                 class="url-two"> &nbsp; 90% discount <del>5000</del></span>--><br>
+                                <!--
                             <select name="amount" id="amount" class="form-control">
                                 <option value="nil" disabled>select a plan</option>
                                 <option value="1000" id="plan">One Month (1) -- &#8358;1000</option>
@@ -278,10 +288,10 @@
                                 <option value="null" disabled>Other plans coming soon!!!</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <button class="btn btn-md btn-success" type="submit" onclick="payWithPaystack()">
+                            <button class="btn btn-md btn-success" type="submit" name="register">
                                 Sign up</button>
                         </div>
                     </div>
@@ -354,11 +364,48 @@
     </footer>
 
     <!--paystack script-->
-    <script src="https://js.paystack.co/v1/inline.js"></script>
+   <!-- <script src="https://js.paystack.co/v1/inline.js"></script> -->
 </body>
 
 </html>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<?php 
+  define('SALT', 'd#f453dd');
+
+if(isset($_POST['register'])){
+
+      $fName = $_POST['firstname'];
+      $lName = $_POST['lastname'];
+      $email = $_POST['email'];
+      $pno = $_POST['phone'];
+      $wno = $_POST['whatsappno'];
+      $sname = $_POST['shopname'];
+      $surl = $_POST['shopUrl'];
+      $pwd = md5(SALT. $_POST['password']);
+      $user_ip = getRealIpUser();
+
+       // Declare a date 
+      $startDate =  date("Y-m-d");
+
+
+       //store data to customers table
+
+       $customer_sql = "INSERT INTO customers (firstname, lastname, email, password, phone_no, whatsapp_no, shop_name, shop_url, reg_date, user_ip)
+       VALUES ('$fName', '$lName', '$email', '$pwd', '$pno', '$wno', '$sname', '$surl', '$startDate', '$user_ip')";
+       $query1 = mysqli_query($con, $customer_sql) or die(mysqli_error($con));
+
+       if($query1){
+
+
+  
+        echo "<script>window.open('sign-in.php', '_self')</script>";
+  }
+       
+        }  
+
+
+?>
 
 <script>
    /**  code.onchange = function () {
@@ -480,8 +527,12 @@
     });
 </script>
 
+
+
+
+<!-- paystack payment 
 <script>
-    const paymentForm = document.getElementById('paymentForm');
+   /**  const paymentForm = document.getElementById('paymentForm');
     paymentForm.addEventListener("submit", payWithPaystack, false);
 
     function payWithPaystack(e) {
@@ -501,7 +552,7 @@
             // label: "Optional string that replaces customer email"
             onClose: function () {
                 alert('Window closed.');
-            },
+            },  
             callback: function (response) {
                 var firstName = document.getElementById("firstName").value;
                 var lastName = document.getElementById("lastName").value;
@@ -532,4 +583,6 @@
         });
         handler.openIframe();
     }
-</script>
+
+    */
+</script> -->

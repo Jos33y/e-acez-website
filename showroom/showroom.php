@@ -50,12 +50,27 @@ $sql = "SELECT * FROM social WHERE customer_id = '$owner_id'";
 
 $query = mysqli_query($con, $sql);
 
+$check_user = mysqli_num_rows($query);
+
+if($check_user==true){
+
 $row = mysqli_fetch_array($query);
 
  $fpixel = $row['facebook_pixel'];
 
 
 echo $fpixel; 
+
+}
+
+elseif($check_user==false){
+
+    echo "";
+}
+
+  $sql = "UPDATE customers SET visits = visits+1 WHERE customer_id = $owner_id";
+  $con->query($sql);
+
 ?>
 
 </head>
@@ -265,6 +280,10 @@ while($row = mysqli_fetch_array($run_cat)){
 
       $query = mysqli_query($con, $sql);
 
+      $check_user = mysqli_num_rows($query);
+
+      if($check_user==true){
+
       $row = mysqli_fetch_array($query);
 
         $fb = $row['facebook'];
@@ -274,8 +293,19 @@ while($row = mysqli_fetch_array($run_cat)){
        $insta = $row['instagram'];
 
        $ytube = $row['youtube'];
+}
+      elseif($check_user==false){
 
+        $fb = ""; 
 
+       $twitter = ""; 
+
+       $insta = ""; 
+
+       $ytube = ""; 
+
+}
+       
 ?>
         <br>
         <ul>
